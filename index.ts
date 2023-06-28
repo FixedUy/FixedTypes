@@ -1,7 +1,7 @@
 import { CampoExtraMediosPago } from "./types/campoExtraMediosPago";
 import { CampoExtraMediosPagoConverter } from "./types/campoExtraMediosPagoConverter";
 
-exports.campoExtraMediosPago = CampoExtraMediosPago;
+exports.CampoExtraMediosPago = CampoExtraMediosPago;
 exports.CampoExtraMediosPagoConverter = CampoExtraMediosPagoConverter;
 // exports.cliente = require("./types/cliente");
 // exports.empresa = require("./types/empresa");
