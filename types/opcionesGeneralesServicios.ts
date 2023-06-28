@@ -2,8 +2,10 @@ export interface OpcionesGeneralesServicios {
   precioArbitrario: false;
 }
 
-export const defecto: { [key: string]: OpcionesGeneralesServicios } = {
+export const defectoOpcionesGeneralesServicios: {
+  [key: string]: OpcionesGeneralesServicios;
+} = {
   defecto: {
-    precioArbitrario: false
-  }
+    precioArbitrario: false,
+  },
 };

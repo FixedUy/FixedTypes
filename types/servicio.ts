@@ -2,7 +2,7 @@ import {
   DocumentData,
   QueryDocumentSnapshot,
   SnapshotOptions,
-  WithFieldValue
+  WithFieldValue,
 } from "firebase/firestore";
 import { isArray } from "lodash";
 import { ServiciosPrecios } from "./ServiciosPrecios";
@@ -57,7 +57,7 @@ const ServicioConverter = {
       data.listaPrecio != null &&
       isArray(data.listaPrecio)
     ) {
-      data.listaPrecio.map(e => {
+      data.listaPrecio.map((e) => {
         listaPrecio[e["id"]] = new ServiciosPrecios(
           e["id"],
           e["nombre"],
@@ -81,7 +81,7 @@ const ServicioConverter = {
       data.activo
       // data.buscablePor,
     );
-  }
+  },
 };
 
 export { Servicio, ServicioConverter };
