@@ -1,4 +1,4 @@
-export class Unidad {
+export class UnidadPrueba {
   version: number;
   id: string;
   nombre: string;
