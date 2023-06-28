@@ -1,21 +1,18 @@
-export class UnidadPrueba {
-  version: number;
-  id: string;
-  nombre: string;
-  activo: boolean;
-  ultimaEdicion: number;
-
-  constructor(
-    version: number,
-    id: string,
-    nombre: string,
-    activo: boolean,
-    ultimaEdicion: number
-  ) {
-    this.version = version;
-    this.id = id;
-    this.nombre = nombre;
-    this.activo = activo;
-    this.ultimaEdicion = ultimaEdicion;
-  }
-}
+exports.campoExtraMediosPago = require("./types/campoExtraMediosPago");
+exports.cliente = require("./types/cliente");
+exports.empresa = require("./types/empresa");
+exports.local = require("./types/local");
+exports.mediosPago = require("./types/mediosPago");
+exports.moneda = require("./types/moneda");
+exports.opcionesGenerales = require("./types/opcionesGenerales");
+exports.opcionesGeneralesServicios = require("./types/opcionesGeneralesServicios");
+exports.productosListasPrecio = require("./types/productosListasPrecio");
+exports.productosRubros = require("./types/productosRubros");
+exports.servicio = require("./types/servicio");
+exports.serviciosListasPrecio = require("./types/serviciosListasPrecio");
+exports.serviciosPrecios = require("./types/serviciosPrecios");
+exports.serviciosRubros = require("./types/serviciosRubros");
+exports.tasaIVA = require("./types/tasaIVA");
+exports.unidad = require("./types/unidad");
+exports.usuario = require("./types/usuario");
+exports.usuariosSistemaInvitacion = require("./types/usuariosSistemaInvitacion");
