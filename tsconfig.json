@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "commonjs",
     "declaration": true,
+    "declarationDir": "src/types",
     "outDir": "dist"
   },
   "include": ["src/**/*.ts"],
