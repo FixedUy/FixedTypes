@@ -1,4 +1,6 @@
-// export * from "./types/campoExtraMediosPago";
+exports.campoExtraMediosPago = require("./types/campoExtraMediosPago");
+exports.cliente = require("./types/cliente");
+exports.local = require("./types/local");
 // export * from "./types/cliente";
 // export * from "./types/empresa";
 // export * from "./types/local";
@@ -10,8 +12,8 @@
 // export * from "./types/productosRubros";
 // export * from "./types/servicio";
 // export * from "./types/serviciosListasPrecio";
-// export * from "./types/serviciosPrecios";
-// export * from "./types/serviciosRubros";
+// // export * from "./types/serviciosPrecios";
+// // export * from "./types/serviciosRubros";
 // export * from "./types/tasaIVA";
 // export * from "./types/unidad";
 // export * from "./types/usuario";
