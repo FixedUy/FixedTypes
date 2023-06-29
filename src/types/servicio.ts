@@ -5,8 +5,8 @@ import {
   WithFieldValue,
 } from "firebase/firestore";
 import { isArray } from "lodash";
-import { ServiciosPrecios } from "./ServiciosPrecios";
-import { ServiciosRubro } from "./ServiciosRubros";
+import { ServiciosPrecios } from "./serviciosPrecios";
+import { ServiciosRubro } from "./serviciosRubros";
 
 class Servicio {
   version: number;
