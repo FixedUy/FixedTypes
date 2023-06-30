@@ -17,6 +17,8 @@ class Servicio {
   listaPrecio: { [key: string]: ServiciosPrecios };
   unidad: string;
   activo: boolean;
+  campoExtra: { [key: string]: string };
+
   // buscablePor: string[];
 
   constructor(
@@ -27,7 +29,8 @@ class Servicio {
     rubro: ServiciosRubro | string,
     listaPrecio: { [key: string]: ServiciosPrecios },
     unidad: string,
-    activo: boolean
+    activo: boolean,
+    campoExtra: { [key: string]: string }
     // buscablePor: string[],
   ) {
     this.version = version;
@@ -38,6 +41,7 @@ class Servicio {
     this.listaPrecio = listaPrecio;
     this.unidad = unidad;
     this.activo = activo;
+    this.campoExtra = campoExtra;
     // this.buscablePor = buscablePor;
   }
 }
@@ -78,7 +82,8 @@ const ServicioConverter = {
       data.rubro,
       listaPrecio,
       data.unidad,
-      data.activo
+      data.activo,
+      data.campoExtra
       // data.buscablePor,
     );
   },
