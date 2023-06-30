@@ -1,8 +1,4 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotMetadata,
-} from "firebase/firestore";
+import admin = require("firebase-admin");
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
@@ -77,41 +73,14 @@ class Usuario {
   }
 }
 
-class CustomQueryDocumentSnapshot<T> {
-  constructor(private snapshot: QueryDocumentSnapshot<T>) {}
-
-  get id() {
-    return this.snapshot.id;
-  }
-
-  get ref() {
-    return this.snapshot.ref;
-  }
-
-  get exists() {
-    return this.snapshot.exists;
-  }
-
-  get customMetadata(): SnapshotMetadata {
-    return {
-      hasPendingWrites: false,
-      fromCache: false,
-      isEqual: () => false,
-    };
-  }
-
-  // Getter for the data property
-  get customData(): T | undefined {
-    return this.snapshot.data();
-  }
-}
-
 const usuarioConverter = {
-  toFirestore(Usuario: Usuario): DocumentData {
+  toFirestore(Usuario: Usuario): admin.firestore.DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(snapshot: CustomQueryDocumentSnapshot<DocumentData>): Usuario {
-    const data = snapshot.customData;
+  fromFirestore(
+    snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>
+  ): Usuario {
+    const data = snapshot.data();
     const empresas: Empresa[] = [];
     if (
       data.empresas != undefined &&
