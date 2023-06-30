@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usuarioConverter = exports.Usuario = void 0;
+exports.usuarioConverterAdmin = exports.usuarioConverter = exports.Usuario = void 0;
 const empresa_1 = require("./empresa");
 const lodash_1 = require("lodash");
 class Usuario {
@@ -55,21 +55,34 @@ class Usuario {
     }
 }
 exports.Usuario = Usuario;
+const generarUsuario = (documentId, data) => {
+    const empresas = [];
+    if (data.empresas != undefined &&
+        data.empresas != null &&
+        (0, lodash_1.isArray)(data.empresas)) {
+        data.empresas.map((e) => {
+            empresas.push(new empresa_1.Empresa(e["id"], e["nombreComercial"], e["rut"], e["razonSocial"], e["logoURL"]));
+        });
+    }
+    return new Usuario(documentId, data.nombre, data.mail, data.creadoEl, empresas, data.vendedor, data.activo, data.ultimaEdicion);
+};
 const usuarioConverter = {
     toFirestore(Usuario) {
         return { nombre: Usuario.nombre };
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
-        const empresas = [];
-        if (data.empresas != undefined &&
-            data.empresas != null &&
-            (0, lodash_1.isArray)(data.empresas)) {
-            data.empresas.map((e) => {
-                empresas.push(new empresa_1.Empresa(e["id"], e["nombreComercial"], e["rut"], e["razonSocial"], e["logoURL"]));
-            });
-        }
-        return new Usuario(snapshot.id, data.nombre, data.mail, data.creadoEl, empresas, data.vendedor, data.activo, data.ultimaEdicion);
+        return generarUsuario(snapshot.id, data);
     },
 };
 exports.usuarioConverter = usuarioConverter;
+const usuarioConverterAdmin = {
+    toFirestore(Usuario) {
+        return { nombre: Usuario.nombre };
+    },
+    fromFirestore(snapshot) {
+        const data = snapshot.data();
+        return generarUsuario(snapshot.id, data);
+    },
+};
+exports.usuarioConverterAdmin = usuarioConverterAdmin;

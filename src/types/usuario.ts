@@ -1,6 +1,7 @@
 import admin = require("firebase-admin");
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
+import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 
 class Usuario {
   id: string;
@@ -73,7 +74,49 @@ class Usuario {
   }
 }
 
+const generarUsuario = (documentId: string, data: DocumentData) => {
+  const empresas: Empresa[] = [];
+  if (
+    data.empresas != undefined &&
+    data.empresas != null &&
+    isArray(data.empresas)
+  ) {
+    data.empresas.map((e) => {
+      empresas.push(
+        new Empresa(
+          e["id"],
+          e["nombreComercial"],
+          e["rut"],
+          e["razonSocial"],
+          e["logoURL"]
+        )
+      );
+    });
+  }
+
+  return new Usuario(
+    documentId,
+    data.nombre,
+    data.mail,
+    data.creadoEl,
+    empresas,
+    data.vendedor,
+    data.activo,
+    data.ultimaEdicion
+  );
+};
+
 const usuarioConverter = {
+  toFirestore(Usuario: Usuario): DocumentData {
+    return { nombre: Usuario.nombre };
+  },
+  fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario {
+    const data = snapshot.data();
+    return generarUsuario(snapshot.id, data);
+  },
+};
+
+const usuarioConverterAdmin = {
   toFirestore(Usuario: Usuario): admin.firestore.DocumentData {
     return { nombre: Usuario.nombre };
   },
@@ -81,36 +124,8 @@ const usuarioConverter = {
     snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>
   ): Usuario {
     const data = snapshot.data();
-    const empresas: Empresa[] = [];
-    if (
-      data.empresas != undefined &&
-      data.empresas != null &&
-      isArray(data.empresas)
-    ) {
-      data.empresas.map((e) => {
-        empresas.push(
-          new Empresa(
-            e["id"],
-            e["nombreComercial"],
-            e["rut"],
-            e["razonSocial"],
-            e["logoURL"]
-          )
-        );
-      });
-    }
-
-    return new Usuario(
-      snapshot.id,
-      data.nombre,
-      data.mail,
-      data.creadoEl,
-      empresas,
-      data.vendedor,
-      data.activo,
-      data.ultimaEdicion
-    );
+    return generarUsuario(snapshot.id, data);
   },
 };
 
-export { Usuario, usuarioConverter };
+export { Usuario, usuarioConverter, usuarioConverterAdmin };
