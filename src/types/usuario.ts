@@ -73,11 +73,16 @@ class Usuario {
   }
 }
 
+interface CustomQueryDocumentSnapshot<T> extends QueryDocumentSnapshot<T> {
+  get metadata();
+  // Provide a custom implementation for the metadata property
+}
+
 const usuarioConverter = {
   toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario {
+  fromFirestore(snapshot: CustomQueryDocumentSnapshot<DocumentData>): Usuario {
     const data = snapshot.data()!;
     const empresas: Empresa[] = [];
     if (

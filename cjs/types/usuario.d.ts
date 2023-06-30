@@ -12,8 +12,11 @@ declare class Usuario {
     ultimaEdicion: number;
     constructor(id: string, nombre: string, mail: string, creadoEl: number, empresas: Empresa[], vendedor: boolean, activo: boolean, ultimaEdicion: number);
 }
+interface CustomQueryDocumentSnapshot<T> extends QueryDocumentSnapshot<T> {
+    get metadata(): any;
+}
 declare const usuarioConverter: {
     toFirestore(Usuario: Usuario): DocumentData;
-    fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario;
+    fromFirestore(snapshot: CustomQueryDocumentSnapshot<DocumentData>): Usuario;
 };
 export { Usuario, usuarioConverter };
