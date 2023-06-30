@@ -1,5 +1,4 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
+import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 import { Empresa } from "./empresa";
 declare class Usuario {
     id: string;
@@ -13,9 +12,8 @@ declare class Usuario {
     ultimaEdicion: number;
     constructor(id: string, nombre: string, mail: string, creadoEl: number, empresas: Empresa[], vendedor: boolean, activo: boolean, ultimaEdicion: number);
 }
-type QueryDocumentSnapshot = firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>;
 declare const usuarioConverter: {
-    toFirestore(Usuario: Usuario): firebase.firestore.DocumentData;
-    fromFirestore(snapshot: QueryDocumentSnapshot): Usuario;
+    toFirestore(Usuario: Usuario): DocumentData;
+    fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario;
 };
 export { Usuario, usuarioConverter };

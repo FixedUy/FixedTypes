@@ -1,5 +1,9 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
+import {
+  DocumentData,
+  FirestoreDataConverter,
+  QueryDocumentSnapshot,
+  SnapshotOptions,
+} from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
@@ -74,14 +78,11 @@ class Usuario {
   }
 }
 
-type QueryDocumentSnapshot =
-  firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>;
-
 const usuarioConverter = {
-  toFirestore(Usuario: Usuario): firebase.firestore.DocumentData {
+  toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): Usuario {
+  fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario {
     const data = snapshot.data()!;
     const empresas: Empresa[] = [];
     if (

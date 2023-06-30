@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuarioConverter = exports.Usuario = void 0;
-require("firebase/compat/firestore");
 const empresa_1 = require("./empresa");
 const lodash_1 = require("lodash");
 class Usuario {
