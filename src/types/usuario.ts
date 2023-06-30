@@ -1,11 +1,5 @@
 import firebase from "firebase/compat/app";
-import "firebase/firestore";
-import {
-  DocumentData,
-  FirestoreDataConverter,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-} from "firebase/firestore";
+import "firebase/compat/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
