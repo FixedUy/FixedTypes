@@ -74,13 +74,14 @@ class Usuario {
   }
 }
 
+type QueryDocumentSnapshot =
+  firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>;
+
 const usuarioConverter = {
   toFirestore(Usuario: Usuario): firebase.firestore.DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(
-    snapshot: firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>
-  ): Usuario {
+  fromFirestore(snapshot: QueryDocumentSnapshot): Usuario {
     const data = snapshot.data()!;
     const empresas: Empresa[] = [];
     if (
