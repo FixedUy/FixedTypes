@@ -4,7 +4,8 @@ export interface OpcionesGenerales {
   logoGeneral: string;
   logoGeneralURL: string;
   nombreComercial: string;
-  unidades: false;
+  centroCostos: boolean;
+  unidades: boolean;
 }
 
 export const defecto: { [key: string]: OpcionesGenerales } = {
@@ -14,6 +15,7 @@ export const defecto: { [key: string]: OpcionesGenerales } = {
     logoGeneralURL: "",
     monedaDefecto: "",
     tasaIVADefecto: "",
-    unidades: false
-  }
+    centroCostos: false,
+    unidades: false,
+  },
 };

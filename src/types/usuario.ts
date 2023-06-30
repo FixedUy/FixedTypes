@@ -16,7 +16,6 @@ class Usuario {
   vendedor: boolean;
   activo: boolean;
   ultimaEdicion: number;
-  campoExtra: { [key: string]: string };
 
   constructor(
     id: string,
@@ -26,8 +25,7 @@ class Usuario {
     empresas: Empresa[],
     vendedor: boolean,
     activo: boolean,
-    ultimaEdicion: number,
-    campoExtra: { [key: string]: string }
+    ultimaEdicion: number
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -37,7 +35,6 @@ class Usuario {
     this.vendedor = vendedor;
     this.activo = activo;
     this.ultimaEdicion = ultimaEdicion;
-    this.campoExtra = campoExtra;
 
     if (creadoEl != null) {
       const fecha = new Date(creadoEl);
@@ -116,8 +113,7 @@ const usuarioConverter = {
       empresas,
       data.vendedor,
       data.activo,
-      data.ultimaEdicion,
-      data.campoExtra
+      data.ultimaEdicion
     );
   },
 };
