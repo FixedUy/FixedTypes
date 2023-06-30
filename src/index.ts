@@ -18,3 +18,4 @@ export * from "./types/tasaIVA";
 export * from "./types/unidad";
 export * from "./types/usuario";
 export * from "./types/usuariosSistemaInvitacion";
+export * from "./types/opcionesGeneralesCamposAdicionales";
