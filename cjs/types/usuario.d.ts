@@ -17,6 +17,6 @@ interface CustomQueryDocumentSnapshot<T> extends QueryDocumentSnapshot<T> {
 }
 declare const usuarioConverter: {
     toFirestore(Usuario: Usuario): DocumentData;
-    fromFirestore(snapshot: CustomQueryDocumentSnapshot<DocumentData>): Usuario;
+    fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData> | CustomQueryDocumentSnapshot<DocumentData>): Usuario;
 };
 export { Usuario, usuarioConverter };
