@@ -1,9 +1,4 @@
-import {
-  DocumentData,
-  FirestoreDataConverter,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-} from "firebase/firestore";
+import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
