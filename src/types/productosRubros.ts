@@ -2,7 +2,7 @@ import {
   DocumentData,
   QueryDocumentSnapshot,
   SnapshotOptions,
-  WithFieldValue
+  WithFieldValue,
 } from "firebase/firestore";
 
 class ProductosRubro {
@@ -43,11 +43,8 @@ const ProductosRubroConverter = {
   toFirestore(servicioRubros: ProductosRubro): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): ProductosRubro {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): ProductosRubro {
+    const data = snapshot.data()!;
     return new ProductosRubro(
       data.version,
       snapshot.id,
@@ -59,7 +56,7 @@ const ProductosRubroConverter = {
       data.esHoja,
       data.ultimaEdicion
     );
-  }
+  },
 };
 
 export { ProductosRubro, ProductosRubroConverter };

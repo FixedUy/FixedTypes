@@ -27,11 +27,8 @@ const centroCostosConverter = {
   toFirestore(centroCostos: CentroCostos): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): CentroCostos {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): CentroCostos {
+    const data = snapshot.data()!;
     return new CentroCostos(
       snapshot.id,
       data.nombre,

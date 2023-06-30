@@ -50,11 +50,8 @@ const ServicioConverter = {
   toFirestore(servicio: Servicio): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Servicio {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): Servicio {
+    const data = snapshot.data()!;
     const listaPrecio: { [key: string]: ServiciosPrecios } = {};
     if (
       data.listaPrecio != undefined &&

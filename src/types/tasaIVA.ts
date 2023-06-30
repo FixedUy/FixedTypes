@@ -1,7 +1,7 @@
 import {
   DocumentData,
   QueryDocumentSnapshot,
-  SnapshotOptions
+  SnapshotOptions,
 } from "firebase/firestore";
 
 class TasaIVA {
@@ -39,11 +39,8 @@ const tasaConverter = {
   toFirestore(tasa: TasaIVA): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): TasaIVA {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): TasaIVA {
+    const data = snapshot.data()!;
     return new TasaIVA(
       snapshot.id,
       data.nombre,
@@ -54,7 +51,7 @@ const tasaConverter = {
       data.activoServicios,
       data.ultimaEdicion
     );
-  }
+  },
 };
 
 export { TasaIVA, tasaConverter };

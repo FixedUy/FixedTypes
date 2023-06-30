@@ -39,11 +39,8 @@ const monedaConverter = {
   toFirestore(moneda: Moneda): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Moneda {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): Moneda {
+    const data = snapshot.data()!;
     return new Moneda(
       snapshot.id,
       data.nombre,

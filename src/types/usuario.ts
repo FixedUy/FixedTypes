@@ -78,15 +78,12 @@ class Usuario {
   }
 }
 
-const usuarioConverter: FirestoreDataConverter<Usuario> = {
+const usuarioConverter = {
   toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Usuario {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario {
+    const data = snapshot.data()!;
     const empresas: Empresa[] = [];
     if (
       data.empresas != undefined &&

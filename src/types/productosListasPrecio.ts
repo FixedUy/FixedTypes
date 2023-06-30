@@ -2,7 +2,7 @@ import {
   DocumentData,
   QueryDocumentSnapshot,
   SnapshotOptions,
-  WithFieldValue
+  WithFieldValue,
 } from "firebase/firestore";
 import { Local } from "./local";
 import { isArray } from "lodash";
@@ -39,11 +39,8 @@ const ProductosListasPrecioConverter = {
   toFirestore(servicioListaPrecio: ProductosListasPrecio): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): ProductosListasPrecio {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): ProductosListasPrecio {
+    const data = snapshot.data()!;
 
     const locales: string[] = [];
     if (
@@ -51,7 +48,7 @@ const ProductosListasPrecioConverter = {
       data.locales != null &&
       isArray(data.locales)
     ) {
-      data.locales.map(e => {
+      data.locales.map((e) => {
         locales.push(e);
       });
     }
@@ -65,7 +62,7 @@ const ProductosListasPrecioConverter = {
       data.activo,
       data.ultimaEdicion
     );
-  }
+  },
 };
 
 export { ProductosListasPrecio, ProductosListasPrecioConverter };

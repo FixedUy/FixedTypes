@@ -46,11 +46,8 @@ const ProductoConverter = {
   toFirestore(servicio: Producto): DocumentData {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Producto {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): Producto {
+    const data = snapshot.data()!;
     const listaPrecio: { [key: string]: ProductosPrecios } = {};
     if (
       data.listaPrecio != undefined &&

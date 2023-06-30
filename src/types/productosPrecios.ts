@@ -47,11 +47,8 @@ const ProductosPreciosConverter = {
       precioArbitrario: productosPreciosAux.precioArbitrario,
     };
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): ProductosPrecios {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: QueryDocumentSnapshot): ProductosPrecios {
+    const data = snapshot.data()!;
     return new ProductosPrecios(
       data.id,
       data.nombre,
