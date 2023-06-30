@@ -1,7 +1,7 @@
 import {
   DocumentData,
   QueryDocumentSnapshot,
-  SnapshotOptions
+  SnapshotOptions,
 } from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
@@ -16,6 +16,7 @@ class Usuario {
   vendedor: boolean;
   activo: boolean;
   ultimaEdicion: number;
+  campoExtra: { [key: string]: string };
 
   constructor(
     id: string,
@@ -25,7 +26,8 @@ class Usuario {
     empresas: Empresa[],
     vendedor: boolean,
     activo: boolean,
-    ultimaEdicion: number
+    ultimaEdicion: number,
+    campoExtra: { [key: string]: string }
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -35,6 +37,7 @@ class Usuario {
     this.vendedor = vendedor;
     this.activo = activo;
     this.ultimaEdicion = ultimaEdicion;
+    this.campoExtra = campoExtra;
 
     if (creadoEl != null) {
       const fecha = new Date(creadoEl);
@@ -92,7 +95,7 @@ const usuarioConverter = {
       data.empresas != null &&
       isArray(data.empresas)
     ) {
-      data.empresas.map(e => {
+      data.empresas.map((e) => {
         empresas.push(
           new Empresa(
             e["id"],
@@ -113,9 +116,10 @@ const usuarioConverter = {
       empresas,
       data.vendedor,
       data.activo,
-      data.ultimaEdicion
+      data.ultimaEdicion,
+      data.campoExtra
     );
-  }
+  },
 };
 
 export { Usuario, usuarioConverter };
