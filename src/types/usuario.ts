@@ -1,5 +1,6 @@
 import {
   DocumentData,
+  FirestoreDataConverter,
   QueryDocumentSnapshot,
   SnapshotOptions,
 } from "firebase/firestore";
@@ -77,7 +78,7 @@ class Usuario {
   }
 }
 
-const usuarioConverter = {
+const usuarioConverter: FirestoreDataConverter<Usuario> = {
   toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
