@@ -1,4 +1,5 @@
 export * from "./types/campoExtraMediosPago";
+export * from "./types/centroCostos";
 export * from "./types/cliente";
 export * from "./types/empresa";
 export * from "./types/local";
