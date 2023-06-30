@@ -55,12 +55,37 @@ class Usuario {
     }
 }
 exports.Usuario = Usuario;
+class CustomQueryDocumentSnapshot {
+    constructor(snapshot) {
+        this.snapshot = snapshot;
+    }
+    get id() {
+        return this.snapshot.id;
+    }
+    get ref() {
+        return this.snapshot.ref;
+    }
+    get exists() {
+        return this.snapshot.exists;
+    }
+    get customMetadata() {
+        return {
+            hasPendingWrites: false,
+            fromCache: false,
+            isEqual: () => false,
+        };
+    }
+    // Getter for the data property
+    get customData() {
+        return this.snapshot.data();
+    }
+}
 const usuarioConverter = {
     toFirestore(Usuario) {
         return { nombre: Usuario.nombre };
     },
     fromFirestore(snapshot) {
-        const data = snapshot.data();
+        const data = snapshot.customData;
         const empresas = [];
         if (data.empresas != undefined &&
             data.empresas != null &&

@@ -1,4 +1,8 @@
-import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import {
+  DocumentData,
+  QueryDocumentSnapshot,
+  SnapshotMetadata,
+} from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
@@ -73,20 +77,41 @@ class Usuario {
   }
 }
 
-interface CustomQueryDocumentSnapshot<T> extends QueryDocumentSnapshot<T> {
-  get metadata();
+class CustomQueryDocumentSnapshot<T> {
+  constructor(private snapshot: QueryDocumentSnapshot<T>) {}
+
+  get id() {
+    return this.snapshot.id;
+  }
+
+  get ref() {
+    return this.snapshot.ref;
+  }
+
+  get exists() {
+    return this.snapshot.exists;
+  }
+
+  get customMetadata(): SnapshotMetadata {
+    return {
+      hasPendingWrites: false,
+      fromCache: false,
+      isEqual: () => false,
+    };
+  }
+
+  // Getter for the data property
+  get customData(): T | undefined {
+    return this.snapshot.data();
+  }
 }
 
 const usuarioConverter = {
   toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(
-    snapshot:
-      | QueryDocumentSnapshot<DocumentData>
-      | CustomQueryDocumentSnapshot<DocumentData>
-  ): Usuario {
-    const data = snapshot.data()!;
+  fromFirestore(snapshot: CustomQueryDocumentSnapshot<DocumentData>): Usuario {
+    const data = snapshot.customData;
     const empresas: Empresa[] = [];
     if (
       data.empresas != undefined &&
