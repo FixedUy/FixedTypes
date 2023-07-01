@@ -72,10 +72,11 @@ class Usuario {
   }
 }
 
-const usuarioConverter = {
+class UsuarioConverter {
   toFirestore(Usuario: Usuario) {
     return { nombre: Usuario.nombre };
-  },
+  }
+
   fromFirestore(snapshot, options): Usuario {
     const data = snapshot.data(options)!;
     const empresas: Empresa[] = [];
@@ -107,7 +108,7 @@ const usuarioConverter = {
       data.activo,
       data.ultimaEdicion
     );
-  },
-};
+  }
+}
 
-export { Usuario, usuarioConverter };
+export { Usuario, UsuarioConverter };
