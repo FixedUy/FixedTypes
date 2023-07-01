@@ -1,9 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue,
-} from "firebase/firestore";
 import { TasaIVA } from "./tasaIVA";
 import { Moneda } from "./moneda";
 
@@ -36,7 +30,7 @@ class ProductosPrecios {
 }
 
 const ProductosPreciosConverter = {
-  toFirestore(productosPreciosAux: ProductosPrecios): DocumentData {
+  toFirestore(productosPreciosAux: ProductosPrecios) {
     return {
       id: productosPreciosAux.id,
       nombre: productosPreciosAux.nombre,
@@ -47,11 +41,8 @@ const ProductosPreciosConverter = {
       precioArbitrario: productosPreciosAux.precioArbitrario,
     };
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): ProductosPrecios {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): ProductosPrecios {
+    const data = snapshot.data()!;
     return new ProductosPrecios(
       data.id,
       data.nombre,

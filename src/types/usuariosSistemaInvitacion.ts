@@ -1,10 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue
-} from "firebase/firestore";
-
 class UsuarioSistemaInvitacion {
   id: string;
   mail: string;
@@ -75,14 +68,11 @@ class UsuarioSistemaInvitacion {
 }
 
 const usuarioSistemaInvitacionConverter = {
-  toFirestore(Usuario: UsuarioSistemaInvitacion): DocumentData {
+  toFirestore(Usuario: UsuarioSistemaInvitacion) {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): UsuarioSistemaInvitacion {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): UsuarioSistemaInvitacion {
+    const data = snapshot.data()!;
     return new UsuarioSistemaInvitacion(
       snapshot.id,
       data.mail,
@@ -92,7 +82,7 @@ const usuarioSistemaInvitacionConverter = {
       data.enviadaPorMail,
       data.enviadaEl?.seconds
     );
-  }
+  },
 };
 
 export { UsuarioSistemaInvitacion, usuarioSistemaInvitacionConverter };

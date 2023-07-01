@@ -1,9 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-} from "firebase/firestore";
-
 class Moneda {
   id: string;
   nombre: string;
@@ -36,14 +30,11 @@ class Moneda {
 }
 
 const monedaConverter = {
-  toFirestore(moneda: Moneda): DocumentData {
+  toFirestore(moneda: Moneda) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Moneda {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): Moneda {
+    const data = snapshot.data()!;
     return new Moneda(
       snapshot.id,
       data.nombre,

@@ -1,8 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions
-} from "firebase/firestore";
 import { ServiciosListasPrecio } from "./serviciosListasPrecio";
 
 class Cliente {
@@ -70,14 +65,11 @@ class Cliente {
 }
 
 const clienteConverter = {
-  toFirestore(cliente: Cliente): DocumentData {
+  toFirestore(cliente: Cliente) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Cliente {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): Cliente {
+    const data = snapshot.data()!;
     return new Cliente(
       snapshot.id,
       data.tipoDocumento,
@@ -99,7 +91,7 @@ const clienteConverter = {
       data.esCliente,
       data.activo
     );
-  }
+  },
 };
 
 export { Cliente, clienteConverter };

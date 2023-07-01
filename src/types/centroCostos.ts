@@ -1,9 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-} from "firebase/firestore";
-
 class CentroCostos {
   id: string;
   nombre: string;
@@ -24,14 +18,11 @@ class CentroCostos {
 }
 
 const centroCostosConverter = {
-  toFirestore(centroCostos: CentroCostos): DocumentData {
+  toFirestore(centroCostos: CentroCostos) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): CentroCostos {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): CentroCostos {
+    const data = snapshot.data()!;
     return new CentroCostos(
       snapshot.id,
       data.nombre,

@@ -1,9 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue,
-} from "firebase/firestore";
 import { isArray } from "lodash";
 import { ServiciosPrecios } from "./serviciosPrecios";
 import { ServiciosRubro } from "./serviciosRubros";
@@ -47,14 +41,11 @@ class Servicio {
 }
 
 const ServicioConverter = {
-  toFirestore(servicio: Servicio): DocumentData {
+  toFirestore(servicio: Servicio) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Servicio {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): Servicio {
+    const data = snapshot.data()!;
     const listaPrecio: { [key: string]: ServiciosPrecios } = {};
     if (
       data.listaPrecio != undefined &&

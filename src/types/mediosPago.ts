@@ -1,9 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue,
-} from "firebase/firestore";
 import { CampoExtraMediosPago } from "./campoExtraMediosPago";
 import { isArray } from "lodash";
 
@@ -39,14 +33,11 @@ class MediosPago {
 }
 
 const MediosPagoConverter = {
-  toFirestore(mediosPago: MediosPago): DocumentData {
+  toFirestore(mediosPago: MediosPago) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): MediosPago {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): MediosPago {
+    const data = snapshot.data()!;
 
     const campoExtraMediosPago: CampoExtraMediosPago[] = [];
     if (

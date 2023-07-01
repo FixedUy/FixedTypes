@@ -1,11 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue
-} from "firebase/firestore";
-import { isArray } from "lodash";
-
 class Unidad {
   version: number;
   id: string;
@@ -29,14 +21,11 @@ class Unidad {
 }
 
 const UnidadConverter = {
-  toFirestore(unidad: Unidad): DocumentData {
+  toFirestore(unidad: Unidad) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Unidad {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): Unidad {
+    const data = snapshot.data()!;
     return new Unidad(
       data.version,
       snapshot.id,
@@ -44,6 +33,6 @@ const UnidadConverter = {
       data.activo,
       data.ultimaEdicion
     );
-  }
+  },
 };
 export { Unidad, UnidadConverter };
