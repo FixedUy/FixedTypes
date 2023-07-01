@@ -1,4 +1,3 @@
-import * as admin from "firebase-admin";
 import { Empresa } from "./empresa";
 import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 declare class Usuario {
@@ -17,8 +16,4 @@ declare const usuarioConverter: {
     toFirestore(Usuario: Usuario): DocumentData;
     fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario;
 };
-declare const usuarioConverterAdmin: {
-    toFirestore(Usuario: Usuario): admin.firestore.DocumentData;
-    fromFirestore(snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>): Usuario;
-};
-export { Usuario, usuarioConverter, usuarioConverterAdmin };
+export { Usuario, usuarioConverter };

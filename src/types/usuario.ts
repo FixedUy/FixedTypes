@@ -1,4 +1,4 @@
-import * as admin from "firebase-admin";
+// import * as admin from "firebase-admin";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
@@ -116,16 +116,17 @@ const usuarioConverter = {
   },
 };
 
-const usuarioConverterAdmin = {
-  toFirestore(Usuario: Usuario): admin.firestore.DocumentData {
-    return { nombre: Usuario.nombre };
-  },
-  fromFirestore(
-    snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>
-  ): Usuario {
-    const data = snapshot.data();
-    return generarUsuario(snapshot.id, data);
-  },
-};
+// const usuarioConverterAdmin = {
+//   toFirestore(Usuario: Usuario): admin.firestore.DocumentData {
+//     return { nombre: Usuario.nombre };
+//   },
+//   fromFirestore(
+//     snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>
+//   ): Usuario {
+//     const data = snapshot.data();
+//     return generarUsuario(snapshot.id, data);
+//   },
+// };
 
-export { Usuario, usuarioConverter, usuarioConverterAdmin };
+// export { Usuario, usuarioConverter, usuarioConverterAdmin };
+export { Usuario, usuarioConverter };
