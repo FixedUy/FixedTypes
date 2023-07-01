@@ -76,8 +76,8 @@ const usuarioConverter = {
   toFirestore(Usuario: Usuario) {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(snapshot, options): Usuario {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot): Usuario {
+    const data = snapshot.data()!;
     const empresas: Empresa[] = [];
     if (
       data.empresas != undefined &&
