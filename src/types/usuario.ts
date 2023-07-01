@@ -78,13 +78,10 @@ class Usuario {
 }
 
 const usuarioConverter = {
-  toFirestore(Usuario: Usuario): DocumentData {
+  toFirestore(Usuario: Usuario) {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Usuario {
+  fromFirestore(snapshot, options): Usuario {
     const data = snapshot.data(options)!;
     const empresas: Empresa[] = [];
     if (
