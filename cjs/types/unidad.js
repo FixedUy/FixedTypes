@@ -1,7 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UnidadConverter = exports.Unidad = void 0;
 class Unidad {
+    version;
+    id;
+    nombre;
+    activo;
+    ultimaEdicion;
     constructor(version, id, nombre, activo, ultimaEdicion) {
         this.version = version;
         this.id = id;
@@ -10,7 +12,6 @@ class Unidad {
         this.ultimaEdicion = ultimaEdicion;
     }
 }
-exports.Unidad = Unidad;
 const UnidadConverter = {
     toFirestore(unidad) {
         return {};
@@ -20,4 +21,4 @@ const UnidadConverter = {
         return new Unidad(data.version, snapshot.id, data.nombre, data.activo, data.ultimaEdicion);
     },
 };
-exports.UnidadConverter = UnidadConverter;
+export { Unidad, UnidadConverter };

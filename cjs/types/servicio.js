@@ -1,9 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServicioConverter = exports.Servicio = void 0;
-const lodash_1 = require("lodash");
-const serviciosPrecios_1 = require("./serviciosPrecios");
+import { isArray } from "lodash";
+import { ServiciosPrecios } from "./serviciosPrecios";
 class Servicio {
+    version;
+    id;
+    codigo;
+    nombre;
+    rubro;
+    listaPrecio;
+    unidad;
+    activo;
+    campoExtra;
     // buscablePor: string[];
     constructor(version, id, codigo, nombre, rubro, listaPrecio, unidad, activo, campoExtra
     // buscablePor: string[],
@@ -20,7 +26,6 @@ class Servicio {
         // this.buscablePor = buscablePor;
     }
 }
-exports.Servicio = Servicio;
 const ServicioConverter = {
     toFirestore(servicio) {
         return {};
@@ -30,9 +35,9 @@ const ServicioConverter = {
         const listaPrecio = {};
         if (data.listaPrecio != undefined &&
             data.listaPrecio != null &&
-            (0, lodash_1.isArray)(data.listaPrecio)) {
+            isArray(data.listaPrecio)) {
             data.listaPrecio.map((e) => {
-                listaPrecio[e["id"]] = new serviciosPrecios_1.ServiciosPrecios(e["id"], e["nombre"], e["tasa"], e["precioSinIva"], e["precioConIva"], e["moneda"], e["precioArbitrario"]);
+                listaPrecio[e["id"]] = new ServiciosPrecios(e["id"], e["nombre"], e["tasa"], e["precioSinIva"], e["precioConIva"], e["moneda"], e["precioArbitrario"]);
             });
         }
         return new Servicio(data.version, snapshot.id, data.codigo, data.nombre, data.rubro, listaPrecio, data.unidad, data.activo, data.campoExtra
@@ -40,4 +45,4 @@ const ServicioConverter = {
         );
     },
 };
-exports.ServicioConverter = ServicioConverter;
+export { Servicio, ServicioConverter };

@@ -1,7 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServiciosPreciosConverter = exports.ServiciosPrecios = void 0;
 class ServiciosPrecios {
+    id;
+    nombre;
+    tasa;
+    precioSinIva;
+    precioConIva;
+    moneda;
+    precioArbitrario;
     constructor(id, nombre, tasa, precioSinIva, precioConIva, moneda, precioArbitrario) {
         this.id = id;
         this.nombre = nombre;
@@ -12,7 +16,6 @@ class ServiciosPrecios {
         this.precioArbitrario = precioArbitrario;
     }
 }
-exports.ServiciosPrecios = ServiciosPrecios;
 const ServiciosPreciosConverter = {
     toFirestore(serviciosPreciosAux) {
         return {
@@ -30,4 +33,4 @@ const ServiciosPreciosConverter = {
         return new ServiciosPrecios(data.id, data.nombre, data.tasa, data.precioSinIva, data.precioConIva, data.moneda, data.precioArbitrario);
     },
 };
-exports.ServiciosPreciosConverter = ServiciosPreciosConverter;
+export { ServiciosPrecios, ServiciosPreciosConverter };

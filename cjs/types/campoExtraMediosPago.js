@@ -1,14 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CampoExtraMediosPagoConverter = exports.CampoExtraMediosPago = void 0;
 class CampoExtraMediosPago {
+    tipo;
+    nombre;
+    obligatorio;
     constructor(tipo, nombre, obligatorio) {
         this.tipo = tipo;
         this.nombre = nombre;
         this.obligatorio = obligatorio;
     }
 }
-exports.CampoExtraMediosPago = CampoExtraMediosPago;
 const CampoExtraMediosPagoConverter = {
     toFirestore(campoExtra) {
         return {
@@ -29,4 +28,4 @@ const CampoExtraMediosPagoConverter = {
     //   );
     // }
 };
-exports.CampoExtraMediosPagoConverter = CampoExtraMediosPagoConverter;
+export { CampoExtraMediosPago, CampoExtraMediosPagoConverter };

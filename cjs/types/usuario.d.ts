@@ -1,4 +1,4 @@
-import admin = require("firebase-admin");
+import * as admin from "firebase-admin";
 import { Empresa } from "./empresa";
 import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 declare class Usuario {

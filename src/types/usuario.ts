@@ -1,4 +1,4 @@
-import admin = require("firebase-admin");
+import * as admin from "firebase-admin";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";

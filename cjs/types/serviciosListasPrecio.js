@@ -1,8 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServiciosListasPrecioConverter = exports.ServiciosListasPrecio = void 0;
-const lodash_1 = require("lodash");
+import { isArray } from "lodash";
 class ServiciosListasPrecio {
+    version;
+    id;
+    nombre;
+    locales;
+    clonarId;
+    activo;
+    ultimaEdicion;
     constructor(version, id, nombre, locales, clonarId, activo, ultimaEdicion) {
         this.version = version;
         this.id = id;
@@ -13,7 +17,6 @@ class ServiciosListasPrecio {
         this.ultimaEdicion = ultimaEdicion;
     }
 }
-exports.ServiciosListasPrecio = ServiciosListasPrecio;
 const ServiciosListasPrecioConverter = {
     toFirestore(servicioListaPrecio) {
         return {};
@@ -23,7 +26,7 @@ const ServiciosListasPrecioConverter = {
         const locales = [];
         if (data.locales != undefined &&
             data.locales != null &&
-            (0, lodash_1.isArray)(data.locales)) {
+            isArray(data.locales)) {
             data.locales.map((e) => {
                 locales.push(e);
             });
@@ -31,4 +34,4 @@ const ServiciosListasPrecioConverter = {
         return new ServiciosListasPrecio(data.version, snapshot.id, data.nombre, locales, data.clonarId, data.activo, data.ultimaEdicion);
     },
 };
-exports.ServiciosListasPrecioConverter = ServiciosListasPrecioConverter;
+export { ServiciosListasPrecio, ServiciosListasPrecioConverter };

@@ -1,7 +1,23 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.clienteConverter = exports.Cliente = void 0;
 class Cliente {
+    id;
+    tipoDocumento;
+    documento;
+    razonSocial;
+    pais;
+    nombreComercial;
+    direccion;
+    localidad;
+    departamento;
+    direccionEntrega;
+    descuento;
+    emails;
+    mailDgi;
+    mailCopiaXml;
+    vendedores;
+    listaPrecioServicios;
+    esProveedor;
+    esCliente;
+    activo;
     constructor(id, tipoDocumento, documento, razonSocial, pais, nombreComercial, direccion, localidad, departamento, direccionEntrega, descuento, emails, mailDgi, mailCopiaXml, vendedores, listaPrecioServicios, esProveedor, esCliente, activo) {
         this.id = id;
         this.tipoDocumento = tipoDocumento;
@@ -24,7 +40,6 @@ class Cliente {
         this.activo = activo;
     }
 }
-exports.Cliente = Cliente;
 const clienteConverter = {
     toFirestore(cliente) {
         return {};
@@ -34,4 +49,4 @@ const clienteConverter = {
         return new Cliente(snapshot.id, data.tipoDocumento, data.documento, data.razonSocial, data.pais, data.nombreComercial, data.direccion, data.localidad, data.departamento, data.direccionEntrega, data.descuento, data.emails, data.mailDgi, data.mailCopiaXml, data.vendedores, data.listaPrecioServicios, data.esProveedor, data.esCliente, data.activo);
     },
 };
-exports.clienteConverter = clienteConverter;
+export { Cliente, clienteConverter };

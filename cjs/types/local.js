@@ -1,7 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.localConverter = exports.Local = void 0;
 class Local {
+    id;
+    nombreComercial;
+    nombre;
+    direccion;
+    localidad;
+    departamento;
+    codigoDgi;
+    logo;
+    logoURL;
+    activo;
+    ultimaEdicion;
     constructor(id, nombreComercial, nombre, direccion, localidad, departamento, codigoDgi, logo, logoURL, activo, ultimaEdicion) {
         this.id = id;
         this.nombreComercial = nombreComercial;
@@ -16,7 +24,6 @@ class Local {
         this.ultimaEdicion = ultimaEdicion;
     }
 }
-exports.Local = Local;
 const localConverter = {
     toFirestore(local) {
         return {
@@ -38,4 +45,4 @@ const localConverter = {
         return new Local(snapshot.id, data.nombreComercial, data.nombre, data.direccion, data.localidad, data.departamento, data.codigoDgi, data.logo, data.logoURL, data.activo, data.ultimaEdicion);
     },
 };
-exports.localConverter = localConverter;
+export { Local, localConverter };

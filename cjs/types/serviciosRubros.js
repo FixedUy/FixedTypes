@@ -1,7 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServiciosRubroConverter = exports.ServiciosRubro = void 0;
 class ServiciosRubro {
+    version;
+    id;
+    codigo;
+    nombre;
+    padreId;
+    nombreCompleto;
+    activo;
+    esHoja;
+    ultimaEdicion;
     constructor(version, id, codigo, nombre, padreId, nombreCompleto, activo, esHoja, ultimaEdicion) {
         this.version = version;
         this.id = id;
@@ -14,7 +20,6 @@ class ServiciosRubro {
         this.ultimaEdicion = ultimaEdicion;
     }
 }
-exports.ServiciosRubro = ServiciosRubro;
 const ServiciosRubroConverter = {
     toFirestore(servicioRubros) {
         return {};
@@ -24,4 +29,4 @@ const ServiciosRubroConverter = {
         return new ServiciosRubro(data.version, snapshot.id, data.codigo, data.nombre, data.padreId, data.nombreCompleto, data.activo, data.esHoja, data.ultimaEdicion);
     },
 };
-exports.ServiciosRubroConverter = ServiciosRubroConverter;
+export { ServiciosRubro, ServiciosRubroConverter };

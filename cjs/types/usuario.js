@@ -1,9 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.usuarioConverterAdmin = exports.usuarioConverter = exports.Usuario = void 0;
-const empresa_1 = require("./empresa");
-const lodash_1 = require("lodash");
+import { Empresa } from "./empresa";
+import { isArray } from "lodash";
 class Usuario {
+    id;
+    nombre;
+    mail;
+    creadoEl;
+    creadoElString;
+    empresas;
+    vendedor;
+    activo;
+    ultimaEdicion;
     constructor(id, nombre, mail, creadoEl, empresas, vendedor, activo, ultimaEdicion) {
         this.id = id;
         this.nombre = nombre;
@@ -54,14 +60,13 @@ class Usuario {
         }
     }
 }
-exports.Usuario = Usuario;
 const generarUsuario = (documentId, data) => {
     const empresas = [];
     if (data.empresas != undefined &&
         data.empresas != null &&
-        (0, lodash_1.isArray)(data.empresas)) {
+        isArray(data.empresas)) {
         data.empresas.map((e) => {
-            empresas.push(new empresa_1.Empresa(e["id"], e["nombreComercial"], e["rut"], e["razonSocial"], e["logoURL"]));
+            empresas.push(new Empresa(e["id"], e["nombreComercial"], e["rut"], e["razonSocial"], e["logoURL"]));
         });
     }
     return new Usuario(documentId, data.nombre, data.mail, data.creadoEl, empresas, data.vendedor, data.activo, data.ultimaEdicion);
@@ -75,7 +80,6 @@ const usuarioConverter = {
         return generarUsuario(snapshot.id, data);
     },
 };
-exports.usuarioConverter = usuarioConverter;
 const usuarioConverterAdmin = {
     toFirestore(Usuario) {
         return { nombre: Usuario.nombre };
@@ -85,4 +89,4 @@ const usuarioConverterAdmin = {
         return generarUsuario(snapshot.id, data);
     },
 };
-exports.usuarioConverterAdmin = usuarioConverterAdmin;
+export { Usuario, usuarioConverter, usuarioConverterAdmin };

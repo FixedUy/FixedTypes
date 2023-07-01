@@ -1,7 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.usuarioSistemaInvitacionConverter = exports.UsuarioSistemaInvitacion = void 0;
 class UsuarioSistemaInvitacion {
+    id;
+    mail;
+    nombre;
+    vendedor;
+    enviadaPorNombre;
+    enviadaPorMail;
+    enviadaEl;
+    enviadaElString;
     constructor(id, mail, nombre, vendedor, enviadaPorNombre, enviadaPorMail, fechaTimestamp) {
         this.id = id;
         this.mail = mail;
@@ -52,15 +57,13 @@ class UsuarioSistemaInvitacion {
         }
     }
 }
-exports.UsuarioSistemaInvitacion = UsuarioSistemaInvitacion;
 const usuarioSistemaInvitacionConverter = {
     toFirestore(Usuario) {
         return { nombre: Usuario.nombre };
     },
     fromFirestore(snapshot) {
-        var _a;
         const data = snapshot.data();
-        return new UsuarioSistemaInvitacion(snapshot.id, data.mail, data.nombre, data.vendedor, data.enviadaPorNombre, data.enviadaPorMail, (_a = data.enviadaEl) === null || _a === void 0 ? void 0 : _a.seconds);
+        return new UsuarioSistemaInvitacion(snapshot.id, data.mail, data.nombre, data.vendedor, data.enviadaPorNombre, data.enviadaPorMail, data.enviadaEl?.seconds);
     },
 };
-exports.usuarioSistemaInvitacionConverter = usuarioSistemaInvitacionConverter;
+export { UsuarioSistemaInvitacion, usuarioSistemaInvitacionConverter };

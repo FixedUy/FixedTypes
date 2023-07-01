@@ -1,7 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.centroCostosConverter = exports.CentroCostos = void 0;
 class CentroCostos {
+    id;
+    nombre;
+    valorExportacion;
+    superior;
     constructor(id, nombre, valorExportacion, superior) {
         this.id = id;
         this.nombre = nombre;
@@ -9,7 +10,6 @@ class CentroCostos {
         this.superior = superior;
     }
 }
-exports.CentroCostos = CentroCostos;
 const centroCostosConverter = {
     toFirestore(centroCostos) {
         return {};
@@ -19,4 +19,4 @@ const centroCostosConverter = {
         return new CentroCostos(snapshot.id, data.nombre, data.valorExportacion, data.superior);
     },
 };
-exports.centroCostosConverter = centroCostosConverter;
+export { CentroCostos, centroCostosConverter };

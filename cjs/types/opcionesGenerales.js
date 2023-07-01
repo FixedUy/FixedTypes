@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.defecto = void 0;
-exports.defecto = {
+export const defecto = {
     defecto: {
         nombreComercial: "",
         logoGeneral: "",

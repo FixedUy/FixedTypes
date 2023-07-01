@@ -1,9 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MediosPagoConverter = exports.MediosPago = void 0;
-const campoExtraMediosPago_1 = require("./campoExtraMediosPago");
-const lodash_1 = require("lodash");
+import { CampoExtraMediosPago } from "./campoExtraMediosPago";
+import { isArray } from "lodash";
 class MediosPago {
+    version;
+    id;
+    nombre;
+    identificable;
+    requiereVencimiento;
+    camposExtra;
+    activo;
+    ultimaEdicion;
     constructor(version, id, nombre, identificable, requiereVencimiento, camposExtra, activo, ultimaEdicion) {
         this.version = version;
         this.id = id;
@@ -15,7 +20,6 @@ class MediosPago {
         this.ultimaEdicion = ultimaEdicion;
     }
 }
-exports.MediosPago = MediosPago;
 const MediosPagoConverter = {
     toFirestore(mediosPago) {
         return {};
@@ -25,12 +29,12 @@ const MediosPagoConverter = {
         const campoExtraMediosPago = [];
         if (data.camposExtra != undefined &&
             data.camposExtra != null &&
-            (0, lodash_1.isArray)(data.camposExtra)) {
+            isArray(data.camposExtra)) {
             data.camposExtra.map((e) => {
-                campoExtraMediosPago.push(new campoExtraMediosPago_1.CampoExtraMediosPago(e["tipo"], e["nombre"], e["obligatorio"]));
+                campoExtraMediosPago.push(new CampoExtraMediosPago(e["tipo"], e["nombre"], e["obligatorio"]));
             });
         }
         return new MediosPago(data.version, snapshot.id, data.nombre, data.identificable, data.requiereVencimiento, campoExtraMediosPago, data.activo, data.ultimaEdicion);
     },
 };
-exports.MediosPagoConverter = MediosPagoConverter;
+export { MediosPago, MediosPagoConverter };

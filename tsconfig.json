@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "declaration": true,
+    "allowArbitraryExtensions": true,
     "outDir": "cjs"
   },
   "include": ["src/**/*.ts"],
