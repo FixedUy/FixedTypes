@@ -1,8 +1,3 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-} from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 
