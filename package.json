@@ -1,12 +1,13 @@
 {
-  "name": "FixedTypes",
-  "version": "1.1.31",
+  "name": "fixedtypespackage",
+  "version": "1.1.33",
   "type": "module",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,11 @@
   "homepage": "https://github.com/FixedUy/FixedTypes#readme",
   "devDependencies": {
     "@types/lodash": "^4.14.167",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.44.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
     "typescript": "^4.9.0"
   },
   "engines": {

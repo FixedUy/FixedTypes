@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 class Moneda {
   id: string;
   nombre: string;

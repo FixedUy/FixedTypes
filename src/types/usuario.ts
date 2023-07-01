@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
 

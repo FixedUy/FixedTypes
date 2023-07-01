@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 class CampoExtraMediosPago {
   tipo: string;
   nombre: string;

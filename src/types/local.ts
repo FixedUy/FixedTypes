@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 class Local {
   id: string;
   nombreComercial: string;

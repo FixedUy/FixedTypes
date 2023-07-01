@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { ServiciosListasPrecio } from "./serviciosListasPrecio";
 
 class Cliente {

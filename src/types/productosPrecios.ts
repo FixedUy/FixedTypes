@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { TasaIVA } from "./tasaIVA";
 import { Moneda } from "./moneda";
 

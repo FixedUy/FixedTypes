@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { CampoExtraMediosPago } from "./campoExtraMediosPago";
 import { isArray } from "lodash";
 

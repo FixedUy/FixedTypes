@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { isArray } from "lodash";
 import { ProductosPrecios } from "./productosPrecios";
 import { ProductosRubro } from "./productosRubros";

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 class ServiciosRubro {
   version: number;
   id: string;
