@@ -1,7 +1,7 @@
 import {
   DocumentData,
   QueryDocumentSnapshot,
-  SnapshotOptions,
+  SnapshotOptions
 } from "firebase/firestore";
 
 class Local {
@@ -57,11 +57,14 @@ const localConverter = {
       logo: local.logo,
       logoURL: local.logoURL,
       activo: local.activo,
-      ultimaEdicion: local.ultimaEdicion,
+      ultimaEdicion: local.ultimaEdicion
     };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): Local {
-    const data = snapshot.data()!;
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): Local {
+    const data = snapshot.data(options)!;
     return new Local(
       snapshot.id,
       data.nombreComercial,
@@ -75,7 +78,7 @@ const localConverter = {
       data.activo,
       data.ultimaEdicion
     );
-  },
+  }
 };
 
 export { Local, localConverter };

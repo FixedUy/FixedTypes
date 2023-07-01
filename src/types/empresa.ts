@@ -2,7 +2,7 @@ import {
   DocumentData,
   QueryDocumentSnapshot,
   SnapshotOptions,
-  WithFieldValue,
+  WithFieldValue
 } from "firebase/firestore";
 
 class Empresa {
@@ -31,8 +31,11 @@ const empresaConverter = {
   toFirestore(empresa: Empresa): DocumentData {
     return { nombreComercial: empresa.nombreComercial };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): Empresa {
-    const data = snapshot.data()!;
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): Empresa {
+    const data = snapshot.data(options)!;
     return new Empresa(
       data.id,
       data.nombreComercial,
@@ -40,7 +43,7 @@ const empresaConverter = {
       data.razonSocial,
       data.logoURL
     );
-  },
+  }
 };
 
 export { Empresa, empresaConverter };

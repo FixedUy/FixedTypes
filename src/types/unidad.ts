@@ -2,7 +2,7 @@ import {
   DocumentData,
   QueryDocumentSnapshot,
   SnapshotOptions,
-  WithFieldValue,
+  WithFieldValue
 } from "firebase/firestore";
 import { isArray } from "lodash";
 
@@ -32,8 +32,11 @@ const UnidadConverter = {
   toFirestore(unidad: Unidad): DocumentData {
     return {};
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): Unidad {
-    const data = snapshot.data()!;
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): Unidad {
+    const data = snapshot.data(options)!;
     return new Unidad(
       data.version,
       snapshot.id,
@@ -41,6 +44,6 @@ const UnidadConverter = {
       data.activo,
       data.ultimaEdicion
     );
-  },
+  }
 };
 export { Unidad, UnidadConverter };

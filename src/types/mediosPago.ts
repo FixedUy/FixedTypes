@@ -42,8 +42,11 @@ const MediosPagoConverter = {
   toFirestore(mediosPago: MediosPago): DocumentData {
     return {};
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): MediosPago {
-    const data = snapshot.data()!;
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): MediosPago {
+    const data = snapshot.data(options)!;
 
     const campoExtraMediosPago: CampoExtraMediosPago[] = [];
     if (

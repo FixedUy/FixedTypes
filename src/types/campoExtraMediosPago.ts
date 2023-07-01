@@ -24,8 +24,11 @@ const CampoExtraMediosPagoConverter = {
       obligatorio: campoExtra.obligatorio,
     };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot): CampoExtraMediosPago {
-    const data = snapshot.data()!;
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): CampoExtraMediosPago {
+    const data = snapshot.data(options)!;
     return new CampoExtraMediosPago(data.tipo, data.nombre, data.obligatorio);
   },
   // fromDataObject(data: any): CampoExtraMediosPago {

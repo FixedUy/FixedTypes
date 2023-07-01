@@ -1,7 +1,10 @@
-// import * as admin from "firebase-admin";
+import {
+  DocumentData,
+  QueryDocumentSnapshot,
+  SnapshotOptions,
+} from "firebase/firestore";
 import { Empresa } from "./empresa";
 import { isArray } from "lodash";
-import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 
 class Usuario {
   id: string;
@@ -74,59 +77,45 @@ class Usuario {
   }
 }
 
-const generarUsuario = (documentId: string, data: DocumentData) => {
-  const empresas: Empresa[] = [];
-  if (
-    data.empresas != undefined &&
-    data.empresas != null &&
-    isArray(data.empresas)
-  ) {
-    data.empresas.map((e) => {
-      empresas.push(
-        new Empresa(
-          e["id"],
-          e["nombreComercial"],
-          e["rut"],
-          e["razonSocial"],
-          e["logoURL"]
-        )
-      );
-    });
-  }
-
-  return new Usuario(
-    documentId,
-    data.nombre,
-    data.mail,
-    data.creadoEl,
-    empresas,
-    data.vendedor,
-    data.activo,
-    data.ultimaEdicion
-  );
-};
-
 const usuarioConverter = {
   toFirestore(Usuario: Usuario): DocumentData {
     return { nombre: Usuario.nombre };
   },
-  fromFirestore(snapshot: QueryDocumentSnapshot<DocumentData>): Usuario {
-    const data = snapshot.data();
-    return generarUsuario(snapshot.id, data);
+  fromFirestore(
+    snapshot: QueryDocumentSnapshot,
+    options: SnapshotOptions
+  ): Usuario {
+    const data = snapshot.data(options)!;
+    const empresas: Empresa[] = [];
+    if (
+      data.empresas != undefined &&
+      data.empresas != null &&
+      isArray(data.empresas)
+    ) {
+      data.empresas.map((e) => {
+        empresas.push(
+          new Empresa(
+            e["id"],
+            e["nombreComercial"],
+            e["rut"],
+            e["razonSocial"],
+            e["logoURL"]
+          )
+        );
+      });
+    }
+
+    return new Usuario(
+      snapshot.id,
+      data.nombre,
+      data.mail,
+      data.creadoEl,
+      empresas,
+      data.vendedor,
+      data.activo,
+      data.ultimaEdicion
+    );
   },
 };
 
-// const usuarioConverterAdmin = {
-//   toFirestore(Usuario: Usuario): admin.firestore.DocumentData {
-//     return { nombre: Usuario.nombre };
-//   },
-//   fromFirestore(
-//     snapshot: admin.firestore.QueryDocumentSnapshot<admin.firestore.DocumentData>
-//   ): Usuario {
-//     const data = snapshot.data();
-//     return generarUsuario(snapshot.id, data);
-//   },
-// };
-
-// export { Usuario, usuarioConverter, usuarioConverterAdmin };
 export { Usuario, usuarioConverter };
