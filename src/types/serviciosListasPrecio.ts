@@ -1,4 +1,3 @@
-import { Local } from "./local";
 import { isArray } from "lodash";
 
 class ServiciosListasPrecio {
