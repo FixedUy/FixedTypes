@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable require-jsdoc */
 import {Empresa} from "./empresa";
-import {isArray} from "lodash";
 
 export class Usuario {
   id: string;
