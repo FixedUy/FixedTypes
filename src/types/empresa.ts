@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable require-jsdoc */
-class Empresa {
+export class Empresa {
   id: string;
   nombreComercial: string;
   rut: string;
@@ -23,21 +23,3 @@ class Empresa {
     this.logoURL = logoURL;
   }
 }
-
-const empresaConverter = {
-  toFirestore(empresa: Empresa) {
-    return {nombreComercial: empresa.nombreComercial};
-  },
-  fromFirestore(snapshot: any): Empresa {
-    const data = snapshot.data()!;
-    return new Empresa(
-      data.id,
-      data.nombreComercial,
-      data.rut,
-      data.razonSocial,
-      data.logoURL
-    );
-  }
-};
-
-export {Empresa, empresaConverter};
