@@ -1,25 +1,25 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable require-jsdoc */
-export class Empresa {
+interface Empresa {
   id: string;
   nombreComercial: string;
   rut: string;
   razonSocial: string;
   logoURL: string;
-
-  constructor(
-    id: string,
-    nombreComercial: string,
-    rut: string,
-    razonSocial: string,
-    logoURL: string
-  ) {
-    this.id = id;
-    this.nombreComercial = nombreComercial;
-    this.rut = rut;
-    this.razonSocial = razonSocial;
-    this.logoURL = logoURL;
-  }
 }
+
+const empresaConverter = {
+  toFirestore(empresa: Empresa) {
+    return {nombreComercial: empresa.nombreComercial};
+  },
+  fromFirestore(snapshot: any): Empresa {
+    const data = snapshot.data()!;
+    return {
+      id: data.id,
+      nombreComercial: data.nombreComercial,
+      rut: data.rut,
+      razonSocial: data.razonSocial,
+      logoURL: data.logoURL
+    };
+  }
+};
+
+export {type Empresa, empresaConverter};

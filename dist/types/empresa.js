@@ -1,17 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Empresa = void 0;
-/* eslint-disable arrow-parens */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable require-jsdoc */
-class Empresa {
-    constructor(id, nombreComercial, rut, razonSocial, logoURL) {
-        this.id = id;
-        this.nombreComercial = nombreComercial;
-        this.rut = rut;
-        this.razonSocial = razonSocial;
-        this.logoURL = logoURL;
+exports.empresaConverter = void 0;
+const empresaConverter = {
+    toFirestore(empresa) {
+        return { nombreComercial: empresa.nombreComercial };
+    },
+    fromFirestore(snapshot) {
+        const data = snapshot.data();
+        return {
+            id: data.id,
+            nombreComercial: data.nombreComercial,
+            rut: data.rut,
+            razonSocial: data.razonSocial,
+            logoURL: data.logoURL
+        };
     }
-}
-exports.Empresa = Empresa;
+};
+exports.empresaConverter = empresaConverter;
