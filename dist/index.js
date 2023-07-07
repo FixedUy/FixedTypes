@@ -38,4 +38,3 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./types/usuario"), exports);
 __exportStar(require("./types/empresa"), exports);
-__exportStar(require("./types/usuarioConverter"), exports);

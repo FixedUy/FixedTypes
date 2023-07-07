@@ -1,5 +1,5 @@
 import { Empresa } from "./empresa";
-export declare class Usuario {
+interface Usuario {
     id: string;
     nombre: string;
     mail: string;
@@ -9,5 +9,11 @@ export declare class Usuario {
     vendedor: boolean;
     activo: boolean;
     ultimaEdicion: number;
-    constructor(id: string, nombre: string, mail: string, creadoEl: number, empresas: Empresa[], vendedor: boolean, activo: boolean, ultimaEdicion: number);
 }
+declare const usuarioConverter: {
+    toFirestore(Usuario: Usuario): {
+        nombre: string;
+    };
+    fromFirestore(snapshot: any): Usuario;
+};
+export { type Usuario, usuarioConverter };

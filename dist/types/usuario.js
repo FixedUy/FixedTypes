@@ -1,56 +1,44 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Usuario = void 0;
-class Usuario {
-    constructor(id, nombre, mail, creadoEl, empresas, vendedor, activo, ultimaEdicion) {
-        this.id = id;
-        this.nombre = nombre;
-        this.mail = mail;
-        this.creadoEl = creadoEl;
-        this.empresas = empresas;
-        this.vendedor = vendedor;
-        this.activo = activo;
-        this.ultimaEdicion = ultimaEdicion;
-        if (creadoEl != null) {
-            const fecha = new Date(creadoEl);
-            const diaNumber = fecha.getDate();
-            let dia = "";
-            if (diaNumber < 10) {
-                dia = "0" + diaNumber;
-            }
-            else {
-                dia = diaNumber.toString();
-            }
-            const mesNumber = fecha.getMonth() + 1;
-            let mes = "";
-            if (mesNumber < 10) {
-                mes = "0" + mesNumber;
-            }
-            else {
-                mes = mesNumber.toString();
-            }
-            const horaNumber = fecha.getHours() + 1;
-            let hora = "";
-            if (horaNumber < 10) {
-                hora = "0" + horaNumber;
-            }
-            else {
-                hora = horaNumber.toString();
-            }
-            const minutoNumber = fecha.getMinutes() + 1;
-            let minuto = "";
-            if (minutoNumber < 10) {
-                minuto = "0" + minutoNumber;
-            }
-            else {
-                minuto = minutoNumber.toString();
-            }
-            // eslint-disable-next-line max-len
-            this.creadoElString = `${dia}/${mes}/${fecha.getFullYear()} ${hora}:${minuto}`;
+exports.usuarioConverter = void 0;
+/* eslint-disable arrow-parens */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable require-jsdoc */
+const empresa_1 = require("./empresa");
+const usuarioConverter = {
+    toFirestore(Usuario) {
+        return { nombre: Usuario.nombre };
+    },
+    fromFirestore(snapshot) {
+        const data = snapshot.data();
+        const empresas = [];
+        if (data.empresas != undefined &&
+            data.empresas != null &&
+            Array.isArray(data.empresas)) {
+            data.empresas.map((e) => {
+                empresas.push(new empresa_1.Empresa(e["id"], e["nombreComercial"], e["rut"], e["razonSocial"], e["logoURL"]));
+            });
         }
-        else {
-            this.creadoElString = "";
-        }
+        return {
+            id: snapshot.id,
+            nombre: data.nombre,
+            mail: data.mail,
+            creadoEl: data.creadoEl,
+            creadoElString: data.nombre,
+            empresas: empresas,
+            vendedor: data.vendedor,
+            activo: data.activo,
+            ultimaEdicion: data.creadoEl
+        };
+        // snapshot.id,
+        // data.nombre,
+        // data.mail,
+        // data.creadoEl,
+        // empresas,
+        // data.vendedor,
+        // data.activo,
+        // data.ultimaEdicion
     }
-}
-exports.Usuario = Usuario;
+};
+exports.usuarioConverter = usuarioConverter;
