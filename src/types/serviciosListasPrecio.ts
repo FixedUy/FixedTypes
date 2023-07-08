@@ -1,13 +1,6 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue
-} from "firebase/firestore";
-import {Local} from "./local";
 import {isArray} from "lodash";
 
-class ServiciosListasPrecio {
+interface ServiciosListasPrecio {
   version: number;
   id: string;
   nombre: string;
@@ -15,35 +8,14 @@ class ServiciosListasPrecio {
   clonarId: string;
   activo: boolean;
   ultimaEdicion: number;
-
-  constructor(
-    version: number,
-    id: string,
-    nombre: string,
-    locales: string[],
-    clonarId: string,
-    activo: boolean,
-    ultimaEdicion: number
-  ) {
-    this.version = version;
-    this.id = id;
-    this.nombre = nombre;
-    this.locales = locales;
-    this.clonarId = clonarId;
-    this.activo = activo;
-    this.ultimaEdicion = ultimaEdicion;
-  }
 }
 
-const ServiciosListasPrecioConverter = {
-  toFirestore(servicioListaPrecio: ServiciosListasPrecio): DocumentData {
+const serviciosListasPrecioConverter = {
+  toFirestore(servicioListaPrecio: ServiciosListasPrecio) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): ServiciosListasPrecio {
-    const data = snapshot.data(options)!;
+  fromFirestore(snapshot: any): ServiciosListasPrecio {
+    const data = snapshot.data()!;
 
     const locales: string[] = [];
     if (
@@ -56,16 +28,16 @@ const ServiciosListasPrecioConverter = {
       });
     }
 
-    return new ServiciosListasPrecio(
-      data.version,
-      snapshot.id,
-      data.nombre,
-      locales,
-      data.clonarId,
-      data.activo,
-      data.ultimaEdicion
-    );
+    return {
+      version: data.version,
+      id: snapshot.id,
+      nombre: data.nombre,
+      locales: locales,
+      clonarId: data.clonarId,
+      activo: data.activo,
+      ultimaEdicion: data.ultimaEdicion
+    };
   }
 };
 
-export {ServiciosListasPrecio, ServiciosListasPrecioConverter};
+export {type ServiciosListasPrecio, serviciosListasPrecioConverter};

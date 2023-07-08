@@ -1,5 +1,4 @@
-import { DocumentData, QueryDocumentSnapshot, SnapshotOptions } from "firebase/firestore";
-declare class ProductosRubro {
+interface ProductosRubro {
     version: number;
     id: string;
     codigo: string;
@@ -9,10 +8,9 @@ declare class ProductosRubro {
     activo: boolean;
     esHoja: boolean;
     ultimaEdicion: number;
-    constructor(version: number, id: string, codigo: string, nombre: string, padreId: string | null, nombreCompleto: string, activo: boolean, esHoja: boolean, ultimaEdicion: number);
 }
-declare const ProductosRubroConverter: {
-    toFirestore(servicioRubros: ProductosRubro): DocumentData;
-    fromFirestore(snapshot: QueryDocumentSnapshot, options: SnapshotOptions): ProductosRubro;
+declare const productosRubroConverter: {
+    toFirestore(servicioRubros: ProductosRubro): {};
+    fromFirestore(snapshot: any): ProductosRubro;
 };
-export { ProductosRubro, ProductosRubroConverter };
+export { type ProductosRubro, productosRubroConverter };

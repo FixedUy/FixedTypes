@@ -1,25 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductosListasPrecioConverter = exports.ProductosListasPrecio = void 0;
+exports.productosListasPrecioConverter = void 0;
 const lodash_1 = require("lodash");
-class ProductosListasPrecio {
-    constructor(version, id, nombre, locales, clonarId, activo, ultimaEdicion) {
-        this.version = version;
-        this.id = id;
-        this.nombre = nombre;
-        this.locales = locales;
-        this.clonarId = clonarId;
-        this.activo = activo;
-        this.ultimaEdicion = ultimaEdicion;
-    }
-}
-exports.ProductosListasPrecio = ProductosListasPrecio;
-const ProductosListasPrecioConverter = {
+const productosListasPrecioConverter = {
     toFirestore(productoListaPrecio) {
         return {};
     },
-    fromFirestore(snapshot, options) {
-        const data = snapshot.data(options);
+    fromFirestore(snapshot) {
+        const data = snapshot.data();
         const locales = [];
         if (data.locales != undefined &&
             data.locales != null &&
@@ -28,7 +16,15 @@ const ProductosListasPrecioConverter = {
                 locales.push(e);
             });
         }
-        return new ProductosListasPrecio(data.version, snapshot.id, data.nombre, locales, data.clonarId, data.activo, data.ultimaEdicion);
+        return {
+            version: data.version,
+            id: snapshot.id,
+            nombre: data.nombre,
+            locales: locales,
+            clonarId: data.clonarId,
+            activo: data.activo,
+            ultimaEdicion: data.ultimaEdicion
+        };
     }
 };
-exports.ProductosListasPrecioConverter = ProductosListasPrecioConverter;
+exports.productosListasPrecioConverter = productosListasPrecioConverter;

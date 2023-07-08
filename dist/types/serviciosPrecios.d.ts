@@ -1,18 +1,22 @@
-import { DocumentData, QueryDocumentSnapshot, SnapshotOptions } from "firebase/firestore";
-import { TasaIVA } from "./tasaIVA";
 import { Moneda } from "./moneda";
-declare class ServiciosPrecios {
-    id: string;
-    nombre: string;
+import { TasaIVA } from "./tasaIVA";
+interface ServiciosPrecios {
+    idLista: string;
     tasa: TasaIVA | string;
     precioSinIva: number;
     precioConIva: number;
     moneda: Moneda | string;
     precioArbitrario: boolean;
-    constructor(id: string, nombre: string, tasa: TasaIVA | string, precioSinIva: number, precioConIva: number, moneda: Moneda | string, precioArbitrario: boolean);
 }
-declare const ServiciosPreciosConverter: {
-    toFirestore(serviciosPreciosAux: ServiciosPrecios): DocumentData;
-    fromFirestore(snapshot: QueryDocumentSnapshot, options: SnapshotOptions): ServiciosPrecios;
+declare const serviciosPreciosConverter: {
+    toFirestore(lista: ServiciosPrecios): {
+        idLista: string;
+        tasa: string | TasaIVA;
+        precioSinIva: number;
+        precioConIva: number;
+        moneda: string | Moneda;
+        precioArbitrario: boolean;
+    };
+    fromFirestore(snapshot: any): ServiciosPrecios;
 };
-export { ServiciosPrecios, ServiciosPreciosConverter };
+export { type ServiciosPrecios, serviciosPreciosConverter };

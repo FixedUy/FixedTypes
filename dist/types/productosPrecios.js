@@ -1,33 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductosPreciosConverter = exports.ProductosPrecios = void 0;
-class ProductosPrecios {
-    constructor(id, nombre, tasa, precioSinIva, precioConIva, moneda, precioArbitrario) {
-        this.id = id;
-        this.nombre = nombre;
-        this.tasa = tasa;
-        this.precioSinIva = precioSinIva;
-        this.precioConIva = precioConIva;
-        this.moneda = moneda;
-        this.precioArbitrario = precioArbitrario;
-    }
-}
-exports.ProductosPrecios = ProductosPrecios;
-const ProductosPreciosConverter = {
-    toFirestore(productosPreciosAux) {
+exports.productosPreciosConverter = void 0;
+const productosPreciosConverter = {
+    toFirestore(lista) {
         return {
-            id: productosPreciosAux.id,
-            nombre: productosPreciosAux.nombre,
-            tasa: productosPreciosAux.tasa,
-            precioSinIva: productosPreciosAux.precioSinIva,
-            precioConIva: productosPreciosAux.precioConIva,
-            moneda: productosPreciosAux.moneda,
-            precioArbitrario: productosPreciosAux.precioArbitrario
+            idLista: lista.idLista,
+            tasa: lista.tasa,
+            precioSinIva: lista.precioSinIva,
+            precioConIva: lista.precioConIva,
+            moneda: lista.moneda,
+            precioArbitrario: lista.precioArbitrario
         };
     },
-    fromFirestore(snapshot, options) {
-        const data = snapshot.data(options);
-        return new ProductosPrecios(data.id, data.nombre, data.tasa, data.precioSinIva, data.precioConIva, data.moneda, data.precioArbitrario);
+    fromFirestore(snapshot) {
+        const data = snapshot.data();
+        return {
+            idLista: data.idLista,
+            precioSinIva: data.precioSinIva,
+            precioConIva: data.precioConIva,
+            moneda: data.moneda,
+            tasa: data.tasa,
+            precioArbitrario: data.precioArbitrario
+        };
     }
 };
-exports.ProductosPreciosConverter = ProductosPreciosConverter;
+exports.productosPreciosConverter = productosPreciosConverter;

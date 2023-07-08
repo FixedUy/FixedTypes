@@ -1,14 +1,7 @@
-import {
-  DocumentData,
-  QueryDocumentSnapshot,
-  SnapshotOptions,
-  WithFieldValue
-} from "firebase/firestore";
-import {isArray} from "lodash";
 import {ServiciosPrecios} from "./serviciosPrecios";
 import {ServiciosRubro} from "./serviciosRubros";
 
-class Servicio {
+interface Servicio {
   version: number;
   id: string;
   codigo: string[];
@@ -18,75 +11,27 @@ class Servicio {
   unidad: string;
   activo: boolean;
   campoExtra: {[key: string]: string};
-
-  // buscablePor: string[];
-
-  constructor(
-    version: number,
-    id: string,
-    codigo: string[],
-    nombre: string,
-    rubro: ServiciosRubro | string,
-    listaPrecio: {[key: string]: ServiciosPrecios},
-    unidad: string,
-    activo: boolean,
-    campoExtra: {[key: string]: string}
-    // buscablePor: string[],
-  ) {
-    this.version = version;
-    this.id = id;
-    this.codigo = codigo;
-    this.nombre = nombre;
-    this.rubro = rubro;
-    this.listaPrecio = listaPrecio;
-    this.unidad = unidad;
-    this.activo = activo;
-    this.campoExtra = campoExtra;
-    // this.buscablePor = buscablePor;
-  }
 }
 
-const ServicioConverter = {
-  toFirestore(servicio: Servicio): DocumentData {
+const servicioConverter = {
+  toFirestore(servicio: Servicio) {
     return {};
   },
-  fromFirestore(
-    snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions
-  ): Servicio {
-    const data = snapshot.data(options)!;
-    const listaPrecio: {[key: string]: ServiciosPrecios} = {};
-    if (
-      data.listaPrecio != undefined &&
-      data.listaPrecio != null &&
-      isArray(data.listaPrecio)
-    ) {
-      data.listaPrecio.map(e => {
-        listaPrecio[e["id"]] = new ServiciosPrecios(
-          e["id"],
-          e["nombre"],
-          e["tasa"],
-          e["precioSinIva"],
-          e["precioConIva"],
-          e["moneda"],
-          e["precioArbitrario"]
-        );
-      });
-    }
+  fromFirestore(snapshot: any): Servicio {
+    const data = snapshot.data()!;
 
-    return new Servicio(
-      data.version,
-      snapshot.id,
-      data.codigo,
-      data.nombre,
-      data.rubro,
-      listaPrecio,
-      data.unidad,
-      data.activo,
-      data.campoExtra
-      // data.buscablePor,
-    );
+    return {
+      version: data.version,
+      id: snapshot.id,
+      codigo: data.codigo,
+      nombre: data.nombre,
+      rubro: data.rubro,
+      listaPrecio: data.listaPrecio,
+      unidad: data.unidad,
+      activo: data.activo,
+      campoExtra: data.campoExtra
+    };
   }
 };
 
-export {Servicio, ServicioConverter};
+export {type Servicio, servicioConverter};

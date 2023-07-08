@@ -1,5 +1,4 @@
-import { DocumentData, QueryDocumentSnapshot, SnapshotOptions } from "firebase/firestore";
-declare class ServiciosListasPrecio {
+interface ServiciosListasPrecio {
     version: number;
     id: string;
     nombre: string;
@@ -7,10 +6,9 @@ declare class ServiciosListasPrecio {
     clonarId: string;
     activo: boolean;
     ultimaEdicion: number;
-    constructor(version: number, id: string, nombre: string, locales: string[], clonarId: string, activo: boolean, ultimaEdicion: number);
 }
-declare const ServiciosListasPrecioConverter: {
-    toFirestore(servicioListaPrecio: ServiciosListasPrecio): DocumentData;
-    fromFirestore(snapshot: QueryDocumentSnapshot, options: SnapshotOptions): ServiciosListasPrecio;
+declare const serviciosListasPrecioConverter: {
+    toFirestore(servicioListaPrecio: ServiciosListasPrecio): {};
+    fromFirestore(snapshot: any): ServiciosListasPrecio;
 };
-export { ServiciosListasPrecio, ServiciosListasPrecioConverter };
+export { type ServiciosListasPrecio, serviciosListasPrecioConverter };
