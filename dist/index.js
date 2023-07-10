@@ -44,6 +44,7 @@ __exportStar(require("./types/usuariosSistemaInvitacion"), exports);
 __exportStar(require("./types/usuario"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
+__exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
 __exportStar(require("./types/cloudFunctions/actualizarDatosEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/actualizarUsuarioDeEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/enviarMailInvitacion"), exports);
