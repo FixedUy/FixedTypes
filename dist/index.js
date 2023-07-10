@@ -43,5 +43,10 @@ __exportStar(require("./types/unidad"), exports);
 __exportStar(require("./types/usuariosSistemaInvitacion"), exports);
 __exportStar(require("./types/usuario"), exports);
 // cloud functions
-__exportStar(require("./types/cloudFunctions/registrarEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/response"), exports);
+__exportStar(require("./types/cloudFunctions/actualizarDatosEmpresa"), exports);
+__exportStar(require("./types/cloudFunctions/actualizarUsuarioDeEmpresa"), exports);
+__exportStar(require("./types/cloudFunctions/enviarMailInvitacion"), exports);
+__exportStar(require("./types/cloudFunctions/invitacionAceptar"), exports);
+__exportStar(require("./types/cloudFunctions/invitacionRechazar"), exports);
+__exportStar(require("./types/cloudFunctions/registrarEmpresa"), exports);
