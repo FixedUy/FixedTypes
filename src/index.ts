@@ -28,5 +28,10 @@ export * from "./types/usuariosSistemaInvitacion";
 export * from "./types/usuario";
 
 // cloud functions
-export * from "./types/cloudFunctions/registrarEmpresa";
 export * from "./types/cloudFunctions/response";
+export * from "./types/cloudFunctions/actualizarDatosEmpresa";
+export * from "./types/cloudFunctions/actualizarUsuarioDeEmpresa";
+export * from "./types/cloudFunctions/enviarMailInvitacion";
+export * from "./types/cloudFunctions/invitacionAceptar";
+export * from "./types/cloudFunctions/invitacionRechazar";
+export * from "./types/cloudFunctions/registrarEmpresa";
