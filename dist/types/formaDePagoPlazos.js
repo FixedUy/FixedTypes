@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.pagoEnPlazosConverter = void 0;
 const pagoEnPlazosConverter = {
-    toFirestore(cuenta) {
+    toFirestore(plazo) {
         return {};
     },
     fromFirestore(snapshot) {
