@@ -6,7 +6,7 @@ interface FormasDePagoPlazos {
   ultimaEdicion: number;
 }
 
-const pagoEnPlazosConverter = {
+const FormasDePagoPlazosConverter = {
   toFirestore(plazo: FormasDePagoPlazos) {
     return {};
   },
@@ -22,4 +22,4 @@ const pagoEnPlazosConverter = {
   }
 };
 
-export {type FormasDePagoPlazos, pagoEnPlazosConverter};
+export {type FormasDePagoPlazos, FormasDePagoPlazosConverter};
