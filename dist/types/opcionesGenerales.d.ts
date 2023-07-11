@@ -1,5 +1,6 @@
 export interface OpcionesGenerales {
     monedaDefecto: string;
+    vistaPrecios: string;
     tasaIVADefecto: string;
     logoGeneral: string;
     logoGeneralURL: string;
