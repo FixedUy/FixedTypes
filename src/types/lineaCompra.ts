@@ -5,8 +5,13 @@ interface LineaCompra {
   descripcion: string;
   rubro: string;
   tasaIva: TasaIVA | string;
+  descuentoMontoSinIVA: number;
+  descuentoMontoConIVA: number;
+  descuentoPorcentaje: number;
   precioSinIva: number;
   precioConIva: number;
+  importeSinIVA: number;
+  importeConIVA: number;
 }
 const LineaCompraConverter = {
   toFirestore(linea: LineaCompra) {
@@ -19,8 +24,13 @@ const LineaCompraConverter = {
       descripcion: data.descripcion,
       rubro: data.rubro,
       tasaIva: data.tasaIva,
+      descuentoMontoSinIVA: data.descuentoMontoSinIVA,
+      descuentoMontoConIVA: data.descuentoMontoConIVA,
+      descuentoPorcentaje: data.descuentoPorcentaje,
       precioSinIva: data.precioSinIva,
-      precioConIva: data.precioConIva
+      precioConIva: data.precioConIva,
+      importeSinIVA: data.importeSinIVA,
+      importeConIVA: data.importeConIVA
     };
   }
 };

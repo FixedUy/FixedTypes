@@ -12,8 +12,13 @@ const LineaCompraConverter = {
             descripcion: data.descripcion,
             rubro: data.rubro,
             tasaIva: data.tasaIva,
+            descuentoMontoSinIVA: data.descuentoMontoSinIVA,
+            descuentoMontoConIVA: data.descuentoMontoConIVA,
+            descuentoPorcentaje: data.descuentoPorcentaje,
             precioSinIva: data.precioSinIva,
-            precioConIva: data.precioConIva
+            precioConIva: data.precioConIva,
+            importeSinIVA: data.importeSinIVA,
+            importeConIVA: data.importeConIVA
         };
     }
 };
