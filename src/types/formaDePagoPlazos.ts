@@ -1,4 +1,4 @@
-interface PagoEnPlazos {
+interface FormasDePagoPlazos {
   id: string;
   nombre: string;
   cantDias: number;
@@ -7,10 +7,10 @@ interface PagoEnPlazos {
 }
 
 const pagoEnPlazosConverter = {
-  toFirestore(plazo: PagoEnPlazos) {
+  toFirestore(plazo: FormasDePagoPlazos) {
     return {};
   },
-  fromFirestore(snapshot: any): PagoEnPlazos {
+  fromFirestore(snapshot: any): FormasDePagoPlazos {
     const data = snapshot.data()!;
     return {
       id: snapshot.id,
@@ -22,4 +22,4 @@ const pagoEnPlazosConverter = {
   }
 };
 
-export {type PagoEnPlazos, pagoEnPlazosConverter};
+export {type FormasDePagoPlazos, pagoEnPlazosConverter};
