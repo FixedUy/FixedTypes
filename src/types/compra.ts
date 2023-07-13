@@ -32,7 +32,7 @@ const CompraConverter = {
       version: data.version,
       id: snapshot.id,
       formaDePago: data.formaDePago,
-      fechaComprobante: data.fechaNumero,
+      fechaComprobante: data.fechaComprobante,
       fechaString: data.fechaString,
       fechaEmision: data.fechaEmision,
       comprobante: data.comprobante,
