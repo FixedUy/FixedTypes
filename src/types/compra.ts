@@ -6,8 +6,9 @@ interface Compra {
   version: number;
   id: string;
   formaDePago: string;
-  fechaNumero: number;
+  fechaComprobante: number;
   fechaString: string;
+  fechaEmision: number;
   comprobante: string;
   proveedor: Cliente;
   moneda: string;
@@ -31,8 +32,9 @@ const CompraConverter = {
       version: data.version,
       id: snapshot.id,
       formaDePago: data.formaDePago,
-      fechaNumero: data.fechaNumero,
+      fechaComprobante: data.fechaNumero,
       fechaString: data.fechaString,
+      fechaEmision: data.fechaEmision,
       comprobante: data.comprobante,
       proveedor: data.cliente,
       moneda: data.moneda,

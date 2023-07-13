@@ -4,8 +4,9 @@ interface Compra {
     version: number;
     id: string;
     formaDePago: string;
-    fechaNumero: number;
+    fechaComprobante: number;
     fechaString: string;
+    fechaEmision: number;
     comprobante: string;
     proveedor: Cliente;
     moneda: string;
