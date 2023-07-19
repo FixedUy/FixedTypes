@@ -27,6 +27,7 @@ export * from "./types/tasaIVA";
 export * from "./types/unidad";
 export * from "./types/usuariosSistemaInvitacion";
 export * from "./types/usuario";
+export * from "./types/resguardos";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
