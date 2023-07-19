@@ -9,6 +9,7 @@ export interface OpcionesGenerales {
     moduloProductos: boolean;
     centroCostos: boolean;
     unidades: boolean;
+    moduloResguardos: boolean;
 }
 export declare const defecto: {
     [key: string]: OpcionesGenerales;

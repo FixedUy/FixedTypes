@@ -9,6 +9,7 @@ export interface OpcionesGenerales {
   moduloProductos: boolean;
   centroCostos: boolean;
   unidades: boolean;
+  moduloResguardos: boolean;
 }
 
 export const defecto: {[key: string]: OpcionesGenerales} = {
@@ -22,6 +23,7 @@ export const defecto: {[key: string]: OpcionesGenerales} = {
     moduloServicios: false,
     moduloProductos: false,
     centroCostos: false,
-    unidades: false
+    unidades: false,
+    moduloResguardos: false
   }
 };

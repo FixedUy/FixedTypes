@@ -12,6 +12,7 @@ exports.defecto = {
         moduloServicios: false,
         moduloProductos: false,
         centroCostos: false,
-        unidades: false
+        unidades: false,
+        moduloResguardos: false
     }
 };
