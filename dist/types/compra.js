@@ -15,6 +15,8 @@ const CompraConverter = {
             fechaCreacionString: data.fechaCreacionString,
             fechaCreacion: data.fechaCreacion,
             comprobante: data.comprobante,
+            serie: data.serie,
+            numero: data.numero,
             proveedor: data.proveedor,
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,

@@ -8,6 +8,8 @@ interface Compra {
     fechaCreacionString: string;
     fechaCreacion: number;
     comprobante: string;
+    serie: string;
+    numero: number;
     proveedor: Cliente;
     moneda: string;
     descuentoGeneral: number;
