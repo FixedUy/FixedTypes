@@ -43,6 +43,7 @@ __exportStar(require("./types/tasaIVA"), exports);
 __exportStar(require("./types/unidad"), exports);
 __exportStar(require("./types/usuariosSistemaInvitacion"), exports);
 __exportStar(require("./types/usuario"), exports);
+__exportStar(require("./types/resguardos"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
