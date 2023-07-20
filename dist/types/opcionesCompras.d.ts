@@ -4,6 +4,7 @@ export interface OpcionesCompras {
     comprobanteDefecto: string;
     tasaIVADefecto: string;
     vistaPrecioDefecto: string;
+    monedaDefecto: string;
 }
 export declare const defectoOpcionesCompras: {
     [key: string]: OpcionesCompras;
