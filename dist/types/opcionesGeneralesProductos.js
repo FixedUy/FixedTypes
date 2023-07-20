@@ -5,6 +5,7 @@ exports.defectoOpcionesGeneralesProductos = {
     defecto: {
         nombreModuloProductos: "",
         nombreModuloProductosSingular: "",
+        tasaIVADefectoProductos: "",
         precioArbitrario: false
     }
 };
