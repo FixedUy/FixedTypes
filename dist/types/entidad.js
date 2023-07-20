@@ -24,6 +24,7 @@ const entidadConverter = {
             mailCopiaXml: data.mailCopiaXml,
             vendedores: data.vendedores,
             listaPrecioServicios: data.listaPrecioServicios,
+            listaFormasDePago: data.listaFormasDePago,
             esProveedor: data.esProveedor,
             esCliente: data.esCliente,
             activo: data.activo,

@@ -16,6 +16,7 @@ interface Entidad {
     mailCopiaXml: string;
     vendedores: [];
     listaPrecioServicios: ServiciosListasPrecio[] | null;
+    listaFormasDePago: string[];
     esProveedor: boolean;
     esCliente: boolean;
     activo: boolean;
