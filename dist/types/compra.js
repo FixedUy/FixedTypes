@@ -26,7 +26,8 @@ const CompraConverter = {
             montoIVA: data.montoIVA,
             total: data.total,
             saldo: data.saldo,
-            activo: data.activo
+            activo: data.activo,
+            observaciones: data.observaciones
         };
     }
 };

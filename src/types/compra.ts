@@ -22,6 +22,7 @@ interface Compra {
   total: number;
   saldo: number;
   activo: boolean;
+  observaciones: string;
 }
 
 const CompraConverter = {
@@ -49,7 +50,8 @@ const CompraConverter = {
       montoIVA: data.montoIVA,
       total: data.total,
       saldo: data.saldo,
-      activo: data.activo
+      activo: data.activo,
+      observaciones: data.observaciones
     };
   }
 };

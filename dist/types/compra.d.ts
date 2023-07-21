@@ -20,6 +20,7 @@ interface Compra {
     total: number;
     saldo: number;
     activo: boolean;
+    observaciones: string;
 }
 declare const CompraConverter: {
     toFirestore(compra: Compra): {};
