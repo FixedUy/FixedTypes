@@ -8,6 +8,7 @@ exports.defectoOpcionesCompras = {
         comprobanteDefecto: "",
         tasaIVADefecto: "",
         vistaPrecioDefecto: "",
-        monedaDefecto: ""
+        monedaDefecto: "",
+        cantidadDecimales: 0
     }
 };

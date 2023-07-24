@@ -5,6 +5,7 @@ export interface OpcionesCompras {
   tasaIVADefecto: string;
   vistaPrecioDefecto: string;
   monedaDefecto: string;
+  cantidadDecimales: number;
 }
 
 export const defectoOpcionesCompras: {
@@ -16,6 +17,7 @@ export const defectoOpcionesCompras: {
     comprobanteDefecto: "",
     tasaIVADefecto: "",
     vistaPrecioDefecto: "",
-    monedaDefecto: ""
+    monedaDefecto: "",
+    cantidadDecimales: 0
   }
 };
