@@ -5,7 +5,7 @@ interface Compra {
     id: string;
     formaDePago: string;
     fechaComprobante: number;
-    fechaCreacionString: string;
+    fechaComprobanteString: string;
     fechaCreacion: number;
     comprobante: string;
     serie: string;
@@ -21,6 +21,8 @@ interface Compra {
     saldo: number;
     activo: boolean;
     observaciones: string;
+    usuario: string;
+    local: string;
 }
 declare const CompraConverter: {
     toFirestore(compra: Compra): {};

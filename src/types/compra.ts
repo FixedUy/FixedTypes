@@ -7,7 +7,7 @@ interface Compra {
   id: string;
   formaDePago: string;
   fechaComprobante: number;
-  fechaCreacionString: string;
+  fechaComprobanteString: string;
   fechaCreacion: number;
   comprobante: string;
   serie: string;
@@ -23,6 +23,8 @@ interface Compra {
   saldo: number;
   activo: boolean;
   observaciones: string;
+  usuario: string;
+  local: string;
 }
 
 const CompraConverter = {
@@ -36,7 +38,7 @@ const CompraConverter = {
       id: snapshot.id,
       formaDePago: data.formaDePago,
       fechaComprobante: data.fechaComprobante,
-      fechaCreacionString: data.fechaCreacionString,
+      fechaComprobanteString: data.fechaComprobanteString,
       fechaCreacion: data.fechaCreacion,
       comprobante: data.comprobante,
       serie: data.serie,
@@ -51,7 +53,9 @@ const CompraConverter = {
       total: data.total,
       saldo: data.saldo,
       activo: data.activo,
-      observaciones: data.observaciones
+      observaciones: data.observaciones,
+      usuario: data.usuario,
+      local: data.local
     };
   }
 };

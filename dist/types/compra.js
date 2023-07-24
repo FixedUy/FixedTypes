@@ -12,7 +12,7 @@ const CompraConverter = {
             id: snapshot.id,
             formaDePago: data.formaDePago,
             fechaComprobante: data.fechaComprobante,
-            fechaCreacionString: data.fechaCreacionString,
+            fechaComprobanteString: data.fechaComprobanteString,
             fechaCreacion: data.fechaCreacion,
             comprobante: data.comprobante,
             serie: data.serie,
@@ -27,7 +27,9 @@ const CompraConverter = {
             total: data.total,
             saldo: data.saldo,
             activo: data.activo,
-            observaciones: data.observaciones
+            observaciones: data.observaciones,
+            usuario: data.usuario,
+            local: data.local
         };
     }
 };
