@@ -29,6 +29,7 @@ export * from "./types/usuariosSistemaInvitacion";
 export * from "./types/usuario";
 export * from "./types/resguardos";
 export * from "./types/opcionesCompras";
+export * from "./types/movimientoCuentaCorriente";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";

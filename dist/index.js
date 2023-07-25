@@ -45,6 +45,7 @@ __exportStar(require("./types/usuariosSistemaInvitacion"), exports);
 __exportStar(require("./types/usuario"), exports);
 __exportStar(require("./types/resguardos"), exports);
 __exportStar(require("./types/opcionesCompras"), exports);
+__exportStar(require("./types/movimientoCuentaCorriente"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
