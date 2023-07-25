@@ -1,7 +1,7 @@
 type EnumDictionary<T extends string | symbol | number, U> = {
     [K in T]: U;
 };
-export declare enum MovimientoCuentaCorrienteTipo {
+export declare enum TipoMovimiento {
     Compra = 0,
     CompraNotaCredito = 1,
     Venta = 2,
@@ -14,5 +14,5 @@ export declare enum MovimientoCuentaCorrienteTipo {
     AjusteAgregarDeudaProveedor = 9,
     AjusteQuitarDeudaProveedor = 10
 }
-export declare const movimientoSuma: EnumDictionary<MovimientoCuentaCorrienteTipo, boolean>;
+export declare const movimientoSuma: EnumDictionary<TipoMovimiento, boolean>;
 export {};

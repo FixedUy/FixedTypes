@@ -2,7 +2,7 @@ type EnumDictionary<T extends string | symbol | number, U> = {
   [K in T]: U;
 };
 
-export enum MovimientoCuentaCorrienteTipo {
+export enum TipoMovimiento {
   Compra, // compra creada a un proveedor
   CompraNotaCredito, // agregada nota de crédito emitida por un proveedor
   Venta, // creada venta a un cliente
@@ -16,19 +16,16 @@ export enum MovimientoCuentaCorrienteTipo {
   AjusteQuitarDeudaProveedor
 }
 
-export const movimientoSuma: EnumDictionary<
-  MovimientoCuentaCorrienteTipo,
-  boolean
-> = {
-  [MovimientoCuentaCorrienteTipo.Compra]: false,
-  [MovimientoCuentaCorrienteTipo.CompraNotaCredito]: true,
-  [MovimientoCuentaCorrienteTipo.Venta]: true,
-  [MovimientoCuentaCorrienteTipo.VentaNotaCredito]: false,
-  [MovimientoCuentaCorrienteTipo.VentaNotaDebito]: true,
-  [MovimientoCuentaCorrienteTipo.Recibo]: true,
-  [MovimientoCuentaCorrienteTipo.ReciboCompra]: false,
-  [MovimientoCuentaCorrienteTipo.AjusteAgregarDeudaCliente]: true,
-  [MovimientoCuentaCorrienteTipo.AjusteQuitarDeudaCliente]: false,
-  [MovimientoCuentaCorrienteTipo.AjusteAgregarDeudaProveedor]: false,
-  [MovimientoCuentaCorrienteTipo.AjusteQuitarDeudaProveedor]: true
+export const movimientoSuma: EnumDictionary<TipoMovimiento, boolean> = {
+  [TipoMovimiento.Compra]: false,
+  [TipoMovimiento.CompraNotaCredito]: true,
+  [TipoMovimiento.Venta]: true,
+  [TipoMovimiento.VentaNotaCredito]: false,
+  [TipoMovimiento.VentaNotaDebito]: true,
+  [TipoMovimiento.Recibo]: true,
+  [TipoMovimiento.ReciboCompra]: false,
+  [TipoMovimiento.AjusteAgregarDeudaCliente]: true,
+  [TipoMovimiento.AjusteQuitarDeudaCliente]: false,
+  [TipoMovimiento.AjusteAgregarDeudaProveedor]: false,
+  [TipoMovimiento.AjusteQuitarDeudaProveedor]: true
 };

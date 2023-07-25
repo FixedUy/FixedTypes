@@ -1,30 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.movimientoSuma = exports.MovimientoCuentaCorrienteTipo = void 0;
-var MovimientoCuentaCorrienteTipo;
-(function (MovimientoCuentaCorrienteTipo) {
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["Compra"] = 0] = "Compra";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["CompraNotaCredito"] = 1] = "CompraNotaCredito";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["Venta"] = 2] = "Venta";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["VentaNotaCredito"] = 3] = "VentaNotaCredito";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["VentaNotaDebito"] = 4] = "VentaNotaDebito";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["Recibo"] = 5] = "Recibo";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["ReciboCompra"] = 6] = "ReciboCompra";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["AjusteAgregarDeudaCliente"] = 7] = "AjusteAgregarDeudaCliente";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["AjusteQuitarDeudaCliente"] = 8] = "AjusteQuitarDeudaCliente";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["AjusteAgregarDeudaProveedor"] = 9] = "AjusteAgregarDeudaProveedor";
-    MovimientoCuentaCorrienteTipo[MovimientoCuentaCorrienteTipo["AjusteQuitarDeudaProveedor"] = 10] = "AjusteQuitarDeudaProveedor";
-})(MovimientoCuentaCorrienteTipo = exports.MovimientoCuentaCorrienteTipo || (exports.MovimientoCuentaCorrienteTipo = {}));
+exports.movimientoSuma = exports.TipoMovimiento = void 0;
+var TipoMovimiento;
+(function (TipoMovimiento) {
+    TipoMovimiento[TipoMovimiento["Compra"] = 0] = "Compra";
+    TipoMovimiento[TipoMovimiento["CompraNotaCredito"] = 1] = "CompraNotaCredito";
+    TipoMovimiento[TipoMovimiento["Venta"] = 2] = "Venta";
+    TipoMovimiento[TipoMovimiento["VentaNotaCredito"] = 3] = "VentaNotaCredito";
+    TipoMovimiento[TipoMovimiento["VentaNotaDebito"] = 4] = "VentaNotaDebito";
+    TipoMovimiento[TipoMovimiento["Recibo"] = 5] = "Recibo";
+    TipoMovimiento[TipoMovimiento["ReciboCompra"] = 6] = "ReciboCompra";
+    TipoMovimiento[TipoMovimiento["AjusteAgregarDeudaCliente"] = 7] = "AjusteAgregarDeudaCliente";
+    TipoMovimiento[TipoMovimiento["AjusteQuitarDeudaCliente"] = 8] = "AjusteQuitarDeudaCliente";
+    TipoMovimiento[TipoMovimiento["AjusteAgregarDeudaProveedor"] = 9] = "AjusteAgregarDeudaProveedor";
+    TipoMovimiento[TipoMovimiento["AjusteQuitarDeudaProveedor"] = 10] = "AjusteQuitarDeudaProveedor";
+})(TipoMovimiento = exports.TipoMovimiento || (exports.TipoMovimiento = {}));
 exports.movimientoSuma = {
-    [MovimientoCuentaCorrienteTipo.Compra]: false,
-    [MovimientoCuentaCorrienteTipo.CompraNotaCredito]: true,
-    [MovimientoCuentaCorrienteTipo.Venta]: true,
-    [MovimientoCuentaCorrienteTipo.VentaNotaCredito]: false,
-    [MovimientoCuentaCorrienteTipo.VentaNotaDebito]: true,
-    [MovimientoCuentaCorrienteTipo.Recibo]: true,
-    [MovimientoCuentaCorrienteTipo.ReciboCompra]: false,
-    [MovimientoCuentaCorrienteTipo.AjusteAgregarDeudaCliente]: true,
-    [MovimientoCuentaCorrienteTipo.AjusteQuitarDeudaCliente]: false,
-    [MovimientoCuentaCorrienteTipo.AjusteAgregarDeudaProveedor]: false,
-    [MovimientoCuentaCorrienteTipo.AjusteQuitarDeudaProveedor]: true
+    [TipoMovimiento.Compra]: false,
+    [TipoMovimiento.CompraNotaCredito]: true,
+    [TipoMovimiento.Venta]: true,
+    [TipoMovimiento.VentaNotaCredito]: false,
+    [TipoMovimiento.VentaNotaDebito]: true,
+    [TipoMovimiento.Recibo]: true,
+    [TipoMovimiento.ReciboCompra]: false,
+    [TipoMovimiento.AjusteAgregarDeudaCliente]: true,
+    [TipoMovimiento.AjusteQuitarDeudaCliente]: false,
+    [TipoMovimiento.AjusteAgregarDeudaProveedor]: false,
+    [TipoMovimiento.AjusteQuitarDeudaProveedor]: true
 };
