@@ -15,4 +15,22 @@ export declare enum TipoMovimiento {
     AjusteQuitarDeudaProveedor = 10
 }
 export declare const movimientoSuma: EnumDictionary<TipoMovimiento, boolean>;
-export {};
+interface MovimientoCC {
+    id: string;
+    version: number;
+    importe: number;
+    saldo: number;
+    descripcion: string;
+    documentoId: string;
+    tipo: TipoMovimiento;
+    secuencia: number;
+    fecha: number;
+    fechaString: string;
+    fechaRealizado: number;
+    usuario: string;
+}
+declare const movimientoCCConverter: {
+    toFirestore(movimiento: MovimientoCC): {};
+    fromFirestore(snapshot: any): MovimientoCC;
+};
+export { type MovimientoCC, movimientoCCConverter };
