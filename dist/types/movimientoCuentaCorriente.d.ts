@@ -18,11 +18,11 @@ export declare const movimientoSuma: EnumDictionary<TipoMovimiento, boolean>;
 interface MovimientoCC {
     id: string;
     version: number;
-    monedaId: string;
+    idMoneda: string;
     importe: number;
     saldo: number;
     descripcion: string;
-    documentoId: string;
+    idDocumento: string;
     tipo: TipoMovimiento;
     secuencia: number;
     fecha: number;

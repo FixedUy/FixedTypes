@@ -33,11 +33,11 @@ export const movimientoSuma: EnumDictionary<TipoMovimiento, boolean> = {
 interface MovimientoCC {
   id: string;
   version: number;
-  monedaId: string;
+  idMoneda: string;
   importe: number;
   saldo: number;
   descripcion: string;
-  documentoId: string;
+  idDocumento: string;
   tipo: TipoMovimiento;
   secuencia: number;
   fecha: number;
@@ -82,11 +82,11 @@ const movimientoCCConverter = {
     return {
       id: snapshot.id,
       version: data.version,
-      monedaId: data.monedaId,
+      idMoneda: data.idMoneda,
       importe: data.importe,
       saldo: data.saldo,
       descripcion: data.descripcion,
-      documentoId: data.documentoId,
+      idDocumento: data.idDocumento,
       tipo: tipo,
       secuencia: data.secuencia,
       fecha: data.fecha,
