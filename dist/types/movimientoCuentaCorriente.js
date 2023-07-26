@@ -72,6 +72,7 @@ const movimientoCCConverter = {
         return {
             id: snapshot.id,
             version: data.version,
+            monedaId: data.monedaId,
             importe: data.importe,
             saldo: data.saldo,
             descripcion: data.descripcion,
