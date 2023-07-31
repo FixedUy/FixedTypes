@@ -3,7 +3,7 @@ import { Cliente } from "./cliente";
 import { Local } from "./local";
 interface Remito {
     id: string;
-    fecha: number;
+    fecha: string | number;
     fechaString: string;
     numero: string;
     localIngresa: Local | null;
@@ -11,11 +11,11 @@ interface Remito {
     entidad: Cliente;
     items: RemitoItem[];
     observaciones: string;
-    tipo: Tipo;
+    tipo: RemitoTipo;
 }
-declare enum Tipo {
+declare enum RemitoTipo {
     Ingreso = "ingreso",
     Salida = "salida",
     Transferencia = "transferencia"
 }
-export { type Remito };
+export { type Remito, RemitoTipo };

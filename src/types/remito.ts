@@ -1,24 +1,21 @@
 import {RemitoItem} from "./remitoItem";
 import {Cliente} from "./cliente";
 import {Local} from "./local";
-
 interface Remito {
   id: string;
-  fecha: number;
+  fecha: string | number;
   fechaString: string;
   numero: string;
   localIngresa: Local | null;
   localSale: Local | null;
-  entidad: Cliente /* TO-DO: add | Proveedor*/;
+  entidad: Cliente;
   items: RemitoItem[];
   observaciones: string;
-  tipo: Tipo;
+  tipo: RemitoTipo;
 }
-
-enum Tipo {
+declare enum RemitoTipo {
   Ingreso = "ingreso",
   Salida = "salida",
   Transferencia = "transferencia"
 }
-
-export {type Remito};
+export {type Remito, RemitoTipo};
