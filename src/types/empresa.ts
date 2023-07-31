@@ -1,9 +1,12 @@
+import {OpcionesGenerales} from "./opcionesGenerales";
+
 interface Empresa {
   id: string;
   nombreComercial: string;
   rut: string;
   razonSocial: string;
   logoURL: string;
+  opcionesGenerales: OpcionesGenerales;
 }
 
 const empresaConverter = {
@@ -17,7 +20,8 @@ const empresaConverter = {
       nombreComercial: data.nombreComercial,
       rut: data.rut,
       razonSocial: data.razonSocial,
-      logoURL: data.logoURL
+      logoURL: data.logoURL,
+      opcionesGenerales: data.opcionesGenerales
     };
   }
 };

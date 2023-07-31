@@ -30,7 +30,8 @@ const usuarioConverter = {
           nombreComercial: e["nombreComercial"],
           rut: e["rut"],
           razonSocial: e["razonSocial"],
-          logoURL: e["logoURL"]
+          logoURL: e["logoURL"],
+          opcionesGenerales: null
         });
       });
     }

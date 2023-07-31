@@ -12,7 +12,8 @@ const empresaConverter = {
             nombreComercial: data.nombreComercial,
             rut: data.rut,
             razonSocial: data.razonSocial,
-            logoURL: data.logoURL
+            logoURL: data.logoURL,
+            opcionesGenerales: data.opcionesGenerales
         };
     }
 };
