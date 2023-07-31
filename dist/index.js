@@ -46,6 +46,8 @@ __exportStar(require("./types/usuario"), exports);
 __exportStar(require("./types/resguardos"), exports);
 __exportStar(require("./types/opcionesCompras"), exports);
 __exportStar(require("./types/movimientoCuentaCorriente"), exports);
+__exportStar(require("./types/remito"), exports);
+__exportStar(require("./types/remitoItem"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
