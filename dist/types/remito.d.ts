@@ -10,7 +10,7 @@ interface Remito {
     localSale: Local | null;
     entidad: Cliente;
     items: RemitoItem[];
-    obeservaciones: string;
+    observaciones: string;
     tipo: Tipo;
 }
 declare enum Tipo {

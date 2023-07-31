@@ -11,7 +11,7 @@ interface Remito {
   localSale: Local | null;
   entidad: Cliente /* TO-DO: add | Proveedor*/;
   items: RemitoItem[];
-  obeservaciones: string;
+  observaciones: string;
   tipo: Tipo;
 }
 
