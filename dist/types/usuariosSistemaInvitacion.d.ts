@@ -11,6 +11,7 @@ interface UsuarioSistemaInvitacion {
     empresaNombreComercial: string;
     empresaRazonSocial: string;
     empresaRUT: string;
+    empresaId: string;
 }
 declare const usuarioSistemaInvitacionConverter: {
     toFirestore(Usuario: UsuarioSistemaInvitacion): {

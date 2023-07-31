@@ -11,6 +11,7 @@ interface UsuarioSistemaInvitacion {
   empresaNombreComercial: string;
   empresaRazonSocial: string;
   empresaRUT: string;
+  empresaId: string;
 }
 
 const usuarioSistemaInvitacionConverter = {
@@ -28,6 +29,7 @@ const usuarioSistemaInvitacionConverter = {
       empresaNombreComercial: data.empresaNombreComercial,
       empresaRazonSocial: data.empresaRazonSocial,
       empresaRUT: data.empresaRUT,
+      empresaId: data.empresaId,
       enviadaPorNombre: data.enviadaPorNombre,
       enviadaPorMail: data.enviadaPorMail,
       enviadaEl: data.enviadaEl?.seconds,

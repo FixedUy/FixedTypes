@@ -17,6 +17,7 @@ const usuarioSistemaInvitacionConverter = {
             empresaNombreComercial: data.empresaNombreComercial,
             empresaRazonSocial: data.empresaRazonSocial,
             empresaRUT: data.empresaRUT,
+            empresaId: data.empresaId,
             enviadaPorNombre: data.enviadaPorNombre,
             enviadaPorMail: data.enviadaPorMail,
             enviadaEl: (_a = data.enviadaEl) === null || _a === void 0 ? void 0 : _a.seconds,
