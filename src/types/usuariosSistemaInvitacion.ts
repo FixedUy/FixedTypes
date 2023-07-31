@@ -7,6 +7,10 @@ interface UsuarioSistemaInvitacion {
   enviadaPorMail: string;
   enviadaEl: number | null;
   enviadaElString: string;
+  empresaLogoURL: string;
+  empresaNombreComercial: string;
+  empresaRazonSocial: string;
+  empresaRUT: string;
 }
 
 const usuarioSistemaInvitacionConverter = {
@@ -20,6 +24,10 @@ const usuarioSistemaInvitacionConverter = {
       mail: data.mail,
       nombre: data.nombre,
       vendedor: data.vendedor,
+      empresaLogoURL: data.empresaLogoURL,
+      empresaNombreComercial: data.empresaNombreComercial,
+      empresaRazonSocial: data.empresaRazonSocial,
+      empresaRUT: data.empresaRUT,
       enviadaPorNombre: data.enviadaPorNombre,
       enviadaPorMail: data.enviadaPorMail,
       enviadaEl: data.enviadaEl?.seconds,
