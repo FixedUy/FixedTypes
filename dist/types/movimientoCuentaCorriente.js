@@ -3,17 +3,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.movimientoCCConverter = exports.movimientoSuma = exports.TipoMovimiento = void 0;
 var TipoMovimiento;
 (function (TipoMovimiento) {
-    TipoMovimiento[TipoMovimiento["Compra"] = 0] = "Compra";
-    TipoMovimiento[TipoMovimiento["CompraNotaCredito"] = 1] = "CompraNotaCredito";
-    TipoMovimiento[TipoMovimiento["Venta"] = 2] = "Venta";
-    TipoMovimiento[TipoMovimiento["VentaNotaCredito"] = 3] = "VentaNotaCredito";
-    TipoMovimiento[TipoMovimiento["VentaNotaDebito"] = 4] = "VentaNotaDebito";
-    TipoMovimiento[TipoMovimiento["Recibo"] = 5] = "Recibo";
-    TipoMovimiento[TipoMovimiento["ReciboCompra"] = 6] = "ReciboCompra";
-    TipoMovimiento[TipoMovimiento["AjusteAgregarDeudaCliente"] = 7] = "AjusteAgregarDeudaCliente";
-    TipoMovimiento[TipoMovimiento["AjusteQuitarDeudaCliente"] = 8] = "AjusteQuitarDeudaCliente";
-    TipoMovimiento[TipoMovimiento["AjusteAgregarDeudaProveedor"] = 9] = "AjusteAgregarDeudaProveedor";
-    TipoMovimiento[TipoMovimiento["AjusteQuitarDeudaProveedor"] = 10] = "AjusteQuitarDeudaProveedor";
+    TipoMovimiento["Compra"] = "compra";
+    TipoMovimiento["CompraNotaCredito"] = "compranotacredito";
+    TipoMovimiento["Venta"] = "venta";
+    TipoMovimiento["VentaNotaCredito"] = "ventanotacredito";
+    TipoMovimiento["VentaNotaDebito"] = "ventanotadebito";
+    TipoMovimiento["Recibo"] = "recibo";
+    TipoMovimiento["ReciboCompra"] = "recibocompra";
+    TipoMovimiento["AjusteAgregarDeudaCliente"] = "ajusteagregardeudacliente";
+    TipoMovimiento["AjusteQuitarDeudaCliente"] = "ajustequitardeudacliente";
+    TipoMovimiento["AjusteAgregarDeudaProveedor"] = "ajusteagregardeudaproveedor";
+    TipoMovimiento["AjusteQuitarDeudaProveedor"] = "ajustequitardeudaproveedor";
 })(TipoMovimiento = exports.TipoMovimiento || (exports.TipoMovimiento = {}));
 exports.movimientoSuma = {
     [TipoMovimiento.Compra]: false,

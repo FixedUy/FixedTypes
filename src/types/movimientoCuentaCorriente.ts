@@ -3,17 +3,17 @@ type EnumDictionary<T extends string | symbol | number, U> = {
 };
 
 export enum TipoMovimiento {
-  Compra, // compra creada a un proveedor
-  CompraNotaCredito, // agregada nota de crédito emitida por un proveedor
-  Venta, // creada venta a un cliente
-  VentaNotaCredito, // creada nota de credito a un cliente
-  VentaNotaDebito, // creada nota de débito a un cliente
-  Recibo, // recibo de cobranza a un cliente emitido
-  ReciboCompra, // recibo de pago a un proveedor
-  AjusteAgregarDeudaCliente,
-  AjusteQuitarDeudaCliente,
-  AjusteAgregarDeudaProveedor,
-  AjusteQuitarDeudaProveedor
+  Compra = "compra", // compra creada a un proveedor
+  CompraNotaCredito = "compranotacredito",
+  Venta = "venta", // creada venta a un cliente
+  VentaNotaCredito = "ventanotacredito", // creada nota de credito a un cliente
+  VentaNotaDebito = "ventanotadebito", // creada nota de débito a un cliente
+  Recibo = "recibo", // recibo de cobranza a un cliente emitido
+  ReciboCompra = "recibocompra", // recibo de pago a un proveedor
+  AjusteAgregarDeudaCliente = "ajusteagregardeudacliente",
+  AjusteQuitarDeudaCliente = "ajustequitardeudacliente",
+  AjusteAgregarDeudaProveedor = "ajusteagregardeudaproveedor",
+  AjusteQuitarDeudaProveedor = "ajustequitardeudaproveedor"
 }
 
 export const movimientoSuma: EnumDictionary<TipoMovimiento, boolean> = {
