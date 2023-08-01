@@ -1,6 +1,6 @@
 import {TasaIVA} from "./tasaIVA";
 
-interface LineaCompra {
+interface CompraLinea {
   cantidad: number;
   descripcion: string;
   rubro: string;
@@ -15,11 +15,11 @@ interface LineaCompra {
   stock: boolean;
   idProducto: string;
 }
-const LineaCompraConverter = {
-  toFirestore(linea: LineaCompra) {
+const CompraLineaConverter = {
+  toFirestore(linea: CompraLinea) {
     return {};
   },
-  fromFirestore(snapshot: any): LineaCompra {
+  fromFirestore(snapshot: any): CompraLinea {
     const data = snapshot.data()!;
     return {
       cantidad: data.cantidad,
@@ -39,4 +39,4 @@ const LineaCompraConverter = {
   }
 };
 
-export {type LineaCompra, LineaCompraConverter};
+export {type CompraLinea, CompraLineaConverter};

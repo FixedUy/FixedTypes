@@ -1,5 +1,5 @@
 import {Cliente} from "./cliente";
-import {LineaCompra} from "./lineaCompra";
+import {CompraLinea} from "./compraLinea";
 import {Moneda} from "./moneda";
 
 interface Compra {
@@ -15,7 +15,7 @@ interface Compra {
   proveedor: Cliente;
   moneda: string;
   descuentoGeneral: number;
-  lineaCompra: LineaCompra[];
+  compraLinea: CompraLinea[];
   tipo: string;
   subtotal: number;
   montoIVA: number;
@@ -46,7 +46,7 @@ const CompraConverter = {
       proveedor: data.proveedor,
       moneda: data.moneda,
       descuentoGeneral: data.descuentoGeneral,
-      lineaCompra: data.lineaCompra,
+      compraLinea: data.compraLinea,
       tipo: data.tipo,
       subtotal: data.subtotal,
       montoIVA: data.montoIVA,

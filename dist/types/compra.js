@@ -20,7 +20,7 @@ const CompraConverter = {
             proveedor: data.proveedor,
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,
-            lineaCompra: data.lineaCompra,
+            compraLinea: data.compraLinea,
             tipo: data.tipo,
             subtotal: data.subtotal,
             montoIVA: data.montoIVA,
