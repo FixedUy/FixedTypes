@@ -1,7 +1,7 @@
 import {RemitoItem} from "./remitoItem";
 import {Cliente} from "./cliente";
 import {Local} from "./local";
-interface Remito {
+export interface Remito {
   id: string;
   fecha: string | number;
   fechaString: string;
@@ -13,9 +13,9 @@ interface Remito {
   observaciones: string;
   tipo: RemitoTipo;
 }
-declare enum RemitoTipo {
+
+export enum RemitoTipo {
   Ingreso = "ingreso",
   Salida = "salida",
   Transferencia = "transferencia"
 }
-export {type Remito, RemitoTipo};
