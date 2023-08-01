@@ -1,3 +1,5 @@
+import {String} from "lodash";
+
 type EnumDictionary<T extends string | symbol | number, U> = {
   [K in T]: U;
 };
@@ -16,7 +18,7 @@ export enum TipoMovimiento {
   AjusteQuitarDeudaProveedor = "ajustequitardeudaproveedor"
 }
 
-export const movimientoSuma: EnumDictionary<TipoMovimiento, boolean> = {
+export const movimientoSuma: EnumDictionary<string, boolean> = {
   [TipoMovimiento.Compra]: false,
   [TipoMovimiento.CompraNotaCredito]: true,
   [TipoMovimiento.Venta]: true,

@@ -14,7 +14,7 @@ export declare enum TipoMovimiento {
     AjusteAgregarDeudaProveedor = "ajusteagregardeudaproveedor",
     AjusteQuitarDeudaProveedor = "ajustequitardeudaproveedor"
 }
-export declare const movimientoSuma: EnumDictionary<TipoMovimiento, boolean>;
+export declare const movimientoSuma: EnumDictionary<string, boolean>;
 interface MovimientoCC {
     id: string;
     version: number;
