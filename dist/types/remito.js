@@ -6,4 +6,4 @@ var RemitoTipo;
     RemitoTipo["Ingreso"] = "ingreso";
     RemitoTipo["Salida"] = "salida";
     RemitoTipo["Transferencia"] = "transferencia";
-})(RemitoTipo = exports.RemitoTipo || (exports.RemitoTipo = {}));
+})(RemitoTipo || (exports.RemitoTipo = RemitoTipo = {}));
