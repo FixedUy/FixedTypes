@@ -1,10 +1,8 @@
-import {TasaIVA} from "./tasaIVA";
-
 interface CompraLinea {
   cantidad: number;
   descripcion: string;
   rubro: string;
-  tasaIva: TasaIVA | string;
+  tasaIva: string;
   descuentoMontoSinIVA: number;
   descuentoMontoConIVA: number;
   descuentoPorcentaje: number;

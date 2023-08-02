@@ -2,7 +2,7 @@ interface TasaIVA {
   id: string;
   nombre: string;
   sigla: string;
-  valor: number | string;
+  valor: number;
   cfeDgi: "Basic" | "Exp" | "Min" | "Exe" | "Otro" | "";
   activoProductos: boolean;
   activoServicios: boolean;
