@@ -5,11 +5,13 @@ import {Cliente} from "./cliente";
 
 interface Resguardos {
   fecha: string | number;
+  fechaString: string;
   receptor: Cliente;
   moneda: string;
   retenciones: ResguardosRetencion[];
   referencias: (ResguardosReferenciaCFE | ResguardosReferenciaNormal)[];
   observaciones: string;
+  valor: number;
 }
 
 export {type Resguardos};
