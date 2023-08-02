@@ -11,14 +11,12 @@ const CompraLineaConverter = {
             cantidad: data.cantidad,
             descripcion: data.descripcion,
             rubro: data.rubro,
+            incluyeIva: data.incluyeIva,
             tasaIva: data.tasaIva,
-            descuentoMontoSinIVA: data.descuentoMontoSinIVA,
-            descuentoMontoConIVA: data.descuentoMontoConIVA,
+            descuentoMonto: data.descuentoMonto,
             descuentoPorcentaje: data.descuentoPorcentaje,
-            precioSinIva: data.precioSinIva,
-            precioConIva: data.precioConIva,
-            importeSinIVA: data.importeSinIVA,
-            importeConIVA: data.importeConIVA,
+            precio: data.precio,
+            importe: data.importe,
             stock: data.stock,
             idProducto: data.idProducto
         };

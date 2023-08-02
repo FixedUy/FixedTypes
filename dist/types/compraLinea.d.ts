@@ -1,16 +1,13 @@
-import { TasaIVA } from "./tasaIVA";
 interface CompraLinea {
     cantidad: number;
     descripcion: string;
     rubro: string;
-    tasaIva: TasaIVA | string;
-    descuentoMontoSinIVA: number;
-    descuentoMontoConIVA: number;
+    incluyeIva: boolean;
+    tasaIva: string;
+    descuentoMonto: number;
     descuentoPorcentaje: number;
-    precioSinIva: number;
-    precioConIva: number;
-    importeSinIVA: number;
-    importeConIVA: number;
+    precio: number;
+    importe: number;
     stock: boolean;
     idProducto: string;
 }

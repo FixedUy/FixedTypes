@@ -1,17 +1,13 @@
-import {TasaIVA} from "./tasaIVA";
-
 interface CompraLinea {
   cantidad: number;
   descripcion: string;
   rubro: string;
-  tasaIva: TasaIVA | string;
-  descuentoMontoSinIVA: number;
-  descuentoMontoConIVA: number;
+  incluyeIva: boolean;
+  tasaIva: string;
+  descuentoMonto: number; // Descuento total, no unitario
   descuentoPorcentaje: number;
-  precioSinIva: number;
-  precioConIva: number;
-  importeSinIVA: number;
-  importeConIVA: number;
+  precio: number;
+  importe: number; // = (precio * cantidad) - descuentoMonto
   stock: boolean;
   idProducto: string;
 }
@@ -25,14 +21,12 @@ const CompraLineaConverter = {
       cantidad: data.cantidad,
       descripcion: data.descripcion,
       rubro: data.rubro,
+      incluyeIva: data.incluyeIva,
       tasaIva: data.tasaIva,
-      descuentoMontoSinIVA: data.descuentoMontoSinIVA,
-      descuentoMontoConIVA: data.descuentoMontoConIVA,
+      descuentoMonto: data.descuentoMonto,
       descuentoPorcentaje: data.descuentoPorcentaje,
-      precioSinIva: data.precioSinIva,
-      precioConIva: data.precioConIva,
-      importeSinIVA: data.importeSinIVA,
-      importeConIVA: data.importeConIVA,
+      precio: data.precio,
+      importe: data.importe,
       stock: data.stock,
       idProducto: data.idProducto
     };
