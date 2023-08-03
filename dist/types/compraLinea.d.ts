@@ -2,8 +2,7 @@ interface CompraLinea {
     cantidad: number;
     descripcion: string;
     rubro: string;
-    incluyeIva: boolean;
-    tasaIva: string;
+    montoBruto: number;
     descuentoMonto: number;
     descuentoPorcentaje: number;
     precio: number;

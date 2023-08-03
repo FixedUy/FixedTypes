@@ -2,8 +2,10 @@ interface CompraLinea {
   cantidad: number;
   descripcion: string;
   rubro: string;
-  incluyeIva: boolean;
-  tasaIva: string;
+  montoBruto: number;
+  // indica si precio y descuento son:
+  // 0 = sin iva | 1 = iva incl
+  // | 2 = iva imeba incl | 3 = literal e o monitributo
   descuentoMonto: number; // Descuento total, no unitario
   descuentoPorcentaje: number;
   precio: number;
@@ -21,8 +23,7 @@ const CompraLineaConverter = {
       cantidad: data.cantidad,
       descripcion: data.descripcion,
       rubro: data.rubro,
-      incluyeIva: data.incluyeIva,
-      tasaIva: data.tasaIva,
+      montoBruto: data.montoBruto,
       descuentoMonto: data.descuentoMonto,
       descuentoPorcentaje: data.descuentoPorcentaje,
       precio: data.precio,
