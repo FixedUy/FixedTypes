@@ -1,12 +1,9 @@
-import {Moneda} from "./moneda";
-import {TasaIVA} from "./tasaIVA";
-
 interface ProductosPrecios {
   idLista: string;
-  tasa: TasaIVA | string;
+  tasa: string;
   precioSinIva: number;
   precioConIva: number;
-  moneda: Moneda | string;
+  moneda: string;
   precioArbitrario: boolean;
 }
 
