@@ -2,6 +2,7 @@ interface CompraLinea {
   cantidad: number;
   descripcion: string;
   rubro: string;
+  centroCosto: string;
   tasaIva: string;
   montoBruto: number;
   // indica si precio y descuento son:
@@ -24,6 +25,7 @@ const CompraLineaConverter = {
       cantidad: data.cantidad,
       descripcion: data.descripcion,
       rubro: data.rubro,
+      centroCosto: data.centroCosto,
       tasaIva: data.tasaIva,
       montoBruto: data.montoBruto,
       descuentoMonto: data.descuentoMonto,
