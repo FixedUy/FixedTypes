@@ -2,6 +2,7 @@ interface CompraLinea {
     cantidad: number;
     descripcion: string;
     rubro: string;
+    centroCosto: string;
     tasaIva: string;
     montoBruto: number;
     descuentoMonto: number;
