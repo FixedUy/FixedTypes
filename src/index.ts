@@ -35,6 +35,8 @@ export * from "./types/opcionesCompras";
 export * from "./types/movimientoCuentaCorriente";
 export * from "./types/remito";
 export * from "./types/remitoItem";
+export * from "./types/caja";
+export * from "./types/cajaMovimientos";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
