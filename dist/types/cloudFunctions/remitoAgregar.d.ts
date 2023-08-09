@@ -7,6 +7,7 @@ export interface RemitoAgregar {
     entidadId: string;
     entidadNombre: string;
     observaciones: string;
+    numero: string;
     tipo: string;
     localIngresa: string | null;
     localSale: string | null;
