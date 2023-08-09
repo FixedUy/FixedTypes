@@ -1,6 +1,4 @@
-import {String} from "lodash";
-
-type EnumDictionary<T extends string | symbol | number, U> = {
+type EnumDictionary<T extends string, U> = {
   [K in T]: U;
 };
 

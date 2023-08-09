@@ -1,4 +1,4 @@
-type EnumDictionary<T extends string | symbol | number, U> = {
+type EnumDictionary<T extends string, U> = {
     [K in T]: U;
 };
 export declare enum TipoMovimiento {
