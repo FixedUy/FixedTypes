@@ -11,6 +11,7 @@ interface Caja {
         };
     };
     locales: string;
+    ultimaEdicion: number;
     activo: boolean;
 }
 declare const CajaConverter: {

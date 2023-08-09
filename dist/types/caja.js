@@ -14,6 +14,7 @@ const CajaConverter = {
             saldoMonedas: data.saldoMonedas,
             saldoMedios: data.saldoMedios,
             locales: data.locales,
+            ultimaEdicion: data.ultimaEdicion,
             activo: data.activo
         };
     }
