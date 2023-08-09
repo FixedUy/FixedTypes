@@ -4,7 +4,7 @@ export interface RemitoAgregar {
     version: string;
     fecha: number;
     fechaString: string;
-    entidadId: number;
+    entidadId: string;
     entidadNombre: string;
     observaciones: string;
     tipo: string;
