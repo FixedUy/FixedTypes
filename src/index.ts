@@ -46,6 +46,8 @@ export * from "./types/cloudFunctions/invitacionAceptar";
 export * from "./types/cloudFunctions/invitacionRechazar";
 export * from "./types/cloudFunctions/registrarEmpresa";
 export * from "./types/cloudFunctions/afectarCuentaCorriente";
+export * from "./types/cloudFunctions/comprasAgregar";
+export * from "./types/cloudFunctions/comprasEliminar";
 
 // utils
 export * from "./utils/convertirFechaNumberoAfechaString";

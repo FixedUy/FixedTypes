@@ -61,5 +61,7 @@ __exportStar(require("./types/cloudFunctions/invitacionAceptar"), exports);
 __exportStar(require("./types/cloudFunctions/invitacionRechazar"), exports);
 __exportStar(require("./types/cloudFunctions/registrarEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/afectarCuentaCorriente"), exports);
+__exportStar(require("./types/cloudFunctions/comprasAgregar"), exports);
+__exportStar(require("./types/cloudFunctions/comprasEliminar"), exports);
 // utils
 __exportStar(require("./utils/convertirFechaNumberoAfechaString"), exports);
