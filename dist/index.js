@@ -58,6 +58,7 @@ __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
 __exportStar(require("./types/cloudFunctions/actualizarDatosEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/actualizarUsuarioDeEmpresa"), exports);
+__exportStar(require("./types/cloudFunctions/eliminarMovimiento"), exports);
 __exportStar(require("./types/cloudFunctions/enviarMailInvitacion"), exports);
 __exportStar(require("./types/cloudFunctions/invitacionAceptar"), exports);
 __exportStar(require("./types/cloudFunctions/invitacionRechazar"), exports);
