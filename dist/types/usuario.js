@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuarioConverter = void 0;
 const usuarioConverter = {
-    toFirestore(Usuario) {
-        return { nombre: Usuario.nombre };
+    toFirestore(usuario) {
+        return usuario;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

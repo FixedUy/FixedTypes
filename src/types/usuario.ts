@@ -19,8 +19,8 @@ interface Usuario {
 }
 
 const usuarioConverter = {
-  toFirestore(Usuario: Usuario) {
-    return {nombre: Usuario.nombre};
+  toFirestore(usuario: Usuario) {
+    return usuario;
   },
   fromFirestore(snapshot: any): Usuario {
     const data = snapshot.data()!;

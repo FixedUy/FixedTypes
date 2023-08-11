@@ -17,9 +17,7 @@ interface Usuario {
     ultimaEdicion: number;
 }
 declare const usuarioConverter: {
-    toFirestore(Usuario: Usuario): {
-        nombre: string;
-    };
+    toFirestore(usuario: Usuario): Usuario;
     fromFirestore(snapshot: any): Usuario;
 };
 export { type Usuario, type UsuarioEmpresas, usuarioConverter };
