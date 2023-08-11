@@ -43,6 +43,7 @@ export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";
 export * from "./types/cloudFunctions/actualizarUsuarioDeEmpresa";
+export * from "./types/cloudFunctions/eliminarMovimiento";
 export * from "./types/cloudFunctions/enviarMailInvitacion";
 export * from "./types/cloudFunctions/invitacionAceptar";
 export * from "./types/cloudFunctions/invitacionRechazar";
