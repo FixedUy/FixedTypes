@@ -1,4 +1,10 @@
-import {Empresa} from "./empresa";
+interface UsuarioEmpresas {
+  id: string;
+  nombreComercial: string;
+  rut: string;
+  razonSocial: string;
+  logoURL: string;
+}
 
 interface Usuario {
   id: string;
@@ -6,7 +12,7 @@ interface Usuario {
   mail: string;
   creadoEl: number;
   creadoElString: string;
-  empresas: Empresa[];
+  empresas: UsuarioEmpresas[];
   vendedor: boolean;
   activo: boolean;
   ultimaEdicion: number;
@@ -18,23 +24,6 @@ const usuarioConverter = {
   },
   fromFirestore(snapshot: any): Usuario {
     const data = snapshot.data()!;
-    const empresas: Empresa[] = [];
-    if (
-      data.empresas != undefined &&
-      data.empresas != null &&
-      Array.isArray(data.empresas)
-    ) {
-      data.empresas.map(e => {
-        empresas.push({
-          id: e["id"],
-          nombreComercial: e["nombreComercial"],
-          rut: e["rut"],
-          razonSocial: e["razonSocial"],
-          logoURL: e["logoURL"],
-          opcionesGenerales: null
-        });
-      });
-    }
 
     return {
       id: snapshot.id,
@@ -42,7 +31,7 @@ const usuarioConverter = {
       mail: data.mail,
       creadoEl: data.creadoEl,
       creadoElString: data.creadoElString,
-      empresas: empresas,
+      empresas: data.empresas,
       vendedor: data.vendedor,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion
@@ -50,4 +39,4 @@ const usuarioConverter = {
   }
 };
 
-export {type Usuario, usuarioConverter};
+export {type Usuario, type UsuarioEmpresas, usuarioConverter};
