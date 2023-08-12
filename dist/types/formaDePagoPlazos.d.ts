@@ -6,7 +6,7 @@ interface PagoEnPlazos {
     ultimaEdicion: number;
 }
 declare const pagoEnPlazosConverter: {
-    toFirestore(plazo: PagoEnPlazos): {};
+    toFirestore(plazo: PagoEnPlazos): PagoEnPlazos;
     fromFirestore(snapshot: any): PagoEnPlazos;
 };
 export { type PagoEnPlazos, pagoEnPlazosConverter };

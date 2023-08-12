@@ -25,7 +25,7 @@ interface Compra {
     local: string;
 }
 declare const CompraConverter: {
-    toFirestore(compra: Compra): {};
+    toFirestore(compra: Compra): Compra;
     fromFirestore(snapshot: any): Compra;
 };
 export { type Compra, CompraConverter };

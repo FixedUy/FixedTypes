@@ -6,7 +6,7 @@ interface Unidad {
     ultimaEdicion: number;
 }
 declare const UnidadConverter: {
-    toFirestore(unidad: Unidad): {};
+    toFirestore(unidad: Unidad): Unidad;
     fromFirestore(snapshot: any): Unidad;
 };
 export { type Unidad, UnidadConverter };

@@ -9,14 +9,7 @@ interface ProductosPrecios {
 
 const productosPreciosConverter = {
   toFirestore(lista: ProductosPrecios) {
-    return {
-      idLista: lista.idLista,
-      tasa: lista.tasa,
-      precioSinIva: lista.precioSinIva,
-      precioConIva: lista.precioConIva,
-      moneda: lista.moneda,
-      precioArbitrario: lista.precioArbitrario
-    };
+    return lista;
   },
   fromFirestore(snapshot: any): ProductosPrecios {
     const data = snapshot.data()!;

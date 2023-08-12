@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.cuentaAjenaConverter = void 0;
 const cuentaAjenaConverter = {
     toFirestore(cuenta) {
-        return {};
+        return cuenta;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

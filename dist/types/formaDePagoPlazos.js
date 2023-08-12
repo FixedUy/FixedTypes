@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.pagoEnPlazosConverter = void 0;
 const pagoEnPlazosConverter = {
     toFirestore(plazo) {
-        return {};
+        return plazo;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

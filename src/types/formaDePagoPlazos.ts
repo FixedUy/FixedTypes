@@ -8,7 +8,7 @@ interface PagoEnPlazos {
 
 const pagoEnPlazosConverter = {
   toFirestore(plazo: PagoEnPlazos) {
-    return {};
+    return plazo;
   },
   fromFirestore(snapshot: any): PagoEnPlazos {
     const data = snapshot.data()!;

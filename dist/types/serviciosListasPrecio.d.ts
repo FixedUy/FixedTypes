@@ -8,7 +8,7 @@ interface ServiciosListasPrecio {
     ultimaEdicion: number;
 }
 declare const serviciosListasPrecioConverter: {
-    toFirestore(servicioListaPrecio: ServiciosListasPrecio): {};
+    toFirestore(servicioListaPrecio: ServiciosListasPrecio): ServiciosListasPrecio;
     fromFirestore(snapshot: any): ServiciosListasPrecio;
 };
 export { type ServiciosListasPrecio, serviciosListasPrecioConverter };

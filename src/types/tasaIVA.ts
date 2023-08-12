@@ -10,7 +10,7 @@ interface TasaIVA {
 }
 const tasaConverter = {
   toFirestore(tasa: TasaIVA) {
-    return {};
+    return tasa;
   },
   fromFirestore(snapshot: any): TasaIVA {
     const data = snapshot.data()!;

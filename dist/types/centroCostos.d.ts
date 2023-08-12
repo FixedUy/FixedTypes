@@ -6,7 +6,7 @@ interface CentroCostos {
     ultimaEdicion: number;
 }
 declare const centroCostosConverter: {
-    toFirestore(centroCostos: CentroCostos): {};
+    toFirestore(centroCostos: CentroCostos): CentroCostos;
     fromFirestore(snapshot: any): CentroCostos;
 };
 export { type CentroCostos, centroCostosConverter };

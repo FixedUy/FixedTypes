@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CajaConverter = void 0;
 const CajaConverter = {
-    toFirestore(compra) {
-        return {};
+    toFirestore(caja) {
+        return caja;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

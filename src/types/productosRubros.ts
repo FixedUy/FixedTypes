@@ -11,8 +11,8 @@ interface ProductosRubro {
 }
 
 const productosRubroConverter = {
-  toFirestore(servicioRubros: ProductosRubro) {
-    return {};
+  toFirestore(productoRubro: ProductosRubro) {
+    return productoRubro;
   },
   fromFirestore(snapshot: any): ProductosRubro {
     const data = snapshot.data()!;

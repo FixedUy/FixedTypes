@@ -14,8 +14,8 @@ interface Caja {
 }
 
 const CajaConverter = {
-  toFirestore(compra: Caja) {
-    return {};
+  toFirestore(caja: Caja) {
+    return caja;
   },
   fromFirestore(snapshot: any): Caja {
     const data = snapshot.data()!;

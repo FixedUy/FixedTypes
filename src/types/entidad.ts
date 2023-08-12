@@ -26,8 +26,8 @@ interface Entidad {
 }
 
 const entidadConverter = {
-  toFirestore(cliente: Entidad) {
-    return {};
+  toFirestore(entidad: Entidad) {
+    return entidad;
   },
   fromFirestore(snapshot: any): Entidad {
     const data = snapshot.data()!;

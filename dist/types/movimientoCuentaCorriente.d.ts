@@ -31,7 +31,7 @@ interface MovimientoCC {
     usuario: string;
 }
 declare const movimientoCCConverter: {
-    toFirestore(movimiento: MovimientoCC): {};
+    toFirestore(movimiento: MovimientoCC): MovimientoCC;
     fromFirestore(snapshot: any): MovimientoCC;
 };
 export { type MovimientoCC, movimientoCCConverter };

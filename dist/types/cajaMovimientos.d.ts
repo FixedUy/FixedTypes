@@ -25,7 +25,7 @@ interface CajaMovimiento {
     idDocumento: string;
 }
 declare const CajaMovimientoConverter: {
-    toFirestore(compra: CajaMovimiento): {};
+    toFirestore(cajaMovimiento: CajaMovimiento): CajaMovimiento;
     fromFirestore(snapshot: any): CajaMovimiento;
 };
 export { type CajaMovimiento, CajaMovimientoConverter };

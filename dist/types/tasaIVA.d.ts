@@ -9,7 +9,7 @@ interface TasaIVA {
     ultimaEdicion: number;
 }
 declare const tasaConverter: {
-    toFirestore(tasa: TasaIVA): {};
+    toFirestore(tasa: TasaIVA): TasaIVA;
     fromFirestore(snapshot: any): TasaIVA;
 };
 export { type TasaIVA, tasaConverter };

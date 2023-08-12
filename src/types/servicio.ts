@@ -15,7 +15,7 @@ interface Servicio {
 
 const servicioConverter = {
   toFirestore(servicio: Servicio) {
-    return {};
+    return servicio;
   },
   fromFirestore(snapshot: any): Servicio {
     const data = snapshot.data()!;

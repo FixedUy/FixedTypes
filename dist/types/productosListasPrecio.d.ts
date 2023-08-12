@@ -8,7 +8,7 @@ interface ProductosListasPrecio {
     ultimaEdicion: number;
 }
 declare const productosListasPrecioConverter: {
-    toFirestore(productoListaPrecio: ProductosListasPrecio): {};
+    toFirestore(productoListaPrecio: ProductosListasPrecio): ProductosListasPrecio;
     fromFirestore(snapshot: any): ProductosListasPrecio;
 };
 export { type ProductosListasPrecio, productosListasPrecioConverter };

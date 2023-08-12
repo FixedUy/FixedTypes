@@ -1,5 +1,4 @@
 import {CampoExtraMediosPago} from "./campoExtraMediosPago";
-import {isArray} from "lodash";
 
 interface MediosPago {
   version: number;
@@ -14,25 +13,25 @@ interface MediosPago {
 
 const MediosPagoConverter = {
   toFirestore(mediosPago: MediosPago) {
-    return {};
+    return mediosPago;
   },
   fromFirestore(snapshot: any): MediosPago {
     const data = snapshot.data()!;
 
-    const campoExtraMediosPago: CampoExtraMediosPago[] = [];
-    if (
-      data.camposExtra != undefined &&
-      data.camposExtra != null &&
-      isArray(data.camposExtra)
-    ) {
-      data.camposExtra.map(e => {
-        campoExtraMediosPago.push({
-          tipo: e["tipo"],
-          nombre: e["nombre"],
-          obligatorio: e["obligatorio"]
-        });
-      });
-    }
+    // const campoExtraMediosPago: CampoExtraMediosPago[] = [];
+    // if (
+    //   data.camposExtra != undefined &&
+    //   data.camposExtra != null &&
+    //   isArray(data.camposExtra)
+    // ) {
+    //   data.camposExtra.map(e => {
+    //     campoExtraMediosPago.push({
+    //       tipo: e["tipo"],
+    //       nombre: e["nombre"],
+    //       obligatorio: e["obligatorio"]
+    //     });
+    //   });
+    // }
 
     return {
       version: data.version,
@@ -40,7 +39,8 @@ const MediosPagoConverter = {
       nombre: data.nombre,
       identificable: data.identificable,
       requiereVencimiento: data.requiereVencimiento,
-      camposExtra: campoExtraMediosPago,
+      camposExtra: data.camposExtra,
+      // camposExtra: campoExtraMediosPago,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion
     };

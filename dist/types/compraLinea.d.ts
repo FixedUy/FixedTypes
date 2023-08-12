@@ -13,7 +13,7 @@ interface CompraLinea {
     idProducto: string;
 }
 declare const CompraLineaConverter: {
-    toFirestore(linea: CompraLinea): {};
+    toFirestore(linea: CompraLinea): CompraLinea;
     fromFirestore(snapshot: any): CompraLinea;
 };
 export { type CompraLinea, CompraLineaConverter };

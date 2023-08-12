@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UnidadConverter = void 0;
 const UnidadConverter = {
     toFirestore(unidad) {
-        return {};
+        return unidad;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

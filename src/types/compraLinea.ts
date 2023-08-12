@@ -17,7 +17,7 @@ interface CompraLinea {
 }
 const CompraLineaConverter = {
   toFirestore(linea: CompraLinea) {
-    return {};
+    return linea;
   },
   fromFirestore(snapshot: any): CompraLinea {
     const data = snapshot.data()!;

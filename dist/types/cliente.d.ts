@@ -28,7 +28,7 @@ interface Cliente {
     };
 }
 declare const clienteConverter: {
-    toFirestore(cliente: Cliente): {};
+    toFirestore(cliente: Cliente): Cliente;
     fromFirestore(snapshot: any): Cliente;
 };
 export { type Cliente, clienteConverter };

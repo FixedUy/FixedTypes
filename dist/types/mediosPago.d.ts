@@ -10,7 +10,7 @@ interface MediosPago {
     ultimaEdicion: number;
 }
 declare const MediosPagoConverter: {
-    toFirestore(mediosPago: MediosPago): {};
+    toFirestore(mediosPago: MediosPago): MediosPago;
     fromFirestore(snapshot: any): MediosPago;
 };
 export { type MediosPago, MediosPagoConverter };

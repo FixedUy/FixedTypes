@@ -15,7 +15,7 @@ interface Caja {
     activo: boolean;
 }
 declare const CajaConverter: {
-    toFirestore(compra: Caja): {};
+    toFirestore(caja: Caja): Caja;
     fromFirestore(snapshot: any): Caja;
 };
 export { type Caja, CajaConverter };

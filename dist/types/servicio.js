@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.servicioConverter = void 0;
 const servicioConverter = {
     toFirestore(servicio) {
-        return {};
+        return servicio;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

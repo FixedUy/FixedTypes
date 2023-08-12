@@ -37,8 +37,8 @@ interface CajaMovimiento {
 }
 
 const CajaMovimientoConverter = {
-  toFirestore(compra: CajaMovimiento) {
-    return {};
+  toFirestore(cajaMovimiento: CajaMovimiento) {
+    return cajaMovimiento;
   },
   fromFirestore(snapshot: any): CajaMovimiento {
     const data = snapshot.data()!;

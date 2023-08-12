@@ -12,27 +12,28 @@ interface ProductosListasPrecio {
 
 const productosListasPrecioConverter = {
   toFirestore(productoListaPrecio: ProductosListasPrecio) {
-    return {};
+    return productoListaPrecio;
   },
   fromFirestore(snapshot: any): ProductosListasPrecio {
     const data = snapshot.data()!;
 
-    const locales: string[] = [];
-    if (
-      data.locales != undefined &&
-      data.locales != null &&
-      isArray(data.locales)
-    ) {
-      data.locales.map(e => {
-        locales.push(e);
-      });
-    }
+    // const locales: string[] = [];
+    // if (
+    //   data.locales != undefined &&
+    //   data.locales != null &&
+    //   isArray(data.locales)
+    // ) {
+    //   data.locales.map(e => {
+    //     locales.push(e);
+    //   });
+    // }
 
     return {
       version: data.version,
       id: snapshot.id,
       nombre: data.nombre,
-      locales: locales,
+      locales: data.locales,
+      // locales: locales,
       clonarId: data.clonarId,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion

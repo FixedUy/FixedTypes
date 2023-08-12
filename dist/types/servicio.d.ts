@@ -16,7 +16,7 @@ interface Servicio {
     };
 }
 declare const servicioConverter: {
-    toFirestore(servicio: Servicio): {};
+    toFirestore(servicio: Servicio): Servicio;
     fromFirestore(snapshot: any): Servicio;
 };
 export { type Servicio, servicioConverter };

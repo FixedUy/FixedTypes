@@ -19,7 +19,7 @@ interface Producto {
     };
 }
 declare const productoConverter: {
-    toFirestore(producto: Producto): {};
+    toFirestore(producto: Producto): Producto;
     fromFirestore(snapshot: any): Producto;
 };
 export { type Producto, productoConverter };

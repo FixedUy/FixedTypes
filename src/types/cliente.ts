@@ -27,7 +27,7 @@ interface Cliente {
 
 const clienteConverter = {
   toFirestore(cliente: Cliente) {
-    return {};
+    return cliente;
   },
   fromFirestore(snapshot: any): Cliente {
     const data = snapshot.data()!;

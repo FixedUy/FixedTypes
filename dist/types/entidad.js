@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.entidadConverter = void 0;
 const entidadConverter = {
-    toFirestore(cliente) {
-        return {};
+    toFirestore(entidad) {
+        return entidad;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

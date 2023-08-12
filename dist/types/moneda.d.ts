@@ -9,7 +9,7 @@ interface Moneda {
     ultimaEdicion: number;
 }
 declare const monedaConverter: {
-    toFirestore(moneda: Moneda): {};
+    toFirestore(moneda: Moneda): Moneda;
     fromFirestore(snapshot: any): Moneda;
 };
 export { type Moneda, monedaConverter };

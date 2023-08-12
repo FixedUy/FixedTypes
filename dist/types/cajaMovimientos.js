@@ -21,8 +21,8 @@ exports.movimientoSumaCaja = {
     [CajaTipoMovimiento.AjusteQuitar]: false
 };
 const CajaMovimientoConverter = {
-    toFirestore(compra) {
-        return {};
+    toFirestore(cajaMovimiento) {
+        return cajaMovimiento;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

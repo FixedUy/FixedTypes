@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.centroCostosConverter = void 0;
 const centroCostosConverter = {
     toFirestore(centroCostos) {
-        return {};
+        return centroCostos;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

@@ -16,7 +16,7 @@ interface Producto {
 
 const productoConverter = {
   toFirestore(producto: Producto) {
-    return {};
+    return producto;
   },
   fromFirestore(snapshot: any): Producto {
     const data = snapshot.data()!;

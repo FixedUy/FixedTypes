@@ -15,8 +15,8 @@ interface UsuarioSistemaInvitacion {
 }
 
 const usuarioSistemaInvitacionConverter = {
-  toFirestore(Usuario: UsuarioSistemaInvitacion) {
-    return {nombre: Usuario.nombre};
+  toFirestore(usuarioInvitacion: UsuarioSistemaInvitacion) {
+    return usuarioInvitacion;
   },
   fromFirestore(snapshot: any): UsuarioSistemaInvitacion {
     const data = snapshot.data()!;

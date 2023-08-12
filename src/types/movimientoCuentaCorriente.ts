@@ -48,7 +48,7 @@ interface MovimientoCC {
 
 const movimientoCCConverter = {
   toFirestore(movimiento: MovimientoCC) {
-    return {};
+    return movimiento;
   },
   fromFirestore(snapshot: any): MovimientoCC {
     const data = snapshot.data()!;

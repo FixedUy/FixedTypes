@@ -29,7 +29,7 @@ interface Compra {
 
 const CompraConverter = {
   toFirestore(compra: Compra) {
-    return {};
+    return compra;
   },
   fromFirestore(snapshot: any): Compra {
     const data = snapshot.data()!;

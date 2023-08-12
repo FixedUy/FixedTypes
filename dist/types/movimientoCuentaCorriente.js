@@ -30,7 +30,7 @@ exports.movimientoSuma = {
 };
 const movimientoCCConverter = {
     toFirestore(movimiento) {
-        return {};
+        return movimiento;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

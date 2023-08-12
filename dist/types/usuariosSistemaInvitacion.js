@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuarioSistemaInvitacionConverter = void 0;
 const usuarioSistemaInvitacionConverter = {
-    toFirestore(Usuario) {
-        return { nombre: Usuario.nombre };
+    toFirestore(usuarioInvitacion) {
+        return usuarioInvitacion;
     },
     fromFirestore(snapshot) {
         var _a;

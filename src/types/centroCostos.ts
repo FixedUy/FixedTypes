@@ -8,7 +8,7 @@ interface CentroCostos {
 
 const centroCostosConverter = {
   toFirestore(centroCostos: CentroCostos) {
-    return {};
+    return centroCostos;
   },
   fromFirestore(snapshot: any): CentroCostos {
     const data = snapshot.data()!;

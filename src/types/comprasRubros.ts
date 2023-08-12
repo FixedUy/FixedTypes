@@ -12,7 +12,7 @@ interface ComprasRubro {
 
 const comprasRubroConverter = {
   toFirestore(comprasRubros: ComprasRubro) {
-    return {};
+    return comprasRubros;
   },
   fromFirestore(snapshot: any): ComprasRubro {
     const data = snapshot.data()!;

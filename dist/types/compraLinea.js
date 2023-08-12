@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompraLineaConverter = void 0;
 const CompraLineaConverter = {
     toFirestore(linea) {
-        return {};
+        return linea;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

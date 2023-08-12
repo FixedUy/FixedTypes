@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompraConverter = void 0;
 const CompraConverter = {
     toFirestore(compra) {
-        return {};
+        return compra;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
