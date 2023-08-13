@@ -8,6 +8,9 @@ interface Caja {
       [monedaId: string]: string;
     };
   };
+  // Lista de usuarios que pueden hacer retiros de caja,
+  // ajustes de quitar, y aceptar depositos.
+  puedenRetirar: string[];
   locales: string;
   ultimaEdicion: number;
   activo: boolean;
@@ -23,6 +26,7 @@ const CajaConverter = {
       version: data.version,
       id: snapshot.id,
       nombre: data.nombre,
+      puedenRetirar: data.puedenRetirar,
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
       locales: data.locales,

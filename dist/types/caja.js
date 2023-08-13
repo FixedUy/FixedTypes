@@ -11,6 +11,7 @@ const CajaConverter = {
             version: data.version,
             id: snapshot.id,
             nombre: data.nombre,
+            puedenRetirar: data.puedenRetirar,
             saldoMonedas: data.saldoMonedas,
             saldoMedios: data.saldoMedios,
             locales: data.locales,

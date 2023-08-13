@@ -10,6 +10,7 @@ interface Caja {
             [monedaId: string]: string;
         };
     };
+    puedenRetirar: string[];
     locales: string;
     ultimaEdicion: number;
     activo: boolean;
