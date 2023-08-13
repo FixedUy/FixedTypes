@@ -12,7 +12,7 @@ export interface OpcionesGenerales {
   moduloResguardos: boolean;
 }
 
-export const defecto: {[key: string]: OpcionesGenerales} = {
+export const opcionesGeneralesDefecto: {[key: string]: OpcionesGenerales} = {
   defecto: {
     nombreComercial: "",
     logoGeneral: "",

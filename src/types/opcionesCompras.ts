@@ -8,7 +8,7 @@ export interface OpcionesCompras {
   cantidadDecimales: number;
 }
 
-export const defectoOpcionesCompras: {
+export const opcionesCompraDefecto: {
   [key: string]: OpcionesCompras;
 } = {
   defecto: {

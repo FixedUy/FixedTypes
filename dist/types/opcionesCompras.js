@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defectoOpcionesCompras = void 0;
-exports.defectoOpcionesCompras = {
+exports.opcionesCompraDefecto = void 0;
+exports.opcionesCompraDefecto = {
     defecto: {
         comprobanteContado: true,
         comprobanteCredito: true,

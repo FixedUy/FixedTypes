@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defecto = void 0;
-exports.defecto = {
+exports.opcionesGeneralesDefecto = void 0;
+exports.opcionesGeneralesDefecto = {
     defecto: {
         nombreComercial: "",
         logoGeneral: "",

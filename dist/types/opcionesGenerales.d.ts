@@ -11,6 +11,6 @@ export interface OpcionesGenerales {
     unidades: boolean;
     moduloResguardos: boolean;
 }
-export declare const defecto: {
+export declare const opcionesGeneralesDefecto: {
     [key: string]: OpcionesGenerales;
 };
