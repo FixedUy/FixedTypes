@@ -1,3 +1,4 @@
+import { OpcionesCompras } from "./opcionesCompras";
 import { OpcionesGenerales } from "./opcionesGenerales";
 interface Empresa {
     id: string;
@@ -7,6 +8,7 @@ interface Empresa {
     razonSocial: string;
     logoURL: string;
     opcionesGenerales: OpcionesGenerales;
+    opcionesCompras: OpcionesCompras;
     domicilio: string;
     localidad: string;
     departamento: string;

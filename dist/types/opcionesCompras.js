@@ -3,12 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.defectoOpcionesCompras = void 0;
 exports.defectoOpcionesCompras = {
     defecto: {
-        comprobanteContado: false,
-        comprobanteCredito: false,
+        comprobanteContado: true,
+        comprobanteCredito: true,
         comprobanteDefecto: "",
         tasaIVADefecto: "",
-        vistaPrecioDefecto: "",
+        vistaPrecioDefecto: "sinIVA",
         monedaDefecto: "",
-        cantidadDecimales: 0
+        cantidadDecimales: 2
     }
 };

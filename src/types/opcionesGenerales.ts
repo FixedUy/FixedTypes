@@ -1,6 +1,6 @@
 export interface OpcionesGenerales {
   monedaDefecto: string;
-  vistaPrecios: string;
+  vistaPrecios: "conIVA" | "sinIVA";
   tasaIVADefecto: string;
   logoGeneral: string;
   logoGeneralURL: string;
@@ -18,7 +18,7 @@ export const defecto: {[key: string]: OpcionesGenerales} = {
     logoGeneral: "",
     logoGeneralURL: "",
     monedaDefecto: "",
-    vistaPrecios: "",
+    vistaPrecios: "sinIVA",
     tasaIVADefecto: "",
     moduloServicios: false,
     moduloProductos: false,

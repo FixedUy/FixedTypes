@@ -3,7 +3,7 @@ export interface OpcionesCompras {
   comprobanteCredito: boolean;
   comprobanteDefecto: string;
   tasaIVADefecto: string;
-  vistaPrecioDefecto: string;
+  vistaPrecioDefecto: "conIVA" | "sinIVA";
   monedaDefecto: string;
   cantidadDecimales: number;
 }
@@ -12,12 +12,12 @@ export const defectoOpcionesCompras: {
   [key: string]: OpcionesCompras;
 } = {
   defecto: {
-    comprobanteContado: false,
-    comprobanteCredito: false,
+    comprobanteContado: true,
+    comprobanteCredito: true,
     comprobanteDefecto: "",
     tasaIVADefecto: "",
-    vistaPrecioDefecto: "",
+    vistaPrecioDefecto: "sinIVA",
     monedaDefecto: "",
-    cantidadDecimales: 0
+    cantidadDecimales: 2
   }
 };

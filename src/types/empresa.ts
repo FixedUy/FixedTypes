@@ -1,3 +1,4 @@
+import {OpcionesCompras} from "./opcionesCompras";
 import {OpcionesGenerales} from "./opcionesGenerales";
 
 interface Empresa {
@@ -8,6 +9,7 @@ interface Empresa {
   razonSocial: string;
   logoURL: string;
   opcionesGenerales: OpcionesGenerales;
+  opcionesCompras: OpcionesCompras;
   domicilio: string;
   localidad: string;
   departamento: string;
@@ -39,6 +41,7 @@ const empresaConverter = {
       razonSocial: data.razonSocial,
       logoURL: data.logoURL,
       opcionesGenerales: data.opcionesGenerales,
+      opcionesCompras: data.opcionesCompras,
       domicilio: data.domicilio,
       localidad: data.localidad,
       departamento: data.departamento,

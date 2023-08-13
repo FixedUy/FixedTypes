@@ -7,7 +7,7 @@ exports.defecto = {
         logoGeneral: "",
         logoGeneralURL: "",
         monedaDefecto: "",
-        vistaPrecios: "",
+        vistaPrecios: "sinIVA",
         tasaIVADefecto: "",
         moduloServicios: false,
         moduloProductos: false,

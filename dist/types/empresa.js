@@ -15,6 +15,7 @@ const empresaConverter = {
             razonSocial: data.razonSocial,
             logoURL: data.logoURL,
             opcionesGenerales: data.opcionesGenerales,
+            opcionesCompras: data.opcionesCompras,
             domicilio: data.domicilio,
             localidad: data.localidad,
             departamento: data.departamento,

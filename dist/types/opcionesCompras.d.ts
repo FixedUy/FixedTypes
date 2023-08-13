@@ -3,7 +3,7 @@ export interface OpcionesCompras {
     comprobanteCredito: boolean;
     comprobanteDefecto: string;
     tasaIVADefecto: string;
-    vistaPrecioDefecto: string;
+    vistaPrecioDefecto: "conIVA" | "sinIVA";
     monedaDefecto: string;
     cantidadDecimales: number;
 }
