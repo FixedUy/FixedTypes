@@ -1,15 +1,14 @@
 import { RemitoItem } from "./remitoItem";
 import { Cliente } from "./cliente";
-import { Local } from "./local";
 interface Remito {
-    version: string;
+    version: number;
     id: string;
     fechaComprobante: number;
     fechaComprobanteString: string;
-    fechaCreacion: string;
+    fechaCreacion: number;
     numero: string;
-    localIngresa: Local | null;
-    localSale: Local | null;
+    localIngresa: string | null;
+    localSale: string | null;
     entidad: Cliente;
     items: RemitoItem[];
     observaciones: string;
@@ -22,8 +21,8 @@ export declare enum RemitoTipo {
     Salida = "salida",
     Transferencia = "transferencia"
 }
-declare const remitoConverter: {
+declare const RemitoConverter: {
     toFirestore(remito: Remito): Remito;
     fromFirestore(snapshot: any): Remito;
 };
-export { type Remito, remitoConverter };
+export { type Remito, RemitoConverter };

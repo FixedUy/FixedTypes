@@ -1,7 +1,7 @@
-import { Producto } from "./producto";
-import { Servicio } from "./servicio";
 interface RemitoItem {
-    item: Producto | Servicio;
+    tipo: "producto" | "servicio";
     cantidad: number;
+    tipoId: string;
+    descripcion: string;
 }
 export { type RemitoItem };

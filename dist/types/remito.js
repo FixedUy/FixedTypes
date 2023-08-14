@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.remitoConverter = exports.RemitoTipo = void 0;
+exports.RemitoConverter = exports.RemitoTipo = void 0;
 var RemitoTipo;
 (function (RemitoTipo) {
     RemitoTipo["Ingreso"] = "ingreso";
     RemitoTipo["Salida"] = "salida";
     RemitoTipo["Transferencia"] = "transferencia";
 })(RemitoTipo || (exports.RemitoTipo = RemitoTipo = {}));
-const remitoConverter = {
+const RemitoConverter = {
     toFirestore(remito) {
         return remito;
     },
@@ -31,4 +31,4 @@ const remitoConverter = {
         };
     }
 };
-exports.remitoConverter = remitoConverter;
+exports.RemitoConverter = RemitoConverter;
