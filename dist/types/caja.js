@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CajaConverter = void 0;
-const CajaConverter = {
+exports.cajaConverter = void 0;
+const cajaConverter = {
     toFirestore(caja) {
         return caja;
     },
@@ -21,4 +21,4 @@ const CajaConverter = {
         };
     }
 };
-exports.CajaConverter = CajaConverter;
+exports.cajaConverter = cajaConverter;

@@ -12,12 +12,12 @@ interface Caja {
     };
     puedenRetirar: string[];
     puedenAceptarDepositos: string[];
-    locales: string;
+    locales: string[];
     ultimaEdicion: number;
     activo: boolean;
 }
-declare const CajaConverter: {
+declare const cajaConverter: {
     toFirestore(caja: Caja): Caja;
     fromFirestore(snapshot: any): Caja;
 };
-export { type Caja, CajaConverter };
+export { type Caja, cajaConverter };

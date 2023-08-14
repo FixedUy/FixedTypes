@@ -12,12 +12,12 @@ interface Caja {
   // ajustes de quitar, y aceptar depositos.
   puedenRetirar: string[];
   puedenAceptarDepositos: string[];
-  locales: string;
+  locales: string[];
   ultimaEdicion: number;
   activo: boolean;
 }
 
-const CajaConverter = {
+const cajaConverter = {
   toFirestore(caja: Caja) {
     return caja;
   },
@@ -38,4 +38,4 @@ const CajaConverter = {
   }
 };
 
-export {type Caja, CajaConverter};
+export {type Caja, cajaConverter};
