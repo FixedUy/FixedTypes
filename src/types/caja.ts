@@ -11,6 +11,7 @@ interface Caja {
   // Lista de usuarios que pueden hacer retiros de caja,
   // ajustes de quitar, y aceptar depositos.
   puedenRetirar: string[];
+  puedenAceptarDepositos: string[];
   locales: string;
   ultimaEdicion: number;
   activo: boolean;
@@ -27,6 +28,7 @@ const CajaConverter = {
       id: snapshot.id,
       nombre: data.nombre,
       puedenRetirar: data.puedenRetirar,
+      puedenAceptarDepositos: data.puedenAceptarDepositos,
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
       locales: data.locales,

@@ -52,6 +52,7 @@ export * from "./types/cloudFunctions/afectarCuentaCorriente";
 export * from "./types/cloudFunctions/comprasAgregar";
 export * from "./types/cloudFunctions/comprasEliminar";
 export * from "./types/cloudFunctions/remitoAgregar";
+export * from "./types/cloudFunctions/crearCaja";
 
 // utils
 export * from "./utils/convertirFechaNumberoAfechaString";

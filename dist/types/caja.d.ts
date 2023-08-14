@@ -11,6 +11,7 @@ interface Caja {
         };
     };
     puedenRetirar: string[];
+    puedenAceptarDepositos: string[];
     locales: string;
     ultimaEdicion: number;
     activo: boolean;
