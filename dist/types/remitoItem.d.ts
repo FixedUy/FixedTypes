@@ -1,7 +1,7 @@
 interface RemitoItem {
     tipo: "producto" | "servicio";
     cantidad: number;
-    tipoId: string;
+    productoId: string;
     descripcion: string;
 }
 export { type RemitoItem };
