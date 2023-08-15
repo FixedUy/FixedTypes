@@ -13,6 +13,7 @@ interface Servicio {
     campoExtra: {
         [key: string]: string;
     };
+    buscablePor: null | string[];
 }
 declare const servicioConverter: {
     toFirestore(servicio: Servicio): Servicio;

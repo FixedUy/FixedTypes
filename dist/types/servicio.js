@@ -16,7 +16,8 @@ const servicioConverter = {
             listaPrecio: data.listaPrecio,
             unidad: data.unidad,
             activo: data.activo,
-            campoExtra: data.campoExtra
+            campoExtra: data.campoExtra,
+            buscablePor: null
         };
     }
 };

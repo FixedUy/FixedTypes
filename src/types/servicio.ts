@@ -10,6 +10,7 @@ interface Servicio {
   unidad: string;
   activo: boolean;
   campoExtra: {[key: string]: string};
+  buscablePor: null | string[];
 }
 
 const servicioConverter = {
@@ -28,7 +29,8 @@ const servicioConverter = {
       listaPrecio: data.listaPrecio,
       unidad: data.unidad,
       activo: data.activo,
-      campoExtra: data.campoExtra
+      campoExtra: data.campoExtra,
+      buscablePor: null
     };
   }
 };
