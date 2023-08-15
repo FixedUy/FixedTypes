@@ -12,18 +12,16 @@ export interface OpcionesGenerales {
   moduloResguardos: boolean;
 }
 
-export const opcionesGeneralesDefecto: {[key: string]: OpcionesGenerales} = {
-  defecto: {
-    nombreComercial: "",
-    logoGeneral: "",
-    logoGeneralURL: "",
-    monedaDefecto: "",
-    vistaPrecios: "sinIVA",
-    tasaIVADefecto: "",
-    moduloServicios: false,
-    moduloProductos: false,
-    centroCostos: false,
-    unidades: false,
-    moduloResguardos: false
-  }
+export const opcionesGeneralesDefecto: OpcionesGenerales = {
+  nombreComercial: "",
+  logoGeneral: "",
+  logoGeneralURL: "",
+  monedaDefecto: "",
+  vistaPrecios: "sinIVA",
+  tasaIVADefecto: "",
+  moduloServicios: false,
+  moduloProductos: false,
+  centroCostos: false,
+  unidades: false,
+  moduloResguardos: false
 };

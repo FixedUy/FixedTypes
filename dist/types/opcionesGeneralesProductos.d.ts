@@ -4,6 +4,4 @@ export interface OpcionesGeneralesProductos {
     tasaIVADefectoProductos: string;
     precioArbitrario: boolean;
 }
-export declare const defectoOpcionesGeneralesProductos: {
-    [key: string]: OpcionesGeneralesProductos;
-};
+export declare const defectoOpcionesGeneralesProductos: OpcionesGeneralesProductos;

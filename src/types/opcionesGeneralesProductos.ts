@@ -5,13 +5,9 @@ export interface OpcionesGeneralesProductos {
   precioArbitrario: boolean;
 }
 
-export const defectoOpcionesGeneralesProductos: {
-  [key: string]: OpcionesGeneralesProductos;
-} = {
-  defecto: {
-    nombreModuloProductos: "",
-    nombreModuloProductosSingular: "",
-    tasaIVADefectoProductos: "",
-    precioArbitrario: false
-  }
+export const defectoOpcionesGeneralesProductos: OpcionesGeneralesProductos = {
+  nombreModuloProductos: "",
+  nombreModuloProductosSingular: "",
+  tasaIVADefectoProductos: "",
+  precioArbitrario: false
 };
