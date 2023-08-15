@@ -3,5 +3,6 @@ interface RemitoItem {
     cantidad: number;
     productoId: string;
     descripcion: string;
+    codigo: string;
 }
 export { type RemitoItem };

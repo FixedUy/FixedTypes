@@ -1,8 +1,9 @@
 interface RemitoItem {
   tipo: "producto" | "servicio";
   cantidad: number;
-  productoId: string; // el id del producto o servicio
-  descripcion: string; // el nombre del producto o servicio
+  productoId: string;
+  descripcion: string;
+  codigo: string;
 }
 
 export {type RemitoItem};
