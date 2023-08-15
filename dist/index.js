@@ -51,6 +51,7 @@ __exportStar(require("./types/opcionesCompras"), exports);
 __exportStar(require("./types/movimientoCuentaCorriente"), exports);
 __exportStar(require("./types/remito"), exports);
 __exportStar(require("./types/remitoItem"), exports);
+__exportStar(require("./types/remitoItemFormulario"), exports);
 __exportStar(require("./types/caja"), exports);
 __exportStar(require("./types/cajaMovimientos"), exports);
 // cloud functions
