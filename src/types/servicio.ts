@@ -1,12 +1,11 @@
 import {ServiciosPrecios} from "./serviciosPrecios";
-import {ServiciosRubro} from "./serviciosRubros";
 
 interface Servicio {
   version: number;
   id: string;
   codigo: string[];
   nombre: string;
-  rubro: ServiciosRubro | string;
+  rubroId: string;
   listaPrecio: {[key: string]: ServiciosPrecios};
   unidad: string;
   activo: boolean;
@@ -25,7 +24,7 @@ const servicioConverter = {
       id: snapshot.id,
       codigo: data.codigo,
       nombre: data.nombre,
-      rubro: data.rubro,
+      rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,
       unidad: data.unidad,
       activo: data.activo,

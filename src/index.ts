@@ -1,4 +1,3 @@
-export * from "./types/campoExtraMediosPago";
 export * from "./types/centroCostos";
 export * from "./types/cliente";
 export * from "./types/compra";
@@ -9,7 +8,6 @@ export * from "./types/entidad";
 export * from "./types/formaDePagoPlazos";
 export * from "./types/compraLinea";
 export * from "./types/local";
-export * from "./types/mediosPago";
 export * from "./types/moneda";
 export * from "./types/opcionesGenerales";
 export * from "./types/opcionesGeneralesCamposAdicionales";
@@ -37,6 +35,8 @@ export * from "./types/remito";
 export * from "./types/remitoItem";
 export * from "./types/caja";
 export * from "./types/cajaMovimientos";
+export * from "./types/cajaMediosCobro";
+export * from "./types/cajaMediosPago";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
