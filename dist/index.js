@@ -14,7 +14,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./types/campoExtraMediosPago"), exports);
 __exportStar(require("./types/centroCostos"), exports);
 __exportStar(require("./types/cliente"), exports);
 __exportStar(require("./types/compra"), exports);
@@ -25,7 +24,6 @@ __exportStar(require("./types/entidad"), exports);
 __exportStar(require("./types/formaDePagoPlazos"), exports);
 __exportStar(require("./types/compraLinea"), exports);
 __exportStar(require("./types/local"), exports);
-__exportStar(require("./types/mediosPago"), exports);
 __exportStar(require("./types/moneda"), exports);
 __exportStar(require("./types/opcionesGenerales"), exports);
 __exportStar(require("./types/opcionesGeneralesCamposAdicionales"), exports);
@@ -54,6 +52,8 @@ __exportStar(require("./types/remitoItem"), exports);
 __exportStar(require("./types/remitoItemFormulario"), exports);
 __exportStar(require("./types/caja"), exports);
 __exportStar(require("./types/cajaMovimientos"), exports);
+__exportStar(require("./types/cajaMediosCobro"), exports);
+__exportStar(require("./types/cajaMediosPago"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);

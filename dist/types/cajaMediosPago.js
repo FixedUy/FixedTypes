@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.serviciosListasPrecioConverter = void 0;
-const serviciosListasPrecioConverter = {
-    toFirestore(servicioListaPrecio) {
-        return servicioListaPrecio;
+exports.cajaMediosPagoConverter = void 0;
+const cajaMediosPagoConverter = {
+    toFirestore(mediosPago) {
+        return mediosPago;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
@@ -11,11 +11,12 @@ const serviciosListasPrecioConverter = {
             version: data.version,
             id: snapshot.id,
             nombre: data.nombre,
-            locales: data.locales,
-            clonarId: data.clonarId,
+            requiereVencimiento: data.requiereVencimiento,
+            camposExtra: data.camposExtra,
+            // camposExtra: campoExtraMediosPago,
             activo: data.activo,
             ultimaEdicion: data.ultimaEdicion
         };
     }
 };
-exports.serviciosListasPrecioConverter = serviciosListasPrecioConverter;
+exports.cajaMediosPagoConverter = cajaMediosPagoConverter;

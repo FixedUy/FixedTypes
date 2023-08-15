@@ -6,7 +6,7 @@ var RemitoTipo;
     RemitoTipo["Ingreso"] = "ingreso";
     RemitoTipo["Salida"] = "salida";
     RemitoTipo["Transferencia"] = "transferencia";
-})(RemitoTipo || (exports.RemitoTipo = RemitoTipo = {}));
+})(RemitoTipo = exports.RemitoTipo || (exports.RemitoTipo = {}));
 const RemitoConverter = {
     toFirestore(remito) {
         return remito;

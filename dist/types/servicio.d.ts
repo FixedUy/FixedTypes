@@ -1,11 +1,10 @@
 import { ServiciosPrecios } from "./serviciosPrecios";
-import { ServiciosRubro } from "./serviciosRubros";
 interface Servicio {
     version: number;
     id: string;
     codigo: string[];
     nombre: string;
-    rubro: ServiciosRubro | string;
+    rubroId: string;
     listaPrecio: {
         [key: string]: ServiciosPrecios;
     };
