@@ -6,7 +6,7 @@ var RemitoTipo;
     RemitoTipo["Ingreso"] = "ingreso";
     RemitoTipo["Salida"] = "salida";
     RemitoTipo["Transferencia"] = "transferencia";
-})(RemitoTipo = exports.RemitoTipo || (exports.RemitoTipo = {}));
+})(RemitoTipo || (exports.RemitoTipo = RemitoTipo = {}));
 const RemitoConverter = {
     toFirestore(remito) {
         return remito;
@@ -19,10 +19,12 @@ const RemitoConverter = {
             fechaComprobante: data.fechaComprobante,
             fechaComprobanteString: data.fechaComprobanteString,
             fechaCreacion: data.fechaCreacion,
+            comprobante: data.comprobante,
             numero: data.numero,
             localIngresa: data.localIngresa,
             localSale: data.localSale,
-            entidad: data.entidad,
+            entidadId: data.entidadId,
+            entidadNombre: data.entidadNombre,
             items: data.items,
             observaciones: data.observaciones,
             tipo: data.tipo,

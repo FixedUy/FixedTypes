@@ -1,5 +1,4 @@
 import {RemitoItem} from "./remitoItem";
-import {Cliente} from "./cliente";
 
 interface Remito {
   version: number;
@@ -7,10 +6,12 @@ interface Remito {
   fechaComprobante: number;
   fechaComprobanteString: string;
   fechaCreacion: number;
-  numero: string;
+  comprobante: string;
+  numero: number;
   localIngresa: string | null;
   localSale: string | null;
-  entidad: Cliente;
+  entidadId: string;
+  entidadNombre: string;
   items: RemitoItem[];
   observaciones: string;
   tipo: RemitoTipo;
@@ -36,10 +37,12 @@ const RemitoConverter = {
       fechaComprobante: data.fechaComprobante,
       fechaComprobanteString: data.fechaComprobanteString,
       fechaCreacion: data.fechaCreacion,
+      comprobante: data.comprobante,
       numero: data.numero,
       localIngresa: data.localIngresa,
       localSale: data.localSale,
-      entidad: data.entidad,
+      entidadId: data.entidadId,
+      entidadNombre: data.entidadNombre,
       items: data.items,
       observaciones: data.observaciones,
       tipo: data.tipo,

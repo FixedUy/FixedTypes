@@ -1,15 +1,16 @@
 import { RemitoItem } from "./remitoItem";
-import { Cliente } from "./cliente";
 interface Remito {
     version: number;
     id: string;
     fechaComprobante: number;
     fechaComprobanteString: string;
     fechaCreacion: number;
-    numero: string;
+    comprobante: string;
+    numero: number;
     localIngresa: string | null;
     localSale: string | null;
-    entidad: Cliente;
+    entidadId: string;
+    entidadNombre: string;
     items: RemitoItem[];
     observaciones: string;
     tipo: RemitoTipo;
