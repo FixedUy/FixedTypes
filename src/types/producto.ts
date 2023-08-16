@@ -1,12 +1,11 @@
 import {ProductosPrecios} from "./productosPrecios";
-import {ProductosRubro} from "./productosRubros";
 
 interface Producto {
   version: number;
   id: string;
   codigo: string[];
   nombre: string;
-  rubro: ProductosRubro | string;
+  rubroId: string;
   listaPrecio: {[key: string]: ProductosPrecios};
   unidad: string;
   activo: boolean;
@@ -26,7 +25,7 @@ const productoConverter = {
       id: snapshot.id,
       codigo: data.codigo,
       nombre: data.nombre,
-      rubro: data.rubro,
+      rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,
       unidad: data.unidad,
       activo: data.activo,

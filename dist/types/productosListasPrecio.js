@@ -7,16 +7,6 @@ const productosListasPrecioConverter = {
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
-        // const locales: string[] = [];
-        // if (
-        //   data.locales != undefined &&
-        //   data.locales != null &&
-        //   isArray(data.locales)
-        // ) {
-        //   data.locales.map(e => {
-        //     locales.push(e);
-        //   });
-        // }
         return {
             version: data.version,
             id: snapshot.id,

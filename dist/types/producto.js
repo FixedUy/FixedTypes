@@ -12,7 +12,7 @@ const productoConverter = {
             id: snapshot.id,
             codigo: data.codigo,
             nombre: data.nombre,
-            rubro: data.rubro,
+            rubroId: data.rubroId,
             listaPrecio: data.listaPrecio,
             unidad: data.unidad,
             activo: data.activo,

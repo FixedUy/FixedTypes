@@ -1,5 +1,3 @@
-import {isArray} from "lodash";
-
 interface ProductosListasPrecio {
   version: number;
   id: string;
@@ -16,17 +14,6 @@ const productosListasPrecioConverter = {
   },
   fromFirestore(snapshot: any): ProductosListasPrecio {
     const data = snapshot.data()!;
-
-    // const locales: string[] = [];
-    // if (
-    //   data.locales != undefined &&
-    //   data.locales != null &&
-    //   isArray(data.locales)
-    // ) {
-    //   data.locales.map(e => {
-    //     locales.push(e);
-    //   });
-    // }
 
     return {
       version: data.version,
