@@ -17,6 +17,7 @@ const productoConverter = {
             unidad: data.unidad,
             activo: data.activo,
             campoExtra: data.campoExtra,
+            buscablePor: data.buscablePor,
             stock: data.stock
         };
     }

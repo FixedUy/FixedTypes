@@ -16,6 +16,7 @@ interface Producto {
     stock: {
         [key: string]: number;
     };
+    buscablePor: null | string[];
 }
 declare const productoConverter: {
     toFirestore(producto: Producto): Producto;

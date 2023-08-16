@@ -11,6 +11,7 @@ interface Producto {
   activo: boolean;
   campoExtra: {[key: string]: string};
   stock: {[key: string]: number};
+  buscablePor: null | string[];
 }
 
 const productoConverter = {
@@ -30,6 +31,7 @@ const productoConverter = {
       unidad: data.unidad,
       activo: data.activo,
       campoExtra: data.campoExtra,
+      buscablePor: data.buscablePor,
       stock: data.stock
     };
   }
