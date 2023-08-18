@@ -8,16 +8,12 @@ export interface OpcionesCompras {
   cantidadDecimales: number;
 }
 
-export const opcionesCompraDefecto: {
-  [key: string]: OpcionesCompras;
-} = {
-  defecto: {
-    comprobanteContado: true,
-    comprobanteCredito: true,
-    comprobanteDefecto: "",
-    tasaIVADefecto: "",
-    vistaPrecioDefecto: "sinIVA",
-    monedaDefecto: "",
-    cantidadDecimales: 2
-  }
+export const opcionesCompraDefecto: OpcionesCompras = {
+  comprobanteContado: true,
+  comprobanteCredito: true,
+  comprobanteDefecto: "",
+  tasaIVADefecto: "",
+  vistaPrecioDefecto: "sinIVA",
+  monedaDefecto: "",
+  cantidadDecimales: 2
 };

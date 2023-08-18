@@ -7,6 +7,4 @@ export interface OpcionesCompras {
     monedaDefecto: string;
     cantidadDecimales: number;
 }
-export declare const opcionesCompraDefecto: {
-    [key: string]: OpcionesCompras;
-};
+export declare const opcionesCompraDefecto: OpcionesCompras;

@@ -9,11 +9,9 @@ export interface CampoExtra {
   nombre: string;
   clave: string;
 }
-export const campos: {[key: string]: OpcionesGeneralesCamposAdicionales} = {
-  campos: {
-    campoExtraEntidad: [],
-    campoExtraProducto: [],
-    campoExtraServicio: [],
-    campoExtraUsuario: []
-  }
+export const defectoCamposAdicionales: OpcionesGeneralesCamposAdicionales = {
+  campoExtraEntidad: [] as CampoExtra[],
+  campoExtraProducto: [] as CampoExtra[],
+  campoExtraServicio: [] as CampoExtra[],
+  campoExtraUsuario: [] as CampoExtra[]
 };
