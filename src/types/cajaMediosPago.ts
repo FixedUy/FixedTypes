@@ -1,5 +1,3 @@
-import {isArray} from "lodash";
-
 interface CajaMediosPagoCampoExtra {
   tipo: string;
   nombre: string;
@@ -24,26 +22,12 @@ const cajaMediosPagoConverter = {
   fromFirestore(snapshot: any): CajaMediosPago {
     const data = snapshot.data()!;
 
-    const campoExtraMediosPago: CajaMediosPagoCampoExtra[] = [];
-    if (
-      data.camposExtra != undefined &&
-      data.camposExtra != null &&
-      isArray(data.camposExtra)
-    ) {
-      data.camposExtra.map(e => {
-        campoExtraMediosPago.push(
-          (e["tipo"], e["nombre"], e["opciones"], e["obligatorio"])
-        );
-      });
-    }
-
     return {
       version: data.version,
       id: snapshot.id,
       nombre: data.nombre,
       requiereVencimiento: data.requiereVencimiento,
       camposExtra: data.camposExtra,
-      // camposExtra: campoExtraMediosPago,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion
     };
