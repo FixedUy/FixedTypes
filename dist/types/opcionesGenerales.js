@@ -12,6 +12,5 @@ exports.opcionesGeneralesDefecto = {
     moduloProductos: false,
     centroCostos: false,
     unidades: false,
-    moduloResguardos: false,
-    tiposCodigo: []
+    moduloResguardos: false
 };
