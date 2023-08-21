@@ -10,5 +10,6 @@ export interface OpcionesGenerales {
     centroCostos: boolean;
     unidades: boolean;
     moduloResguardos: boolean;
+    tiposCodigo: string[];
 }
 export declare const opcionesGeneralesDefecto: OpcionesGenerales;
