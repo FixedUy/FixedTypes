@@ -9,7 +9,6 @@ interface CajaMediosCobro {
   version: number;
   id: string;
   nombre: string;
-  identificable: boolean;
   requiereVencimiento: boolean;
   camposExtra: CajaMediosCobroCampoExtra[];
   activo: boolean;
@@ -26,10 +25,8 @@ const cajaMediosCobroConverter = {
       version: data.version,
       id: snapshot.id,
       nombre: data.nombre,
-      identificable: data.identificable,
       requiereVencimiento: data.requiereVencimiento,
       camposExtra: data.camposExtra,
-      // camposExtra: campoExtraMediosCobro,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion
     };

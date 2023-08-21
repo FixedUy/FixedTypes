@@ -8,7 +8,6 @@ interface CajaMediosCobro {
     version: number;
     id: string;
     nombre: string;
-    identificable: boolean;
     requiereVencimiento: boolean;
     camposExtra: CajaMediosCobroCampoExtra[];
     activo: boolean;
