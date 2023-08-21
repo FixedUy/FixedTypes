@@ -42,7 +42,7 @@ const cajaMediosPagoConverter = {
       id: snapshot.id,
       nombre: data.nombre,
       requiereVencimiento: data.requiereVencimiento,
-      camposExtra: campoExtraMediosPago,
+      camposExtra: data.camposExtra,
       // camposExtra: campoExtraMediosPago,
       activo: data.activo,
       ultimaEdicion: data.ultimaEdicion
