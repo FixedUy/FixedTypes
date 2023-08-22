@@ -2,7 +2,9 @@ import { ServiciosPrecios } from "./serviciosPrecios";
 interface Servicio {
     version: number;
     id: string;
-    codigo: string[];
+    codigo: {
+        [key: string]: string;
+    };
     nombre: string;
     rubroId: string;
     listaPrecio: {

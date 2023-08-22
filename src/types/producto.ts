@@ -3,7 +3,7 @@ import {ProductosPrecios} from "./productosPrecios";
 interface Producto {
   version: number;
   id: string;
-  codigo: string[];
+  codigo: {[key: string]: string};
   nombre: string;
   rubroId: string;
   listaPrecio: {[key: string]: ProductosPrecios};
