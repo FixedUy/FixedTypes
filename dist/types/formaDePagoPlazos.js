@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.pagoEnPlazosConverter = void 0;
-const pagoEnPlazosConverter = {
+exports.FormasDePagoPlazosConverter = void 0;
+const FormasDePagoPlazosConverter = {
     toFirestore(plazo) {
-        return plazo;
+        return {};
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
@@ -16,4 +16,4 @@ const pagoEnPlazosConverter = {
         };
     }
 };
-exports.pagoEnPlazosConverter = pagoEnPlazosConverter;
+exports.FormasDePagoPlazosConverter = FormasDePagoPlazosConverter;

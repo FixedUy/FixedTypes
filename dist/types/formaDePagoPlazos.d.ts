@@ -5,13 +5,8 @@ interface FormasDePagoPlazos {
     activo: boolean;
     ultimaEdicion: number;
 }
-declare const pagoEnPlazosConverter: {
-<<<<<<< HEAD
+declare const FormasDePagoPlazosConverter: {
     toFirestore(plazo: FormasDePagoPlazos): {};
     fromFirestore(snapshot: any): FormasDePagoPlazos;
-=======
-    toFirestore(plazo: PagoEnPlazos): PagoEnPlazos;
-    fromFirestore(snapshot: any): PagoEnPlazos;
->>>>>>> 41c2a203b1aa8d69604732cc70cf952e61e3488a
 };
-export { type FormasDePagoPlazos, pagoEnPlazosConverter };
+export { type FormasDePagoPlazos, FormasDePagoPlazosConverter };

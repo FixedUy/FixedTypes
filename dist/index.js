@@ -17,6 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./types/centroCostos"), exports);
 __exportStar(require("./types/cliente"), exports);
 __exportStar(require("./types/compra"), exports);
+__exportStar(require("./types/venta"), exports);
 __exportStar(require("./types/comprasRubros"), exports);
 __exportStar(require("./types/cuentaAjena"), exports);
 __exportStar(require("./types/empresa"), exports);

@@ -1,6 +1,7 @@
 export * from "./types/centroCostos";
 export * from "./types/cliente";
 export * from "./types/compra";
+export * from "./types/venta";
 export * from "./types/comprasRubros";
 export * from "./types/cuentaAjena";
 export * from "./types/empresa";
