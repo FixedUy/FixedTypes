@@ -40,6 +40,7 @@ export * from "./types/caja";
 export * from "./types/cajaMovimientos";
 export * from "./types/cajaMediosCobro";
 export * from "./types/cajaMediosPago";
+export * from "./types/usuariosRol";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";

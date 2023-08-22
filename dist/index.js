@@ -56,6 +56,7 @@ __exportStar(require("./types/caja"), exports);
 __exportStar(require("./types/cajaMovimientos"), exports);
 __exportStar(require("./types/cajaMediosCobro"), exports);
 __exportStar(require("./types/cajaMediosPago"), exports);
+__exportStar(require("./types/usuariosRol"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
