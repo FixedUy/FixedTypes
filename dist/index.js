@@ -33,6 +33,7 @@ __exportStar(require("./types/producto"), exports);
 __exportStar(require("./types/productosListasPrecio"), exports);
 __exportStar(require("./types/productosRubros"), exports);
 __exportStar(require("./types/productosPrecios"), exports);
+__exportStar(require("./types/proveedor"), exports);
 __exportStar(require("./types/servicio"), exports);
 __exportStar(require("./types/serviciosListasPrecio"), exports);
 __exportStar(require("./types/serviciosPrecios"), exports);

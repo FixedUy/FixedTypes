@@ -17,6 +17,7 @@ export * from "./types/producto";
 export * from "./types/productosListasPrecio";
 export * from "./types/productosRubros";
 export * from "./types/productosPrecios";
+export * from "./types/proveedor";
 export * from "./types/servicio";
 export * from "./types/serviciosListasPrecio";
 export * from "./types/serviciosPrecios";
