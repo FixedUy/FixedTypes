@@ -10,7 +10,7 @@ interface ProductosRubro {
     ultimaEdicion: number;
 }
 declare const productosRubroConverter: {
-    toFirestore(servicioRubros: ProductosRubro): {};
+    toFirestore(productoRubro: ProductosRubro): ProductosRubro;
     fromFirestore(snapshot: any): ProductosRubro;
 };
 export { type ProductosRubro, productosRubroConverter };

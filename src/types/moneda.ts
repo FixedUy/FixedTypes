@@ -11,7 +11,7 @@ interface Moneda {
 
 const monedaConverter = {
   toFirestore(moneda: Moneda) {
-    return {};
+    return moneda;
   },
   fromFirestore(snapshot: any): Moneda {
     const data = snapshot.data()!;

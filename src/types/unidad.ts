@@ -8,7 +8,7 @@ interface Unidad {
 
 const UnidadConverter = {
   toFirestore(unidad: Unidad) {
-    return {};
+    return unidad;
   },
   fromFirestore(snapshot: any): Unidad {
     const data = snapshot.data()!;

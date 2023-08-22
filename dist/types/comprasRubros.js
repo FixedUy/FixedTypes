@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.comprasRubroConverter = void 0;
 const comprasRubroConverter = {
     toFirestore(comprasRubros) {
-        return {};
+        return comprasRubros;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

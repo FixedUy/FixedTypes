@@ -1,16 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defecto = void 0;
-exports.defecto = {
-    defecto: {
-        nombreComercial: "",
-        logoGeneral: "",
-        logoGeneralURL: "",
-        monedaDefecto: "",
-        tasaIVADefecto: "",
-        moduloServicios: false,
-        moduloProductos: false,
-        centroCostos: false,
-        unidades: false
-    }
+exports.opcionesGeneralesDefecto = void 0;
+exports.opcionesGeneralesDefecto = {
+    nombreComercial: "",
+    logoGeneral: "",
+    logoGeneralURL: "",
+    monedaDefecto: "",
+    vistaPrecios: "sinIVA",
+    tasaIVADefecto: "",
+    moduloServicios: false,
+    moduloProductos: false,
+    centroCostos: false,
+    unidades: false,
+    moduloResguardos: false,
+    tiposCodigo: []
 };

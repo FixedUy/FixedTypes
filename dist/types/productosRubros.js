@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.productosRubroConverter = void 0;
 const productosRubroConverter = {
-    toFirestore(servicioRubros) {
-        return {};
+    toFirestore(productoRubro) {
+        return productoRubro;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

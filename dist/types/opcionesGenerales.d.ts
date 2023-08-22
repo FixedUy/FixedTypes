@@ -1,5 +1,6 @@
 export interface OpcionesGenerales {
     monedaDefecto: string;
+    vistaPrecios: "conIVA" | "sinIVA";
     tasaIVADefecto: string;
     logoGeneral: string;
     logoGeneralURL: string;
@@ -8,7 +9,7 @@ export interface OpcionesGenerales {
     moduloProductos: boolean;
     centroCostos: boolean;
     unidades: boolean;
+    moduloResguardos: boolean;
+    tiposCodigo: string[];
 }
-export declare const defecto: {
-    [key: string]: OpcionesGenerales;
-};
+export declare const opcionesGeneralesDefecto: OpcionesGenerales;

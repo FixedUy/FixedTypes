@@ -1,22 +1,22 @@
 import {ProductosPrecios} from "./productosPrecios";
-import {ProductosRubro} from "./productosRubros";
 
 interface Producto {
   version: number;
   id: string;
-  codigo: string[];
+  codigo: {[key: string]: string};
   nombre: string;
-  rubro: ProductosRubro | string;
+  rubroId: string;
   listaPrecio: {[key: string]: ProductosPrecios};
   unidad: string;
   activo: boolean;
   campoExtra: {[key: string]: string};
   stock: {[key: string]: number};
+  buscablePor: null | string[];
 }
 
 const productoConverter = {
   toFirestore(producto: Producto) {
-    return {};
+    return producto;
   },
   fromFirestore(snapshot: any): Producto {
     const data = snapshot.data()!;
@@ -26,11 +26,12 @@ const productoConverter = {
       id: snapshot.id,
       codigo: data.codigo,
       nombre: data.nombre,
-      rubro: data.rubro,
+      rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,
       unidad: data.unidad,
       activo: data.activo,
       campoExtra: data.campoExtra,
+      buscablePor: data.buscablePor,
       stock: data.stock
     };
   }

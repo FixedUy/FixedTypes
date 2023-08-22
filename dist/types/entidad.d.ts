@@ -16,6 +16,7 @@ interface Entidad {
     mailCopiaXml: string;
     vendedores: [];
     listaPrecioServicios: ServiciosListasPrecio[] | null;
+    listaFormasDePago: string[];
     esProveedor: boolean;
     esCliente: boolean;
     activo: boolean;
@@ -27,7 +28,7 @@ interface Entidad {
     };
 }
 declare const entidadConverter: {
-    toFirestore(cliente: Entidad): {};
+    toFirestore(entidad: Entidad): Entidad;
     fromFirestore(snapshot: any): Entidad;
 };
 export { type Entidad, entidadConverter };

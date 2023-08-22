@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.entidadConverter = void 0;
 const entidadConverter = {
-    toFirestore(cliente) {
-        return {};
+    toFirestore(entidad) {
+        return entidad;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
@@ -24,6 +24,7 @@ const entidadConverter = {
             mailCopiaXml: data.mailCopiaXml,
             vendedores: data.vendedores,
             listaPrecioServicios: data.listaPrecioServicios,
+            listaFormasDePago: data.listaFormasDePago,
             esProveedor: data.esProveedor,
             esCliente: data.esCliente,
             activo: data.activo,

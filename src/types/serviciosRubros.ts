@@ -12,7 +12,7 @@ interface ServiciosRubro {
 
 const serviciosRubroConverter = {
   toFirestore(servicioRubros: ServiciosRubro) {
-    return {};
+    return servicioRubros;
   },
   fromFirestore(snapshot: any): ServiciosRubro {
     const data = snapshot.data()!;

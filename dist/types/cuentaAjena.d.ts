@@ -9,7 +9,7 @@ interface CuentaAjena {
     ultimaEdicion: number;
 }
 declare const cuentaAjenaConverter: {
-    toFirestore(cuenta: CuentaAjena): {};
+    toFirestore(cuenta: CuentaAjena): CuentaAjena;
     fromFirestore(snapshot: any): CuentaAjena;
 };
 export { type CuentaAjena, cuentaAjenaConverter };

@@ -11,7 +11,7 @@ interface CuentaAjena {
 
 const cuentaAjenaConverter = {
   toFirestore(cuenta: CuentaAjena) {
-    return {};
+    return cuenta;
   },
   fromFirestore(snapshot: any): CuentaAjena {
     const data = snapshot.data()!;

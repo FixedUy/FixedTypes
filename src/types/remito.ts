@@ -1,0 +1,55 @@
+import {RemitoItem} from "./remitoItem";
+
+interface Remito {
+  version: number;
+  id: string;
+  fechaComprobante: number;
+  fechaComprobanteString: string;
+  fechaCreacion: number;
+  comprobante: string;
+  numero: number;
+  localIngresa: string | null;
+  localSale: string | null;
+  entidadId: string;
+  entidadNombre: string;
+  items: RemitoItem[];
+  observaciones: string;
+  tipo: RemitoTipo;
+  autor: string;
+  activo: boolean;
+}
+
+export enum RemitoTipo {
+  Ingreso = "ingreso",
+  Salida = "salida",
+  Transferencia = "transferencia"
+}
+
+const RemitoConverter = {
+  toFirestore(remito: Remito) {
+    return remito;
+  },
+  fromFirestore(snapshot: any): Remito {
+    const data = snapshot.data()!;
+    return {
+      version: data.version,
+      id: snapshot.id,
+      fechaComprobante: data.fechaComprobante,
+      fechaComprobanteString: data.fechaComprobanteString,
+      fechaCreacion: data.fechaCreacion,
+      comprobante: data.comprobante,
+      numero: data.numero,
+      localIngresa: data.localIngresa,
+      localSale: data.localSale,
+      entidadId: data.entidadId,
+      entidadNombre: data.entidadNombre,
+      items: data.items,
+      observaciones: data.observaciones,
+      tipo: data.tipo,
+      autor: data.autor,
+      activo: data.activo
+    };
+  }
+};
+
+export {type Remito, RemitoConverter};

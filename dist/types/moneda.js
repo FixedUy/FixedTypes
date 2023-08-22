@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.monedaConverter = void 0;
 const monedaConverter = {
     toFirestore(moneda) {
-        return {};
+        return moneda;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();

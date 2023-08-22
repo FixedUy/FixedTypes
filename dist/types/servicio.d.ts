@@ -1,11 +1,12 @@
 import { ServiciosPrecios } from "./serviciosPrecios";
-import { ServiciosRubro } from "./serviciosRubros";
 interface Servicio {
     version: number;
     id: string;
-    codigo: string[];
+    codigo: {
+        [key: string]: string;
+    };
     nombre: string;
-    rubro: ServiciosRubro | string;
+    rubroId: string;
     listaPrecio: {
         [key: string]: ServiciosPrecios;
     };
@@ -14,9 +15,10 @@ interface Servicio {
     campoExtra: {
         [key: string]: string;
     };
+    buscablePor: null | string[];
 }
 declare const servicioConverter: {
-    toFirestore(servicio: Servicio): {};
+    toFirestore(servicio: Servicio): Servicio;
     fromFirestore(snapshot: any): Servicio;
 };
 export { type Servicio, servicioConverter };

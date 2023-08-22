@@ -1,22 +1,13 @@
-import { Moneda } from "./moneda";
-import { TasaIVA } from "./tasaIVA";
 interface ServiciosPrecios {
     idLista: string;
-    tasa: TasaIVA | string;
+    tasa: string;
     precioSinIva: number;
     precioConIva: number;
-    moneda: Moneda | string;
+    moneda: string;
     precioArbitrario: boolean;
 }
 declare const serviciosPreciosConverter: {
-    toFirestore(lista: ServiciosPrecios): {
-        idLista: string;
-        tasa: string | TasaIVA;
-        precioSinIva: number;
-        precioConIva: number;
-        moneda: string | Moneda;
-        precioArbitrario: boolean;
-    };
+    toFirestore(lista: ServiciosPrecios): ServiciosPrecios;
     fromFirestore(snapshot: any): ServiciosPrecios;
 };
 export { type ServiciosPrecios, serviciosPreciosConverter };

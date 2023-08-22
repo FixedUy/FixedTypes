@@ -1,21 +1,21 @@
 import {ServiciosPrecios} from "./serviciosPrecios";
-import {ServiciosRubro} from "./serviciosRubros";
 
 interface Servicio {
   version: number;
   id: string;
-  codigo: string[];
+  codigo: {[key: string]: string};
   nombre: string;
-  rubro: ServiciosRubro | string;
+  rubroId: string;
   listaPrecio: {[key: string]: ServiciosPrecios};
   unidad: string;
   activo: boolean;
   campoExtra: {[key: string]: string};
+  buscablePor: null | string[];
 }
 
 const servicioConverter = {
   toFirestore(servicio: Servicio) {
-    return {};
+    return servicio;
   },
   fromFirestore(snapshot: any): Servicio {
     const data = snapshot.data()!;
@@ -25,11 +25,12 @@ const servicioConverter = {
       id: snapshot.id,
       codigo: data.codigo,
       nombre: data.nombre,
-      rubro: data.rubro,
+      rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,
       unidad: data.unidad,
       activo: data.activo,
-      campoExtra: data.campoExtra
+      campoExtra: data.campoExtra,
+      buscablePor: null
     };
   }
 };

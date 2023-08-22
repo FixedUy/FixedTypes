@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.servicioConverter = void 0;
 const servicioConverter = {
     toFirestore(servicio) {
-        return {};
+        return servicio;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
@@ -12,11 +12,12 @@ const servicioConverter = {
             id: snapshot.id,
             codigo: data.codigo,
             nombre: data.nombre,
-            rubro: data.rubro,
+            rubroId: data.rubroId,
             listaPrecio: data.listaPrecio,
             unidad: data.unidad,
             activo: data.activo,
-            campoExtra: data.campoExtra
+            campoExtra: data.campoExtra,
+            buscablePor: null
         };
     }
 };

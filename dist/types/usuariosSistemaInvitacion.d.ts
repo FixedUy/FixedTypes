@@ -7,11 +7,14 @@ interface UsuarioSistemaInvitacion {
     enviadaPorMail: string;
     enviadaEl: number | null;
     enviadaElString: string;
+    empresaLogoURL: string;
+    empresaNombreComercial: string;
+    empresaRazonSocial: string;
+    empresaRUT: string;
+    empresaId: string;
 }
 declare const usuarioSistemaInvitacionConverter: {
-    toFirestore(Usuario: UsuarioSistemaInvitacion): {
-        nombre: string;
-    };
+    toFirestore(usuarioInvitacion: UsuarioSistemaInvitacion): UsuarioSistemaInvitacion;
     fromFirestore(snapshot: any): UsuarioSistemaInvitacion;
 };
 export { type UsuarioSistemaInvitacion, usuarioSistemaInvitacionConverter };

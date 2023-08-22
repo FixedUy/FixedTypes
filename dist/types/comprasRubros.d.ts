@@ -10,7 +10,7 @@ interface ComprasRubro {
     ultimaEdicion: number;
 }
 declare const comprasRubroConverter: {
-    toFirestore(comprasRubros: ComprasRubro): {};
+    toFirestore(comprasRubros: ComprasRubro): ComprasRubro;
     fromFirestore(snapshot: any): ComprasRubro;
 };
 export { type ComprasRubro, comprasRubroConverter };

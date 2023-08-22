@@ -1,5 +1,6 @@
 export interface OpcionesGenerales {
   monedaDefecto: string;
+  vistaPrecios: "conIVA" | "sinIVA";
   tasaIVADefecto: string;
   logoGeneral: string;
   logoGeneralURL: string;
@@ -8,18 +9,21 @@ export interface OpcionesGenerales {
   moduloProductos: boolean;
   centroCostos: boolean;
   unidades: boolean;
+  moduloResguardos: boolean;
+  tiposCodigo: string[];
 }
 
-export const defecto: {[key: string]: OpcionesGenerales} = {
-  defecto: {
-    nombreComercial: "",
-    logoGeneral: "",
-    logoGeneralURL: "",
-    monedaDefecto: "",
-    tasaIVADefecto: "",
-    moduloServicios: false,
-    moduloProductos: false,
-    centroCostos: false,
-    unidades: false
-  }
+export const opcionesGeneralesDefecto: OpcionesGenerales = {
+  nombreComercial: "",
+  logoGeneral: "",
+  logoGeneralURL: "",
+  monedaDefecto: "",
+  vistaPrecios: "sinIVA",
+  tasaIVADefecto: "",
+  moduloServicios: false,
+  moduloProductos: false,
+  centroCostos: false,
+  unidades: false,
+  moduloResguardos: false,
+  tiposCodigo: []
 };

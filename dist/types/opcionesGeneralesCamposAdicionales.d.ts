@@ -8,6 +8,4 @@ export interface CampoExtra {
     nombre: string;
     clave: string;
 }
-export declare const campos: {
-    [key: string]: OpcionesGeneralesCamposAdicionales;
-};
+export declare const defectoCamposAdicionales: OpcionesGeneralesCamposAdicionales;

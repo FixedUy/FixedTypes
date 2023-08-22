@@ -11,6 +11,8 @@ interface LineaCompra {
     precioConIva: number;
     importeSinIVA: number;
     importeConIVA: number;
+    stock: boolean;
+    idProducto: string;
 }
 declare const LineaCompraConverter: {
     toFirestore(linea: LineaCompra): {};

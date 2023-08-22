@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompraConverter = void 0;
 const CompraConverter = {
     toFirestore(compra) {
-        return {};
+        return compra;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
@@ -11,19 +11,25 @@ const CompraConverter = {
             version: data.version,
             id: snapshot.id,
             formaDePago: data.formaDePago,
-            fechaNumero: data.fechaNumero,
-            fechaString: data.fechaString,
+            fechaComprobante: data.fechaComprobante,
+            fechaComprobanteString: data.fechaComprobanteString,
+            fechaCreacion: data.fechaCreacion,
             comprobante: data.comprobante,
-            proveedor: data.cliente,
+            serie: data.serie,
+            numero: data.numero,
+            proveedor: data.proveedor,
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,
-            lineaCompra: data.lineaCompra,
+            compraLinea: data.compraLinea,
             tipo: data.tipo,
             subtotal: data.subtotal,
             montoIVA: data.montoIVA,
             total: data.total,
             saldo: data.saldo,
-            activo: data.activo
+            activo: data.activo,
+            observaciones: data.observaciones,
+            usuario: data.usuario,
+            local: data.local
         };
     }
 };

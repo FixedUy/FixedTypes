@@ -16,6 +16,7 @@ interface Cliente {
     mailCopiaXml: string;
     vendedores: [];
     listaPrecioServicios: ServiciosListasPrecio[] | null;
+    listaFormasDePago: string[];
     esProveedor: boolean;
     esCliente: boolean;
     activo: boolean;
@@ -27,7 +28,7 @@ interface Cliente {
     };
 }
 declare const clienteConverter: {
-    toFirestore(cliente: Cliente): {};
+    toFirestore(cliente: Cliente): Cliente;
     fromFirestore(snapshot: any): Cliente;
 };
 export { type Cliente, clienteConverter };

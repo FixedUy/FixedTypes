@@ -1,11 +1,12 @@
 import { ProductosPrecios } from "./productosPrecios";
-import { ProductosRubro } from "./productosRubros";
 interface Producto {
     version: number;
     id: string;
-    codigo: string[];
+    codigo: {
+        [key: string]: string;
+    };
     nombre: string;
-    rubro: ProductosRubro | string;
+    rubroId: string;
     listaPrecio: {
         [key: string]: ProductosPrecios;
     };
@@ -17,9 +18,10 @@ interface Producto {
     stock: {
         [key: string]: number;
     };
+    buscablePor: null | string[];
 }
 declare const productoConverter: {
-    toFirestore(producto: Producto): {};
+    toFirestore(producto: Producto): Producto;
     fromFirestore(snapshot: any): Producto;
 };
 export { type Producto, productoConverter };

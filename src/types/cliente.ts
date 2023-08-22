@@ -17,23 +17,17 @@ interface Cliente {
   mailCopiaXml: string;
   vendedores: [];
   listaPrecioServicios: ServiciosListasPrecio[] | null;
+  listaFormasDePago: string[];
   esProveedor: boolean;
   esCliente: boolean;
   activo: boolean;
   campoExtra: {[key: string]: string};
   saldoCuentas: {[key: string]: number};
 }
-// getSaldo(idMoneda: string): number {
-//   if (idMoneda in this.saldoCuentas) {
-//     return this.saldoCuentas[idMoneda];
-//   } else {
-//     return 0;
-//   }
-// }
 
 const clienteConverter = {
   toFirestore(cliente: Cliente) {
-    return {};
+    return cliente;
   },
   fromFirestore(snapshot: any): Cliente {
     const data = snapshot.data()!;
@@ -54,11 +48,12 @@ const clienteConverter = {
       mailCopiaXml: data.mailCopiaXml,
       vendedores: data.vendedores,
       listaPrecioServicios: data.listaPrecioServicios,
+      listaFormasDePago: data.listaFormasDePago,
       esProveedor: data.esProveedor,
       esCliente: data.esCliente,
       activo: data.activo,
-      campoExtra: data.campoExtra ?? [],
-      saldoCuentas: data.saldoCuentas ?? []
+      campoExtra: data.campoExtra ?? {},
+      saldoCuentas: data.saldoCuentas ?? {}
     };
   }
 };

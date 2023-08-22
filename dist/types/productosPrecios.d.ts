@@ -1,22 +1,13 @@
-import { Moneda } from "./moneda";
-import { TasaIVA } from "./tasaIVA";
 interface ProductosPrecios {
     idLista: string;
-    tasa: TasaIVA | string;
+    tasa: string;
     precioSinIva: number;
     precioConIva: number;
-    moneda: Moneda | string;
+    moneda: string;
     precioArbitrario: boolean;
 }
 declare const productosPreciosConverter: {
-    toFirestore(lista: ProductosPrecios): {
-        idLista: string;
-        tasa: string | TasaIVA;
-        precioSinIva: number;
-        precioConIva: number;
-        moneda: string | Moneda;
-        precioArbitrario: boolean;
-    };
+    toFirestore(lista: ProductosPrecios): ProductosPrecios;
     fromFirestore(snapshot: any): ProductosPrecios;
 };
 export { type ProductosPrecios, productosPreciosConverter };

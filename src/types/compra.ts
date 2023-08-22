@@ -1,29 +1,35 @@
 import {Cliente} from "./cliente";
-import {LineaCompra} from "./lineaCompra";
+import {CompraLinea} from "./compraLinea";
 import {Moneda} from "./moneda";
 
 interface Compra {
   version: number;
   id: string;
   formaDePago: string;
-  fechaNumero: number;
-  fechaString: string;
+  fechaComprobante: number;
+  fechaComprobanteString: string;
+  fechaCreacion: number;
   comprobante: string;
+  serie: string;
+  numero: number;
   proveedor: Cliente;
-  moneda: string | Moneda;
+  moneda: string;
   descuentoGeneral: number;
-  lineaCompra: LineaCompra[];
+  compraLinea: CompraLinea[];
   tipo: string;
   subtotal: number;
   montoIVA: number;
   total: number;
   saldo: number;
   activo: boolean;
+  observaciones: string;
+  usuario: string;
+  local: string;
 }
 
 const CompraConverter = {
   toFirestore(compra: Compra) {
-    return {};
+    return compra;
   },
   fromFirestore(snapshot: any): Compra {
     const data = snapshot.data()!;
@@ -31,19 +37,25 @@ const CompraConverter = {
       version: data.version,
       id: snapshot.id,
       formaDePago: data.formaDePago,
-      fechaNumero: data.fechaNumero,
-      fechaString: data.fechaString,
+      fechaComprobante: data.fechaComprobante,
+      fechaComprobanteString: data.fechaComprobanteString,
+      fechaCreacion: data.fechaCreacion,
       comprobante: data.comprobante,
-      proveedor: data.cliente,
+      serie: data.serie,
+      numero: data.numero,
+      proveedor: data.proveedor,
       moneda: data.moneda,
       descuentoGeneral: data.descuentoGeneral,
-      lineaCompra: data.lineaCompra,
+      compraLinea: data.compraLinea,
       tipo: data.tipo,
       subtotal: data.subtotal,
       montoIVA: data.montoIVA,
       total: data.total,
       saldo: data.saldo,
-      activo: data.activo
+      activo: data.activo,
+      observaciones: data.observaciones,
+      usuario: data.usuario,
+      local: data.local
     };
   }
 };

@@ -2,7 +2,7 @@ interface TasaIVA {
   id: string;
   nombre: string;
   sigla: string;
-  valor: number | string;
+  valor: number;
   cfeDgi: "Basic" | "Exp" | "Min" | "Exe" | "Otro" | "";
   activoProductos: boolean;
   activoServicios: boolean;
@@ -10,7 +10,7 @@ interface TasaIVA {
 }
 const tasaConverter = {
   toFirestore(tasa: TasaIVA) {
-    return {};
+    return tasa;
   },
   fromFirestore(snapshot: any): TasaIVA {
     const data = snapshot.data()!;

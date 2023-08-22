@@ -14,19 +14,7 @@ interface Local {
 
 const localConverter = {
   toFirestore(local: Local) {
-    return {
-      id: local.id,
-      nombreComercial: local.nombreComercial,
-      nombre: local.nombre,
-      direccion: local.direccion,
-      localidad: local.localidad,
-      departamento: local.departamento,
-      codigoDgi: local.codigoDgi,
-      logo: local.logo,
-      logoURL: local.logoURL,
-      activo: local.activo,
-      ultimaEdicion: local.ultimaEdicion
-    };
+    return local;
   },
   fromFirestore(snapshot: any): Local {
     const data = snapshot.data()!;

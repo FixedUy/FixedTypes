@@ -1,16 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.clienteConverter = void 0;
-// getSaldo(idMoneda: string): number {
-//   if (idMoneda in this.saldoCuentas) {
-//     return this.saldoCuentas[idMoneda];
-//   } else {
-//     return 0;
-//   }
-// }
 const clienteConverter = {
     toFirestore(cliente) {
-        return {};
+        return cliente;
     },
     fromFirestore(snapshot) {
         var _a, _b;
@@ -32,11 +25,12 @@ const clienteConverter = {
             mailCopiaXml: data.mailCopiaXml,
             vendedores: data.vendedores,
             listaPrecioServicios: data.listaPrecioServicios,
+            listaFormasDePago: data.listaFormasDePago,
             esProveedor: data.esProveedor,
             esCliente: data.esCliente,
             activo: data.activo,
-            campoExtra: (_a = data.campoExtra) !== null && _a !== void 0 ? _a : [],
-            saldoCuentas: (_b = data.saldoCuentas) !== null && _b !== void 0 ? _b : []
+            campoExtra: (_a = data.campoExtra) !== null && _a !== void 0 ? _a : {},
+            saldoCuentas: (_b = data.saldoCuentas) !== null && _b !== void 0 ? _b : {}
         };
     }
 };

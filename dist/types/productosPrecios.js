@@ -3,14 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.productosPreciosConverter = void 0;
 const productosPreciosConverter = {
     toFirestore(lista) {
-        return {
-            idLista: lista.idLista,
-            tasa: lista.tasa,
-            precioSinIva: lista.precioSinIva,
-            precioConIva: lista.precioConIva,
-            moneda: lista.moneda,
-            precioArbitrario: lista.precioArbitrario
-        };
+        return lista;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
