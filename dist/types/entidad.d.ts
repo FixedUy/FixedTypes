@@ -14,9 +14,10 @@ interface Entidad {
     emails: string[];
     mailDgi: string;
     mailCopiaXml: string;
-    vendedores: [];
+    vendedorId: string;
+    rubroId: string;
     listaPrecioServicios: ServiciosListasPrecio[] | null;
-    listaFormasDePago: string[];
+    formaDePago: string;
     esProveedor: boolean;
     esCliente: boolean;
     activo: boolean;

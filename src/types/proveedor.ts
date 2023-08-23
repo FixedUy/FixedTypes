@@ -15,9 +15,9 @@ interface Proveedor {
   emails: string[];
   mailDgi: string;
   mailCopiaXml: string;
-  vendedores: [];
+  rubroId: string;
   listaPrecioServicios: ServiciosListasPrecio[] | null;
-  listaFormasDePago: string[];
+  formaDePago: string[];
   esProveedor: boolean;
   esCliente: boolean;
   activo: boolean;
@@ -46,9 +46,9 @@ const proveedorConverter = {
       emails: data.emails,
       mailDgi: data.mailDgi,
       mailCopiaXml: data.mailCopiaXml,
-      vendedores: data.vendedores,
+      rubroId: data.rubroId,
       listaPrecioServicios: data.listaPrecioServicios,
-      listaFormasDePago: data.listaFormasDePago,
+      formaDePago: data.formaDePago,
       esProveedor: data.esProveedor,
       esCliente: data.esCliente,
       activo: data.activo,
