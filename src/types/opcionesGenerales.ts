@@ -11,6 +11,8 @@ export interface OpcionesGenerales {
   unidades: boolean;
   moduloResguardos: boolean;
   tiposCodigo: string[];
+  modificarDecimales: boolean;
+  cantidadDecimalesDefecto: number;
 }
 
 export const opcionesGeneralesDefecto: OpcionesGenerales = {
@@ -25,5 +27,7 @@ export const opcionesGeneralesDefecto: OpcionesGenerales = {
   centroCostos: false,
   unidades: false,
   moduloResguardos: false,
-  tiposCodigo: []
+  tiposCodigo: [],
+  modificarDecimales: false,
+  cantidadDecimalesDefecto: 2
 };

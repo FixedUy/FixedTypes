@@ -22,7 +22,7 @@ var Permisos;
     Permisos["CrearVenta"] = "vc";
     Permisos["ListarVentas"] = "vl";
     Permisos["ExportarVentas"] = "ve";
-})(Permisos = exports.Permisos || (exports.Permisos = {}));
+})(Permisos || (exports.Permisos = Permisos = {}));
 const usuarioRolConverter = {
     toFirestore(rol) {
         return rol;

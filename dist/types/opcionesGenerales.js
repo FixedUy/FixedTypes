@@ -13,5 +13,7 @@ exports.opcionesGeneralesDefecto = {
     centroCostos: false,
     unidades: false,
     moduloResguardos: false,
-    tiposCodigo: []
+    tiposCodigo: [],
+    modificarDecimales: false,
+    cantidadDecimalesDefecto: 2
 };
