@@ -18,7 +18,8 @@ const productoConverter = {
             activo: data.activo,
             campoExtra: data.campoExtra,
             buscablePor: data.buscablePor,
-            stock: data.stock
+            stock: data.stock,
+            cantidadDecimales: data.cantidadDecimales
         };
     }
 };

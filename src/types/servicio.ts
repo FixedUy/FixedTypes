@@ -11,6 +11,7 @@ interface Servicio {
   activo: boolean;
   campoExtra: {[key: string]: string};
   buscablePor: null | string[];
+  cantidadDecimales: number;
 }
 
 const servicioConverter = {
@@ -30,7 +31,8 @@ const servicioConverter = {
       unidad: data.unidad,
       activo: data.activo,
       campoExtra: data.campoExtra,
-      buscablePor: null
+      buscablePor: null,
+      cantidadDecimales: data.cantidadDecimales
     };
   }
 };

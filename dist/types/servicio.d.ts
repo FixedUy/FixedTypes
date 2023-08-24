@@ -16,6 +16,7 @@ interface Servicio {
         [key: string]: string;
     };
     buscablePor: null | string[];
+    cantidadDecimales: number;
 }
 declare const servicioConverter: {
     toFirestore(servicio: Servicio): Servicio;

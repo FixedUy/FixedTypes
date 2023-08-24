@@ -17,7 +17,8 @@ const servicioConverter = {
             unidad: data.unidad,
             activo: data.activo,
             campoExtra: data.campoExtra,
-            buscablePor: null
+            buscablePor: null,
+            cantidadDecimales: data.cantidadDecimales
         };
     }
 };
