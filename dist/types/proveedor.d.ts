@@ -26,6 +26,7 @@ interface Proveedor {
     saldoCuentas: {
         [key: string]: number;
     };
+    buscablePor: null | string[];
 }
 declare const proveedorConverter: {
     toFirestore(proveedor: Proveedor): Proveedor;

@@ -23,6 +23,7 @@ interface Proveedor {
   activo: boolean;
   campoExtra: {[key: string]: string};
   saldoCuentas: {[key: string]: number};
+  buscablePor: null | string[];
 }
 
 const proveedorConverter = {
@@ -53,7 +54,8 @@ const proveedorConverter = {
       esCliente: data.esCliente,
       activo: data.activo,
       campoExtra: data.campoExtra ?? {},
-      saldoCuentas: data.saldoCuentas ?? {}
+      saldoCuentas: data.saldoCuentas ?? {},
+      buscablePor: data.buscablePor
     };
   }
 };

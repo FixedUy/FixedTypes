@@ -30,7 +30,8 @@ const proveedorConverter = {
             esCliente: data.esCliente,
             activo: data.activo,
             campoExtra: (_a = data.campoExtra) !== null && _a !== void 0 ? _a : {},
-            saldoCuentas: (_b = data.saldoCuentas) !== null && _b !== void 0 ? _b : {}
+            saldoCuentas: (_b = data.saldoCuentas) !== null && _b !== void 0 ? _b : {},
+            buscablePor: data.buscablePor
         };
     }
 };

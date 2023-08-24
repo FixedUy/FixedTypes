@@ -27,6 +27,7 @@ interface Cliente {
     saldoCuentas: {
         [key: string]: number;
     };
+    buscablePor: null | string[];
 }
 declare const clienteConverter: {
     toFirestore(cliente: Cliente): Cliente;
