@@ -1,12 +1,12 @@
 import { ResguardosRetencion } from "./resguardosRetencion";
 import { ResguardosReferenciaNormal } from "./resguardosReferenciaNormal";
 import { ResguardosReferenciaCFE } from "./resguardosReferenciaCFE";
-import { Cliente } from "./cliente";
 interface Resguardos {
     id: string;
     fecha: string;
     fechaString: string;
-    receptor: Cliente;
+    receptorId: string;
+    receptorString: string;
     moneda: string;
     retenciones: ResguardosRetencion[];
     referencias: (ResguardosReferenciaCFE | ResguardosReferenciaNormal)[];

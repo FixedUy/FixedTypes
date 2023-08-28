@@ -1,13 +1,13 @@
 import {ResguardosRetencion} from "./resguardosRetencion";
 import {ResguardosReferenciaNormal} from "./resguardosReferenciaNormal";
 import {ResguardosReferenciaCFE} from "./resguardosReferenciaCFE";
-import {Cliente} from "./cliente";
 
 interface Resguardos {
   id: string;
   fecha: string;
   fechaString: string;
-  receptor: Cliente;
+  receptorId: string;
+  receptorString: string;
   moneda: string;
   retenciones: ResguardosRetencion[];
   referencias: (ResguardosReferenciaCFE | ResguardosReferenciaNormal)[];
@@ -25,7 +25,8 @@ const resguardosConverter = {
       id: snapshot.id,
       fecha: data.fecha,
       fechaString: data.string,
-      receptor: data.receptor,
+      receptorId: data.receptorId,
+      receptorString: data.receptorString,
       moneda: data.moneda,
       retenciones: data.retenciones,
       referencias: data.referencias,
