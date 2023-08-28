@@ -12,6 +12,8 @@ interface UsuarioSistemaInvitacion {
   empresaRazonSocial: string;
   empresaRUT: string;
   empresaId: string;
+  rolId: string;
+  rolNombre: string;
 }
 
 const usuarioSistemaInvitacionConverter = {
@@ -33,7 +35,9 @@ const usuarioSistemaInvitacionConverter = {
       enviadaPorNombre: data.enviadaPorNombre,
       enviadaPorMail: data.enviadaPorMail,
       enviadaEl: data.enviadaEl?.seconds,
-      enviadaElString: data.enviadaElString
+      enviadaElString: data.enviadaElString,
+      rolId: data.rolId,
+      rolNombre: data.rolNombre
     };
   }
 };
