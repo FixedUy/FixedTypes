@@ -3,7 +3,7 @@ import { ResguardosReferenciaNormal } from "./resguardosReferenciaNormal";
 import { ResguardosReferenciaCFE } from "./resguardosReferenciaCFE";
 interface Resguardos {
     id: string;
-    fecha: string;
+    fecha: number;
     fechaString: string;
     receptorId: string;
     receptorString: string;
