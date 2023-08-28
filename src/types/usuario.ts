@@ -19,6 +19,7 @@ interface Usuario {
   activo: boolean;
   ultimaEdicion: number;
   rol: string;
+  rolId: string;
   permisos: Permisos[];
 }
 
@@ -40,6 +41,7 @@ const usuarioConverter = {
       activo: data.activo,
       permisos: data.permisos,
       rol: data.rol,
+      rolId: data.rolId,
       ultimaEdicion: data.ultimaEdicion
     };
   }

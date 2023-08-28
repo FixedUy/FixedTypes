@@ -18,6 +18,7 @@ const usuarioConverter = {
             activo: data.activo,
             permisos: data.permisos,
             rol: data.rol,
+            rolId: data.rolId,
             ultimaEdicion: data.ultimaEdicion
         };
     }

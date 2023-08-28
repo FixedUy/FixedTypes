@@ -17,6 +17,7 @@ interface Usuario {
     activo: boolean;
     ultimaEdicion: number;
     rol: string;
+    rolId: string;
     permisos: Permisos[];
 }
 declare const usuarioConverter: {

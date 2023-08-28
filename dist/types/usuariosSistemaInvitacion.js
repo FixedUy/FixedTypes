@@ -22,8 +22,7 @@ const usuarioSistemaInvitacionConverter = {
             enviadaPorMail: data.enviadaPorMail,
             enviadaEl: (_a = data.enviadaEl) === null || _a === void 0 ? void 0 : _a.seconds,
             enviadaElString: data.enviadaElString,
-            rolId: data.rolId,
-            rolNombre: data.rolNombre
+            rolId: data.rolId
         };
     }
 };
