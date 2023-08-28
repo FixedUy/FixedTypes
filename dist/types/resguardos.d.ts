@@ -3,6 +3,7 @@ import { ResguardosReferenciaNormal } from "./resguardosReferenciaNormal";
 import { ResguardosReferenciaCFE } from "./resguardosReferenciaCFE";
 import { Cliente } from "./cliente";
 interface Resguardos {
+    id: string;
     fecha: string;
     fechaString: string;
     receptor: Cliente;
@@ -12,4 +13,8 @@ interface Resguardos {
     observaciones: string;
     valor: number;
 }
-export { type Resguardos };
+declare const resguardosConverter: {
+    toFirestore(resguardos: Resguardos): Resguardos;
+    fromFirestore(snapshot: any): Resguardos;
+};
+export { type Resguardos, resguardosConverter };
