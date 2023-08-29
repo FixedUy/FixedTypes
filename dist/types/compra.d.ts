@@ -23,6 +23,8 @@ interface Compra {
     observaciones: string;
     usuario: string;
     local: string;
+    buscablePor: null | string[];
+    productos: string[];
 }
 declare const CompraConverter: {
     toFirestore(compra: Compra): Compra;

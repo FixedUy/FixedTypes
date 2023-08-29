@@ -29,7 +29,9 @@ const CompraConverter = {
             activo: data.activo,
             observaciones: data.observaciones,
             usuario: data.usuario,
-            local: data.local
+            local: data.local,
+            buscablePor: data.buscablePor,
+            productos: data.productos
         };
     }
 };
