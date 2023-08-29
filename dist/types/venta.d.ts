@@ -1,5 +1,6 @@
 import { Cliente } from "./cliente";
 import { CompraLinea } from "./compraLinea";
+import { VentaLinea } from "./ventaLinea";
 interface Venta {
     version: number;
     id: string;
@@ -13,6 +14,7 @@ interface Venta {
     cliente: Cliente;
     moneda: string;
     compraLinea: CompraLinea[];
+    ventaLinea: VentaLinea[];
     descuentoGeneral: number;
     subtotal: number;
     montoIVA: number;
@@ -20,6 +22,7 @@ interface Venta {
     saldo: number;
     activo: boolean;
     observaciones: string;
+    esDeExportacion: boolean;
     usuario: string;
     local: string;
 }

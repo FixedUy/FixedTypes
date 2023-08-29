@@ -21,12 +21,14 @@ const VentaConverter = {
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,
             compraLinea: data.compraLinea,
+            ventaLinea: data.ventaLinea,
             subtotal: data.subtotal,
             montoIVA: data.montoIVA,
             total: data.total,
             saldo: data.saldo,
             activo: data.activo,
             observaciones: data.observaciones,
+            esDeExportacion: data.esDeExportacion,
             usuario: data.usuario,
             local: data.local
         };
