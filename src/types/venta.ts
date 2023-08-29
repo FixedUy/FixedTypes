@@ -1,5 +1,6 @@
 import {Cliente} from "./cliente";
 import {CompraLinea} from "./compraLinea";
+import {VentaLinea} from "./ventaLinea";
 
 interface Venta {
   version: number;
@@ -10,11 +11,11 @@ interface Venta {
   fechaCreacion: number;
   comprobante: string;
   serie: string;
-  numero: number;  
+  numero: number;
   cliente: Cliente;
   moneda: string;
   compraLinea: CompraLinea[];
-//   ventaLinea: VentaLinea[];
+  ventaLinea: VentaLinea[];
   descuentoGeneral: number;
   subtotal: number;
   montoIVA: number;
@@ -22,6 +23,7 @@ interface Venta {
   saldo: number;
   activo: boolean;
   observaciones: string;
+  esDeExportacion: boolean;
   usuario: string;
   local: string;
 }
@@ -46,12 +48,14 @@ const VentaConverter = {
       moneda: data.moneda,
       descuentoGeneral: data.descuentoGeneral,
       compraLinea: data.compraLinea,
+      ventaLinea: data.ventaLinea,
       subtotal: data.subtotal,
       montoIVA: data.montoIVA,
       total: data.total,
       saldo: data.saldo,
       activo: data.activo,
       observaciones: data.observaciones,
+      esDeExportacion: data.esDeExportacion,
       usuario: data.usuario,
       local: data.local
     };
