@@ -9,11 +9,22 @@ l - listar
 
 Letras módulos:
 v - ventas
+s - servicios
+t - servicios rubros
+p - productos
+q - productos rubros
 c - compras
+b - compras rubros
 l - clientes
-p - proveedores
-r - recibos clientes
+r - proveedores
+i - recibos clientes
 e - recibos proveedores
+o - cotizacion
+u - cuentas corrientes clientes
+n - cuentas corrientes proveedores
+a - estadisticas
+w - centro de costos
+
 */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuarioRolConverter = exports.Permisos = void 0;
@@ -23,9 +34,11 @@ var Permisos;
     Permisos["ExportarVentas"] = "ve";
     Permisos["CrearProductos"] = "pc";
     Permisos["ListarProductos"] = "pl";
+    Permisos["CrearCategoriaProductos"] = "ql";
     Permisos["CrearServicios"] = "sc";
     Permisos["ListarServicios"] = "sl";
-})(Permisos || (exports.Permisos = Permisos = {}));
+    Permisos["CrearCategoriaServicios"] = "qt";
+})(Permisos = exports.Permisos || (exports.Permisos = {}));
 const usuarioRolConverter = {
     toFirestore(rol) {
         return rol;

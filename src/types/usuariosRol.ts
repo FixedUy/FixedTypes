@@ -8,11 +8,22 @@ l - listar
 
 Letras módulos:
 v - ventas
+s - servicios
+t - servicios rubros
+p - productos
+q - productos rubros
 c - compras
+b - compras rubros
 l - clientes
-p - proveedores
-r - recibos clientes
+r - proveedores
+i - recibos clientes
 e - recibos proveedores
+o - cotizacion
+u - cuentas corrientes clientes
+n - cuentas corrientes proveedores
+a - estadisticas
+w - centro de costos
+
 */
 
 export enum Permisos {
@@ -20,8 +31,10 @@ export enum Permisos {
   ExportarVentas = "ve",
   CrearProductos = "pc",
   ListarProductos = "pl",
+  CrearCategoriaProductos = "ql",
   CrearServicios = "sc",
-  ListarServicios = "sl"
+  ListarServicios = "sl",
+  CrearCategoriaServicios = "qt"
 }
 
 interface UsuarioRol {

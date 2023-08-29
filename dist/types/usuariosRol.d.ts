@@ -3,8 +3,10 @@ export declare enum Permisos {
     ExportarVentas = "ve",
     CrearProductos = "pc",
     ListarProductos = "pl",
+    CrearCategoriaProductos = "ql",
     CrearServicios = "sc",
-    ListarServicios = "sl"
+    ListarServicios = "sl",
+    CrearCategoriaServicios = "qt"
 }
 interface UsuarioRol {
     id: string;

@@ -1,5 +1,7 @@
 import { OpcionesCompras } from "./opcionesCompras";
 import { OpcionesGenerales } from "./opcionesGenerales";
+import { OpcionesGeneralesProductos } from "./opcionesGeneralesProductos";
+import { OpcionesGeneralesServicios } from "./opcionesGeneralesServicios";
 interface Empresa {
     id: string;
     version: number;
@@ -9,6 +11,8 @@ interface Empresa {
     logoURL: string;
     opcionesGenerales: OpcionesGenerales;
     opcionesCompras: OpcionesCompras;
+    opcionesGeneralesServicios: OpcionesGeneralesServicios;
+    opcionesGeneralesProductos: OpcionesGeneralesProductos;
     domicilio: string;
     localidad: string;
     departamento: string;

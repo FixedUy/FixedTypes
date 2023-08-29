@@ -16,6 +16,8 @@ const empresaConverter = {
             logoURL: data.logoURL,
             opcionesGenerales: data.opcionesGenerales,
             opcionesCompras: data.opcionesCompras,
+            opcionesGeneralesProductos: data.opcionesGeneralesProductos,
+            opcionesGeneralesServicios: data.opcionesGeneralesServicios,
             domicilio: data.domicilio,
             localidad: data.localidad,
             departamento: data.departamento,
