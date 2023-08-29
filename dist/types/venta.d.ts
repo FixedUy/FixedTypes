@@ -23,6 +23,9 @@ interface Venta {
     activo: boolean;
     observaciones: string;
     esDeExportacion: boolean;
+    clausulaVenta: string;
+    modalidadVenta: string;
+    viaTransporte: string;
     usuario: string;
     local: string;
 }

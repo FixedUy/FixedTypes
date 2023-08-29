@@ -29,6 +29,9 @@ const VentaConverter = {
             activo: data.activo,
             observaciones: data.observaciones,
             esDeExportacion: data.esDeExportacion,
+            clausulaVenta: data.clausulaVenta,
+            modalidadVenta: data.modalidadVenta,
+            viaTransporte: data.viaTransporte,
             usuario: data.usuario,
             local: data.local
         };

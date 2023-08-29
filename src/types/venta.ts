@@ -24,6 +24,9 @@ interface Venta {
   activo: boolean;
   observaciones: string;
   esDeExportacion: boolean;
+  clausulaVenta: string;
+  modalidadVenta: string;
+  viaTransporte: string;
   usuario: string;
   local: string;
 }
@@ -56,6 +59,9 @@ const VentaConverter = {
       activo: data.activo,
       observaciones: data.observaciones,
       esDeExportacion: data.esDeExportacion,
+      clausulaVenta: data.clausulaVenta,
+      modalidadVenta: data.modalidadVenta,
+      viaTransporte: data.viaTransporte,
       usuario: data.usuario,
       local: data.local
     };
