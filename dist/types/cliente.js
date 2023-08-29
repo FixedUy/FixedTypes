@@ -24,7 +24,7 @@ const clienteConverter = {
             mailDgi: data.mailDgi,
             mailCopiaXml: data.mailCopiaXml,
             vendedorId: data.vendedorId,
-            rubroId: data.rubroId,
+            rubroServiciosVentaId: data.rubroServiciosVentaId,
             listaPrecioServicios: data.listaPrecioServicios,
             formaDePago: data.formaDePago,
             esProveedor: data.esProveedor,

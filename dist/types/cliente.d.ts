@@ -15,7 +15,7 @@ interface Cliente {
     mailDgi: string;
     mailCopiaXml: string;
     vendedorId: string;
-    rubroId: string;
+    rubroServiciosVentaId: string;
     listaPrecioServicios: ServiciosListasPrecio[] | null;
     formaDePago: string;
     esProveedor: boolean;
