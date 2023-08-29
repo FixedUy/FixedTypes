@@ -13,6 +13,7 @@ interface Producto {
   stock: {[key: string]: number};
   buscablePor: null | string[];
   cantidadDecimales: number;
+  conSeriales: boolean;
 }
 
 const productoConverter = {
@@ -34,7 +35,8 @@ const productoConverter = {
       campoExtra: data.campoExtra,
       buscablePor: data.buscablePor,
       stock: data.stock,
-      cantidadDecimales: data.cantidadDecimales
+      cantidadDecimales: data.cantidadDecimales,
+      conSeriales: data.conSeriales
     };
   }
 };

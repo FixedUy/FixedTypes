@@ -19,7 +19,8 @@ const productoConverter = {
             campoExtra: data.campoExtra,
             buscablePor: data.buscablePor,
             stock: data.stock,
-            cantidadDecimales: data.cantidadDecimales
+            cantidadDecimales: data.cantidadDecimales,
+            conSeriales: data.conSeriales
         };
     }
 };
