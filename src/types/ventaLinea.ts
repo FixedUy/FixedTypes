@@ -1,6 +1,7 @@
 interface VentaLinea {
   cantidad: number;
   descripcion: string;
+  descripcionLarga: string;
   rubro: string;
   centroCosto: string;
   tasaIva: string;
@@ -24,6 +25,7 @@ const VentaLineaConverter = {
     return {
       cantidad: data.cantidad,
       descripcion: data.descripcion,
+      descripcionLarga: data.descripcionLarga,
       rubro: data.rubro,
       centroCosto: data.centroCosto,
       tasaIva: data.tasaIva,

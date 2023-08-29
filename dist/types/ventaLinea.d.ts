@@ -1,6 +1,7 @@
 interface VentaLinea {
     cantidad: number;
     descripcion: string;
+    descripcionLarga: string;
     rubro: string;
     centroCosto: string;
     tasaIva: string;
