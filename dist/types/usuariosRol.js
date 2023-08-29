@@ -19,9 +19,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuarioRolConverter = exports.Permisos = void 0;
 var Permisos;
 (function (Permisos) {
-    Permisos["CrearVenta"] = "vc";
     Permisos["ListarVentas"] = "vl";
     Permisos["ExportarVentas"] = "ve";
+    Permisos["CrearProductos"] = "pc";
+    Permisos["ListarProductos"] = "pl";
+    Permisos["CrearServicios"] = "sc";
+    Permisos["ListarServicios"] = "sl";
 })(Permisos = exports.Permisos || (exports.Permisos = {}));
 const usuarioRolConverter = {
     toFirestore(rol) {
