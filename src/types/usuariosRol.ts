@@ -9,9 +9,8 @@ l - listar
 Letras módulos:
 v - ventas
 s - servicios
-t - servicios rubros
 p - productos
-q - productos rubros
+q - rubros de productos/servicios
 c - compras
 b - compras rubros
 l - clientes
@@ -23,7 +22,16 @@ u - cuentas corrientes clientes
 n - cuentas corrientes proveedores
 a - estadisticas
 w - centro de costos
-
+x - documentos
+z - boleta compra
+d - remitos
+f - resguardos
+g - Exportador personalizado
+h - Stock
+j - Importador
+k - Listas de precio productos/servicios
+t - Caja
+u - CFE Recibidos
 */
 
 export enum Permisos {

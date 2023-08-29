@@ -1,5 +1,3 @@
-import {Permisos} from "./usuariosRol";
-
 interface UsuarioEmpresas {
   id: string;
   nombreComercial: string;
@@ -18,9 +16,7 @@ interface Usuario {
   vendedor: boolean;
   activo: boolean;
   ultimaEdicion: number;
-  rol: string;
   rolId: string;
-  permisos: Permisos[];
 }
 
 const usuarioConverter = {
@@ -39,8 +35,6 @@ const usuarioConverter = {
       empresas: data.empresas,
       vendedor: data.vendedor,
       activo: data.activo,
-      permisos: data.permisos,
-      rol: data.rol,
       rolId: data.rolId,
       ultimaEdicion: data.ultimaEdicion
     };

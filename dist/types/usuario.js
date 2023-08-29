@@ -16,8 +16,6 @@ const usuarioConverter = {
             empresas: data.empresas,
             vendedor: data.vendedor,
             activo: data.activo,
-            permisos: data.permisos,
-            rol: data.rol,
             rolId: data.rolId,
             ultimaEdicion: data.ultimaEdicion
         };

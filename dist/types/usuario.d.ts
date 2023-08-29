@@ -1,4 +1,3 @@
-import { Permisos } from "./usuariosRol";
 interface UsuarioEmpresas {
     id: string;
     nombreComercial: string;
@@ -16,9 +15,7 @@ interface Usuario {
     vendedor: boolean;
     activo: boolean;
     ultimaEdicion: number;
-    rol: string;
     rolId: string;
-    permisos: Permisos[];
 }
 declare const usuarioConverter: {
     toFirestore(usuario: Usuario): Usuario;
