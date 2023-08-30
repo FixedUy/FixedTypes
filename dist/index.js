@@ -32,6 +32,7 @@ __exportStar(require("./types/opcionesGenerales"), exports);
 __exportStar(require("./types/opcionesGeneralesCamposAdicionales"), exports);
 __exportStar(require("./types/opcionesGeneralesProductos"), exports);
 __exportStar(require("./types/opcionesGeneralesServicios"), exports);
+__exportStar(require("./types/opcionesVentaRol"), exports);
 __exportStar(require("./types/producto"), exports);
 __exportStar(require("./types/productoSeriales"), exports);
 __exportStar(require("./types/productosListasPrecio"), exports);
