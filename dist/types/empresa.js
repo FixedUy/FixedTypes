@@ -18,6 +18,7 @@ const empresaConverter = {
             opcionesCompras: data.opcionesCompras,
             opcionesGeneralesProductos: data.opcionesGeneralesProductos,
             opcionesGeneralesServicios: data.opcionesGeneralesServicios,
+            opcionesVenta: data.opcionesVenta,
             domicilio: data.domicilio,
             localidad: data.localidad,
             departamento: data.departamento,

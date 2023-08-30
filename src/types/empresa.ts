@@ -2,6 +2,7 @@ import {OpcionesCompras} from "./opcionesCompras";
 import {OpcionesGenerales} from "./opcionesGenerales";
 import {OpcionesGeneralesProductos} from "./opcionesGeneralesProductos";
 import {OpcionesGeneralesServicios} from "./opcionesGeneralesServicios";
+import {OpcionesVentaRol} from "./opcionesVentaRol";
 
 interface Empresa {
   id: string;
@@ -14,6 +15,7 @@ interface Empresa {
   opcionesCompras: OpcionesCompras;
   opcionesGeneralesServicios: OpcionesGeneralesServicios;
   opcionesGeneralesProductos: OpcionesGeneralesProductos;
+  opcionesVenta: {[key: string]: OpcionesVentaRol};
   domicilio: string;
   localidad: string;
   departamento: string;
@@ -48,6 +50,7 @@ const empresaConverter = {
       opcionesCompras: data.opcionesCompras,
       opcionesGeneralesProductos: data.opcionesGeneralesProductos,
       opcionesGeneralesServicios: data.opcionesGeneralesServicios,
+      opcionesVenta: data.opcionesVenta,
       domicilio: data.domicilio,
       localidad: data.localidad,
       departamento: data.departamento,
