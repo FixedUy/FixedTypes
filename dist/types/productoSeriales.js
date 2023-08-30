@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productoConverter = void 0;
-const productoConverter = {
+exports.productoSerialesConverter = void 0;
+const productoSerialesConverter = {
     toFirestore(producto) {
         return producto;
     },
@@ -21,4 +21,4 @@ const productoConverter = {
         };
     }
 };
-exports.productoConverter = productoConverter;
+exports.productoSerialesConverter = productoSerialesConverter;

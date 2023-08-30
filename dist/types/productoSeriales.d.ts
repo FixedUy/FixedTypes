@@ -10,8 +10,8 @@ interface ProductoSeriales {
     fechaSalidaString: string;
     loteId: string;
 }
-declare const productoConverter: {
+declare const productoSerialesConverter: {
     toFirestore(producto: ProductoSeriales): ProductoSeriales;
     fromFirestore(snapshot: any): ProductoSeriales;
 };
-export { type ProductoSeriales, productoConverter };
+export { type ProductoSeriales, productoSerialesConverter };

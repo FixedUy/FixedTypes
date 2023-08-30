@@ -13,7 +13,7 @@ interface ProductoSeriales {
   loteId: string;
 }
 
-const productoConverter = {
+const productoSerialesConverter = {
   toFirestore(producto: ProductoSeriales) {
     return producto;
   },
@@ -35,4 +35,4 @@ const productoConverter = {
   }
 };
 
-export {type ProductoSeriales, productoConverter};
+export {type ProductoSeriales, productoSerialesConverter};
