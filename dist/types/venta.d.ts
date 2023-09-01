@@ -28,6 +28,8 @@ interface Venta {
     viaTransporte: string;
     usuario: string;
     local: string;
+    listasPreciosServicios: string;
+    listasPreciosProductos: string;
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;

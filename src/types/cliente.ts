@@ -17,7 +17,7 @@ interface Cliente {
   mailCopiaXml: string;
   vendedorId: string;
   rubroServiciosVentaId: string;
-  listaPrecioServicios: ServiciosListasPrecio[] | null;
+  listaPrecioServicios: null | string[];
   formaDePago: string;
   esProveedor: boolean;
   esCliente: boolean;

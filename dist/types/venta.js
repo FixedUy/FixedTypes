@@ -33,7 +33,9 @@ const VentaConverter = {
             modalidadVenta: data.modalidadVenta,
             viaTransporte: data.viaTransporte,
             usuario: data.usuario,
-            local: data.local
+            local: data.local,
+            listasPreciosServicios: data.listasPreciosServicios,
+            listasPreciosProductos: data.listasPreciosProductos
         };
     }
 };
