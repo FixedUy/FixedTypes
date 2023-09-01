@@ -16,7 +16,7 @@ interface Proveedor {
     mailCopiaXml: string;
     rubroCompraId: string;
     listaPrecioServicios: ServiciosListasPrecio[] | null;
-    formaDePago: string[];
+    formaDePago: string;
     esProveedor: boolean;
     esCliente: boolean;
     activo: boolean;
