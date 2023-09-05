@@ -13,6 +13,8 @@ const cajaConverter = {
             nombre: data.nombre,
             puedenRetirar: data.puedenRetirar,
             puedenAceptarDepositos: data.puedenAceptarDepositos,
+            mediosCobro: data.mediosCobro,
+            mediosPago: data.mediosPago,
             saldoMonedas: data.saldoMonedas,
             saldoMedios: data.saldoMedios,
             locales: data.locales,

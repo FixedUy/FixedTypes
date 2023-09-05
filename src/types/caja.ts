@@ -12,6 +12,8 @@ interface Caja {
   // ajustes de quitar, y aceptar depositos.
   puedenRetirar: string[];
   puedenAceptarDepositos: string[];
+  mediosCobro: string[];
+  mediosPago: string[];
   locales: string[];
   ultimaEdicion: number;
   activo: boolean;
@@ -29,6 +31,8 @@ const cajaConverter = {
       nombre: data.nombre,
       puedenRetirar: data.puedenRetirar,
       puedenAceptarDepositos: data.puedenAceptarDepositos,
+      mediosCobro: data.mediosCobro,
+      mediosPago: data.mediosPago,
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
       locales: data.locales,
