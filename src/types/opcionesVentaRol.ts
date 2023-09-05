@@ -11,7 +11,7 @@ export interface OpcionesVentaRol {
   descuentos: boolean;
   descripcionLarga: boolean;
   modificarListaPrecio: boolean;
-  redondear: boolean;
+  redondear: {[key: string]: boolean};
   facturarRemitos: boolean;
   lineaManual: boolean;
   domicilioEntrega: boolean;
@@ -58,7 +58,7 @@ export const opcionesVentaRolDefecto: OpcionesVentaRol = {
   descuentos: true,
   descripcionLarga: false,
   modificarListaPrecio: false,
-  redondear: true,
+  redondear: {},
   facturarRemitos: false,
   lineaManual: true,
   domicilioEntrega: false,

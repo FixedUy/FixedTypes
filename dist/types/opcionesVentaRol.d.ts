@@ -11,7 +11,9 @@ export interface OpcionesVentaRol {
     descuentos: boolean;
     descripcionLarga: boolean;
     modificarListaPrecio: boolean;
-    redondear: boolean;
+    redondear: {
+        [key: string]: boolean;
+    };
     facturarRemitos: boolean;
     lineaManual: boolean;
     domicilioEntrega: boolean;

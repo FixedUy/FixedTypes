@@ -14,7 +14,7 @@ exports.opcionesVentaRolDefecto = {
     descuentos: true,
     descripcionLarga: false,
     modificarListaPrecio: false,
-    redondear: true,
+    redondear: {},
     facturarRemitos: false,
     lineaManual: true,
     domicilioEntrega: false,
