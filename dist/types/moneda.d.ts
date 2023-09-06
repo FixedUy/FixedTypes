@@ -2,9 +2,9 @@ interface Moneda {
     id: string;
     nombre: string;
     simbolo: string;
-    codigoBcu: number | string;
+    codigoBcu: string;
     codigoIso: string;
-    numeroIso: number | string;
+    numeroIso: string;
     activo: boolean;
     ultimaEdicion: number;
 }
