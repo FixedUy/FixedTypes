@@ -2,7 +2,7 @@ import {Cotizacion} from "./cotizacion";
 
 interface Cotizaciones {
   fecha: string;
-  cotizaciones: Cotizacion[];
+  cotizaciones: {[key: string]: Cotizacion};
 }
 
 const cotizacionesConverter = {
