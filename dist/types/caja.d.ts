@@ -7,7 +7,7 @@ interface Caja {
     };
     saldoMedios: {
         [medioId: string]: {
-            [monedaId: string]: string;
+            [monedaId: string]: number;
         };
     };
     puedenRetirar: string[];

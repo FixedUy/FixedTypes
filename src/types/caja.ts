@@ -5,7 +5,7 @@ interface Caja {
   saldoMonedas: {[key: string]: number};
   saldoMedios: {
     [medioId: string]: {
-      [monedaId: string]: string;
+      [monedaId: string]: number;
     };
   };
   // Lista de usuarios que pueden hacer retiros de caja,
