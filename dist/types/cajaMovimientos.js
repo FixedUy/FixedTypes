@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CajaMovimientoConverter = exports.movimientoSumaCaja = exports.CajaTipoMovimiento = void 0;
+exports.cajaMovimientoConverter = exports.movimientoSumaCaja = exports.CajaTipoMovimiento = void 0;
 var CajaTipoMovimiento;
 (function (CajaTipoMovimiento) {
     CajaTipoMovimiento["Compra"] = "compra";
@@ -20,7 +20,7 @@ exports.movimientoSumaCaja = {
     [CajaTipoMovimiento.AjusteAgregar]: true,
     [CajaTipoMovimiento.AjusteQuitar]: false
 };
-const CajaMovimientoConverter = {
+const cajaMovimientoConverter = {
     toFirestore(cajaMovimiento) {
         return cajaMovimiento;
     },
@@ -54,14 +54,12 @@ const CajaMovimientoConverter = {
             id: snapshot.id,
             autor: data.autor,
             fechaCreacion: data.fechaCreacion,
-            monto: data.monto,
-            saldo: data.saldo,
-            idMedio: data.idMedio,
-            idMoneda: data.idMoneda,
-            detalleMovimiento: data.detalleMovimiento,
+            saldoMonedas: data.saldoMonedas,
+            saldoMedios: data.saldoMedios,
+            detalle: data.detalle,
             tipo: tipo,
             idDocumento: data.idDocumento
         };
     }
 };
-exports.CajaMovimientoConverter = CajaMovimientoConverter;
+exports.cajaMovimientoConverter = cajaMovimientoConverter;

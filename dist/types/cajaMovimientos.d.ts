@@ -16,16 +16,20 @@ interface CajaMovimiento {
     id: string;
     autor: string;
     fechaCreacion: number;
-    monto: number;
-    saldo: number;
-    idMedio: string;
-    idMoneda: string;
-    detalleMovimiento: string;
+    saldoMonedas: {
+        [key: string]: number;
+    };
+    saldoMedios: {
+        [medioId: string]: {
+            [monedaId: string]: number;
+        };
+    };
+    detalle: string;
     tipo: CajaTipoMovimiento;
     idDocumento: string;
 }
-declare const CajaMovimientoConverter: {
+declare const cajaMovimientoConverter: {
     toFirestore(cajaMovimiento: CajaMovimiento): CajaMovimiento;
     fromFirestore(snapshot: any): CajaMovimiento;
 };
-export { type CajaMovimiento, CajaMovimientoConverter };
+export { type CajaMovimiento, cajaMovimientoConverter };
