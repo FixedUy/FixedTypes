@@ -8,6 +8,11 @@ interface Caja {
       [monedaId: string]: number;
     };
   };
+  depositosPendientes: {
+    [medioId: string]: {
+      [monedaId: string]: number;
+    };
+  };
   // Lista de usuarios que pueden hacer retiros de caja,
   // ajustes de quitar, y aceptar depositos.
   puedenRetirar: string[];
@@ -36,6 +41,7 @@ const cajaConverter = {
       mediosPago: data.mediosPago,
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
+      depositosPendientes: data.depositosPendientes,
       locales: data.locales,
       admiteDepositos: data.admiteDepositos,
       ultimaEdicion: data.ultimaEdicion,

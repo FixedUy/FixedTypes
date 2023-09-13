@@ -10,6 +10,11 @@ interface Caja {
             [monedaId: string]: number;
         };
     };
+    depositosPendientes: {
+        [medioId: string]: {
+            [monedaId: string]: number;
+        };
+    };
     puedenRetirar: string[];
     puedenAceptarDepositos: string[];
     mediosCobro: string[];

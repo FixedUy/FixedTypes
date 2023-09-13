@@ -17,6 +17,7 @@ const cajaConverter = {
             mediosPago: data.mediosPago,
             saldoMonedas: data.saldoMonedas,
             saldoMedios: data.saldoMedios,
+            depositosPendientes: data.depositosPendientes,
             locales: data.locales,
             admiteDepositos: data.admiteDepositos,
             ultimaEdicion: data.ultimaEdicion,
