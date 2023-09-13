@@ -10,6 +10,9 @@ var CajaTipoMovimiento;
     CajaTipoMovimiento["VentaNotaDebito"] = "ventanotadebito";
     CajaTipoMovimiento["AjusteAgregar"] = "ajusteagregar";
     CajaTipoMovimiento["AjusteQuitar"] = "ajustequitar";
+    CajaTipoMovimiento["DepositoCreado"] = "depositocreado";
+    CajaTipoMovimiento["DepositoRecibido"] = "depositorecibido";
+    CajaTipoMovimiento["DepositoCancelado"] = "depositocancelado";
 })(CajaTipoMovimiento = exports.CajaTipoMovimiento || (exports.CajaTipoMovimiento = {}));
 exports.movimientoSumaCaja = {
     [CajaTipoMovimiento.Compra]: false,

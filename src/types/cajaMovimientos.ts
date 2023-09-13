@@ -9,7 +9,10 @@ export enum CajaTipoMovimiento {
   VentaNotaCredito = "ventanotacredito", // creada nota de credito a un cliente
   VentaNotaDebito = "ventanotadebito", // creada nota de débito a un cliente
   AjusteAgregar = "ajusteagregar",
-  AjusteQuitar = "ajustequitar"
+  AjusteQuitar = "ajustequitar",
+  DepositoCreado = "depositocreado",
+  DepositoRecibido = "depositorecibido",
+  DepositoCancelado = "depositocancelado"
 }
 
 export const movimientoSumaCaja: EnumDictionary<string, boolean> = {
