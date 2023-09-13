@@ -15,6 +15,7 @@ interface Caja {
   mediosCobro: string[];
   mediosPago: string[];
   locales: string[];
+  admiteDepositos: string[]; // de que otras cajas admite depositos
   ultimaEdicion: number;
   activo: boolean;
 }
@@ -36,6 +37,7 @@ const cajaConverter = {
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
       locales: data.locales,
+      admiteDepositos: data.admiteDepositos,
       ultimaEdicion: data.ultimaEdicion,
       activo: data.activo
     };

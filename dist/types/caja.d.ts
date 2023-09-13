@@ -15,6 +15,7 @@ interface Caja {
     mediosCobro: string[];
     mediosPago: string[];
     locales: string[];
+    admiteDepositos: string[];
     ultimaEdicion: number;
     activo: boolean;
 }
