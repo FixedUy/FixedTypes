@@ -69,4 +69,4 @@ const cajaConverter = {
   }
 };
 
-export {type Caja, cajaConverter};
+export {type Caja, cajaConverter, type CajaDeposito};

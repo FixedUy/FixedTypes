@@ -43,4 +43,4 @@ declare const cajaConverter: {
     toFirestore(caja: Caja): Caja;
     fromFirestore(snapshot: any): Caja;
 };
-export { type Caja, cajaConverter };
+export { type Caja, cajaConverter, type CajaDeposito };
