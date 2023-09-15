@@ -1,3 +1,11 @@
+interface CajaDeposito {
+    id: string;
+    cajaOrigen: string;
+    cajaDestino: string;
+    monto: number;
+    medioCobro: string;
+    moneda: string;
+}
 interface Caja {
     version: number;
     id: string;
@@ -10,11 +18,18 @@ interface Caja {
             [monedaId: string]: number;
         };
     };
-    depositosPendientes: {
+    depositosPendientesImportes: {
         [medioId: string]: {
             [monedaId: string]: number;
         };
     };
+    depositosPendientes: CajaDeposito[];
+    depositosPendientesAceptarImportes: {
+        [medioId: string]: {
+            [monedaId: string]: number;
+        };
+    };
+    depositosPendientesAceptar: CajaDeposito[];
     puedenRetirar: string[];
     puedenAceptarDepositos: string[];
     mediosCobro: string[];
