@@ -1,5 +1,9 @@
 interface CajaDeposito {
     id: string;
+    fecha: number;
+    fechaString: string;
+    idUsuarioDepositante: string;
+    nombreUsuarioDepositante: string;
     cajaOrigen: string;
     cajaDestino: string;
     monto: number;
