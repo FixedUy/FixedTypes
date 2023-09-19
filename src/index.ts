@@ -51,6 +51,11 @@ export * from "./types/intefazDocCancela";
 export * from "./types/documentos";
 export * from "./types/interfazPendienteCantidad";
 export * from "./types/interfazPendienteImporte";
+export * from "./types/comprasDevolucionLineaCantidad";
+export * from "./types/comprasFacturasDevueltaCantidad";
+export * from "./types/comprasRelacionImporteTasas";
+export * from "./types/comprasFacturasDevueltaImporte";
+export * from "./types/comprasDevolucion";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";

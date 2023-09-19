@@ -67,6 +67,11 @@ __exportStar(require("./types/intefazDocCancela"), exports);
 __exportStar(require("./types/documentos"), exports);
 __exportStar(require("./types/interfazPendienteCantidad"), exports);
 __exportStar(require("./types/interfazPendienteImporte"), exports);
+__exportStar(require("./types/comprasDevolucionLineaCantidad"), exports);
+__exportStar(require("./types/comprasFacturasDevueltaCantidad"), exports);
+__exportStar(require("./types/comprasRelacionImporteTasas"), exports);
+__exportStar(require("./types/comprasFacturasDevueltaImporte"), exports);
+__exportStar(require("./types/comprasDevolucion"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);

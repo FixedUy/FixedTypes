@@ -1,7 +1,9 @@
 import {Cliente} from "./cliente";
 import {CompraLinea} from "./compraLinea";
+import {ComprasFacturasDevueltaCantidad} from "./comprasFacturasDevueltaCantidad";
+import {ComprasFacturasDevueltaImporte} from "./comprasFacturasDevueltaImporte";
 
-interface Compra {
+interface CompraDevolucion {
   version: number;
   id: string;
   formaDePago: string;
@@ -26,13 +28,15 @@ interface Compra {
   local: string;
   buscablePor: null | string[];
   productos: string[];
+  detalleDevolucion: ComprasFacturasDevueltaCantidad[];
+  detalleDevolucionImporte: ComprasFacturasDevueltaImporte[];
 }
 
-const CompraConverter = {
-  toFirestore(compra: Compra) {
-    return compra;
+const CompraDevolucionConverter = {
+  toFirestore(compraDevolucion: CompraDevolucion) {
+    return compraDevolucion;
   },
-  fromFirestore(snapshot: any): Compra {
+  fromFirestore(snapshot: any): CompraDevolucion {
     const data = snapshot.data()!;
     return {
       version: data.version,
@@ -58,9 +62,11 @@ const CompraConverter = {
       usuario: data.usuario,
       local: data.local,
       buscablePor: data.buscablePor,
-      productos: data.productos
+      productos: data.productos,
+      detalleDevolucion: data.detalleDevolucion,
+      detalleDevolucionImporte: data.detalleDevolucionImporte
     };
   }
 };
 
-export {type Compra, CompraConverter};
+export {type CompraDevolucion, CompraDevolucionConverter};
