@@ -89,5 +89,6 @@ __exportStar(require("./types/cloudFunctions/comprasEliminar"), exports);
 __exportStar(require("./types/cloudFunctions/remitoAgregar"), exports);
 __exportStar(require("./types/cloudFunctions/crearCaja"), exports);
 __exportStar(require("./types/cloudFunctions/cajaDepositoCrear"), exports);
+__exportStar(require("./types/cloudFunctions/cajaDepositoDeshacer"), exports);
 // utils
 __exportStar(require("./utils/convertirFechaNumberoAfechaString"), exports);
