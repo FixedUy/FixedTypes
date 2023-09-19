@@ -27,6 +27,7 @@ interface CompraDevolucion {
     local: string;
     buscablePor: null | string[];
     productos: string[];
+    tipoDevolucion: string;
     detalleDevolucion: ComprasFacturasDevueltaCantidad[];
     detalleDevolucionImporte: ComprasFacturasDevueltaImporte[];
 }

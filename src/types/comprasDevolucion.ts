@@ -28,6 +28,7 @@ interface CompraDevolucion {
   local: string;
   buscablePor: null | string[];
   productos: string[];
+  tipoDevolucion: string;
   detalleDevolucion: ComprasFacturasDevueltaCantidad[];
   detalleDevolucionImporte: ComprasFacturasDevueltaImporte[];
 }
@@ -63,6 +64,7 @@ const CompraDevolucionConverter = {
       local: data.local,
       buscablePor: data.buscablePor,
       productos: data.productos,
+      tipoDevolucion: data.tipoDevolucion,
       detalleDevolucion: data.detalleDevolucion,
       detalleDevolucionImporte: data.detalleDevolucionImporte
     };
