@@ -84,6 +84,7 @@ __exportStar(require("./types/cloudFunctions/invitacionRechazar"), exports);
 __exportStar(require("./types/cloudFunctions/registrarEmpresa"), exports);
 __exportStar(require("./types/cloudFunctions/afectarCuentaCorriente"), exports);
 __exportStar(require("./types/cloudFunctions/comprasAgregar"), exports);
+__exportStar(require("./types/cloudFunctions/comprasAgregarDevolucion"), exports);
 __exportStar(require("./types/cloudFunctions/comprasEliminar"), exports);
 __exportStar(require("./types/cloudFunctions/remitoAgregar"), exports);
 __exportStar(require("./types/cloudFunctions/crearCaja"), exports);
