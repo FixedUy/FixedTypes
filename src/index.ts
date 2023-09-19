@@ -47,6 +47,10 @@ export * from "./types/cajaMediosPago";
 export * from "./types/usuariosRol";
 export * from "./types/cotizacion";
 export * from "./types/cotizaciones";
+export * from "./types/intefazDocCancela";
+export * from "./types/documentos";
+export * from "./types/interfazPendienteCantidad";
+export * from "./types/interfazPendienteImporte";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";

@@ -63,6 +63,10 @@ __exportStar(require("./types/cajaMediosPago"), exports);
 __exportStar(require("./types/usuariosRol"), exports);
 __exportStar(require("./types/cotizacion"), exports);
 __exportStar(require("./types/cotizaciones"), exports);
+__exportStar(require("./types/intefazDocCancela"), exports);
+__exportStar(require("./types/documentos"), exports);
+__exportStar(require("./types/interfazPendienteCantidad"), exports);
+__exportStar(require("./types/interfazPendienteImporte"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);

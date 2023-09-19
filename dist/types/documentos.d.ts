@@ -1,5 +1,5 @@
-import { InterfazDocCancela } from "./IntefazDocCancela";
-import { InterfazPendienteCantidad } from "./InterfazPendienteCantidad";
+import { InterfazDocCancela } from "./intefazDocCancela";
+import { InterfazPendienteCantidad } from "./interfazPendienteCantidad";
 import { InterfazPendienteImporte } from "./interfazPendienteImporte";
 interface Documento {
     version: number;
