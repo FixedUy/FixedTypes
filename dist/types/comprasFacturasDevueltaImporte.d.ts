@@ -1,9 +1,10 @@
+import { ComprasRelacionImporteTasas } from "./comprasRelacionImporteTasas";
 interface ComprasFacturasDevueltaImporte {
     idDocumento: string;
     idCompra: string;
     descripcion: string;
-    relacionImporteTasasPendientes: ComprasFacturasDevueltaImporte[];
-    relacionImporteTasasCancelar: ComprasFacturasDevueltaImporte[];
+    relacionImporteTasasPendientes: ComprasRelacionImporteTasas[];
+    relacionImporteTasasCancelar: ComprasRelacionImporteTasas[];
 }
 declare const ComprasFacturasDevueltaImporteConverter: {
     toFirestore(comprasFacturasDevueltaImporte: ComprasFacturasDevueltaImporte): ComprasFacturasDevueltaImporte;
