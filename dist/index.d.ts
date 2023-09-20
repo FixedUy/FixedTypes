@@ -56,6 +56,7 @@ export * from "./types/comprasFacturasDevueltaCantidad";
 export * from "./types/comprasRelacionImporteTasas";
 export * from "./types/comprasFacturasDevueltaImporte";
 export * from "./types/comprasDevolucion";
+export * from "./types/stockLote";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";

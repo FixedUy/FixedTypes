@@ -72,6 +72,7 @@ __exportStar(require("./types/comprasFacturasDevueltaCantidad"), exports);
 __exportStar(require("./types/comprasRelacionImporteTasas"), exports);
 __exportStar(require("./types/comprasFacturasDevueltaImporte"), exports);
 __exportStar(require("./types/comprasDevolucion"), exports);
+__exportStar(require("./types/stockLote"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
