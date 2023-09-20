@@ -29,6 +29,8 @@ interface CajaMovimiento {
         };
     };
     detalle: string;
+    ingresa: string;
+    sale: string;
     tipo: CajaTipoMovimiento;
     idDocumento: string;
 }

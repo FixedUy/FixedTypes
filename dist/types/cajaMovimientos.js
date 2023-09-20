@@ -61,6 +61,8 @@ const cajaMovimientoConverter = {
             saldoMonedas: data.saldoMonedas,
             saldoMedios: data.saldoMedios,
             detalle: data.detalle,
+            ingresa: data.ingresa,
+            sale: data.sale,
             tipo: tipo,
             idDocumento: data.idDocumento
         };
