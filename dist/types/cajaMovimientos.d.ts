@@ -30,7 +30,7 @@ interface CajaMovimiento {
     };
     detalle: string;
     moneda: string;
-    medio: string;
+    medioCobro: string;
     monto: number;
     tipo: CajaTipoMovimiento;
     idDocumento: string;

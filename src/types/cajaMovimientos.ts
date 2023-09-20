@@ -39,7 +39,7 @@ interface CajaMovimiento {
   };
   detalle: string;
   moneda: string;
-  medio: string;
+  medioCobro: string;
   monto: number;
   tipo: CajaTipoMovimiento;
   idDocumento: string;
@@ -79,7 +79,7 @@ const cajaMovimientoConverter = {
       saldoMedios: data.saldoMedios,
       detalle: data.detalle,
       moneda: data.moneda,
-      medio: data.medio,
+      medioCobro: data.medioCobro,
       monto: data.monto,
       tipo: tipo,
       idDocumento: data.idDocumento
