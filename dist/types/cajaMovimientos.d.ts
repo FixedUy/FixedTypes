@@ -29,8 +29,9 @@ interface CajaMovimiento {
         };
     };
     detalle: string;
-    ingresa: string;
-    sale: string;
+    moneda: string;
+    medio: string;
+    monto: number;
     tipo: CajaTipoMovimiento;
     idDocumento: string;
 }

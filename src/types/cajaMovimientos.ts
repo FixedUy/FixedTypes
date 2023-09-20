@@ -38,8 +38,9 @@ interface CajaMovimiento {
     };
   };
   detalle: string;
-  ingresa: string;
-  sale: string;
+  moneda: string;
+  medio: string;
+  monto: number;
   tipo: CajaTipoMovimiento;
   idDocumento: string;
 }
@@ -77,8 +78,9 @@ const cajaMovimientoConverter = {
       saldoMonedas: data.saldoMonedas,
       saldoMedios: data.saldoMedios,
       detalle: data.detalle,
-      ingresa: data.ingresa,
-      sale: data.sale,
+      moneda: data.moneda,
+      medio: data.medio,
+      monto: data.monto,
       tipo: tipo,
       idDocumento: data.idDocumento
     };
