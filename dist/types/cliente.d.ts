@@ -16,6 +16,7 @@ interface Cliente {
     vendedorId: string;
     rubroServiciosVentaId: string;
     listaPrecioServicios: null | string[];
+    listaPrecioProductos: null | string[];
     formaDePago: string;
     esProveedor: boolean;
     esCliente: boolean;

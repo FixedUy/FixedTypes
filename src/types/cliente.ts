@@ -18,6 +18,7 @@ interface Cliente {
   vendedorId: string;
   rubroServiciosVentaId: string;
   listaPrecioServicios: null | string[];
+  listaPrecioProductos: null | string[];
   formaDePago: string;
   esProveedor: boolean;
   esCliente: boolean;
@@ -51,6 +52,7 @@ const clienteConverter = {
       vendedorId: data.vendedorId,
       rubroServiciosVentaId: data.rubroServiciosVentaId,
       listaPrecioServicios: data.listaPrecioServicios,
+      listaPrecioProductos: data.listaPrecioProductos,
       formaDePago: data.formaDePago,
       esProveedor: data.esProveedor,
       esCliente: data.esCliente,
