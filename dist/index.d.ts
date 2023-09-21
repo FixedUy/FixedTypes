@@ -74,4 +74,5 @@ export * from "./types/cloudFunctions/remitoAgregar";
 export * from "./types/cloudFunctions/crearCaja";
 export * from "./types/cloudFunctions/cajaDepositoCrear";
 export * from "./types/cloudFunctions/cajaDepositoDeshacer";
+export * from "./types/cloudFunctions/cajaDepositoAceptar";
 export * from "./utils/convertirFechaNumberoAfechaString";
