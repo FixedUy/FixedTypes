@@ -19,6 +19,7 @@ interface Venta {
   descuentoGeneral: number;
   subtotal: number;
   montoIVA: number;
+  redondeo: number;
   total: number;
   saldo: number;
   activo: boolean;
@@ -57,6 +58,7 @@ const VentaConverter = {
       ventaLinea: data.ventaLinea,
       subtotal: data.subtotal,
       montoIVA: data.montoIVA,
+      redondeo: data.redondeo,
       total: data.total,
       saldo: data.saldo,
       activo: data.activo,
