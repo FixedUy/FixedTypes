@@ -18,6 +18,7 @@ interface Venta {
     descuentoGeneral: number;
     subtotal: number;
     montoIVA: number;
+    redondeo: number;
     total: number;
     saldo: number;
     activo: boolean;
@@ -30,6 +31,7 @@ interface Venta {
     local: string;
     listasPreciosServicios: string;
     listasPreciosProductos: string;
+    buscablePor: null | string[];
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;

@@ -24,6 +24,7 @@ const VentaConverter = {
             ventaLinea: data.ventaLinea,
             subtotal: data.subtotal,
             montoIVA: data.montoIVA,
+            redondeo: data.redondeo,
             total: data.total,
             saldo: data.saldo,
             activo: data.activo,
@@ -35,7 +36,8 @@ const VentaConverter = {
             usuario: data.usuario,
             local: data.local,
             listasPreciosServicios: data.listasPreciosServicios,
-            listasPreciosProductos: data.listasPreciosProductos
+            listasPreciosProductos: data.listasPreciosProductos,
+            buscablePor: data.buscablePor
         };
     }
 };
