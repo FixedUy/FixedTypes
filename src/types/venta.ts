@@ -31,6 +31,7 @@ interface Venta {
   local: string;
   listasPreciosServicios: string;
   listasPreciosProductos: string;
+  buscablePor: null | string[];
 }
 
 const VentaConverter = {
@@ -67,7 +68,8 @@ const VentaConverter = {
       usuario: data.usuario,
       local: data.local,
       listasPreciosServicios: data.listasPreciosServicios,
-      listasPreciosProductos: data.listasPreciosProductos
+      listasPreciosProductos: data.listasPreciosProductos,
+      buscablePor: data.buscablePor
     };
   }
 };
