@@ -7,10 +7,8 @@ interface StockFichaLotes {
   documentoCreador: string;
   documentoCreadorId: string;
   fechaCreacion: number;
-  fechaCreacionString: string;
   localId: string;
   tasaIVA: string;
-  tieneStock: boolean;
   usuario: string;
 }
 
