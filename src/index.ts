@@ -57,6 +57,7 @@ export * from "./types/comprasRelacionImporteTasas";
 export * from "./types/comprasFacturasDevueltaImporte";
 export * from "./types/comprasDevolucion";
 export * from "./types/stockLote";
+export * from "./types/stockFicha";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
