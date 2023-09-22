@@ -1,5 +1,4 @@
 import { Cliente } from "./cliente";
-import { CompraLinea } from "./compraLinea";
 import { VentaLinea } from "./ventaLinea";
 interface Venta {
     version: number;
@@ -13,7 +12,6 @@ interface Venta {
     numero: number;
     cliente: Cliente;
     moneda: string;
-    compraLinea: CompraLinea[];
     ventaLinea: VentaLinea[];
     descuentoGeneral: number;
     subtotal: number;

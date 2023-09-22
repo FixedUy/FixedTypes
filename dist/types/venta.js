@@ -20,7 +20,6 @@ const VentaConverter = {
             cliente: data.cliente,
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,
-            compraLinea: data.compraLinea,
             ventaLinea: data.ventaLinea,
             subtotal: data.subtotal,
             montoIVA: data.montoIVA,
