@@ -4,6 +4,14 @@ interface StockFichaLotes {
   costo: number;
   moneda: string;
   cotizacion: number;
+  documentoCreador: string;
+  documentoCreadorId: string;
+  fechaCreacion: number;
+  fechaCreacionString: string;
+  localId: string;
+  tasaIVA: string;
+  tieneStock: boolean;
+  usuario: string;
 }
 
 interface StockFicha {
