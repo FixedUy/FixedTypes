@@ -13,7 +13,7 @@ const stockLoteConverter = {
             cantidadActual: data.cantidadActual,
             cantidadOriginal: data.cantidadOriginal,
             costo: data.costo,
-            cotización: data.cotización,
+            cotizacion: data.cotización,
             documentoCreador: data.documentoCreador,
             documentoCreadorId: data.documentoCreadorId,
             fechaCreacion: data.fechaCreacion,

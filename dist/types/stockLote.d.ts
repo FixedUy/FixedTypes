@@ -4,7 +4,7 @@ interface StockLote {
     cantidadActual: number;
     cantidadOriginal: number;
     costo: number;
-    cotización: number;
+    cotizacion: number;
     documentoCreador: string;
     documentoCreadorId: string;
     fechaCreacion: number;
