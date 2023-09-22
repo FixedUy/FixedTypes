@@ -14,7 +14,8 @@ export enum CajaTipoMovimiento {
   DepositoRecibido = "depositorecibido",
   DepositoCancelado = "depositocancelado",
   DepositoRechazado = "depositorechazado",
-  Transferencia = "transferencia"
+  TransferenciaIngresa = "transferenciaingresa",
+  TransferenciaSale = "transferenciasale"
 }
 
 export const movimientoSumaCaja: EnumDictionary<string, boolean> = {
