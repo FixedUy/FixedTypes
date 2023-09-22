@@ -3,7 +3,6 @@ interface StockFichaLotes {
     cantidadQuitada: number;
     costo: number;
     moneda: string;
-    cotizacion: number;
     documentoCreador: string;
     documentoCreadorId: string;
     fechaCreacion: number;
