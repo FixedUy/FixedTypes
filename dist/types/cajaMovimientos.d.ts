@@ -12,7 +12,8 @@ export declare enum CajaTipoMovimiento {
     DepositoCreado = "depositocreado",
     DepositoRecibido = "depositorecibido",
     DepositoCancelado = "depositocancelado",
-    DepositoRechazado = "depositorechazado"
+    DepositoRechazado = "depositorechazado",
+    Transferencia = "transferencia"
 }
 export declare const movimientoSumaCaja: EnumDictionary<string, boolean>;
 interface CajaMovimiento {
