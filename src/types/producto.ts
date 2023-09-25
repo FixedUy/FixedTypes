@@ -4,6 +4,7 @@ interface Producto {
   version: number;
   id: string;
   codigo: {[key: string]: string};
+  todosLosCodigos: string[];
   nombre: string;
   rubroId: string;
   listaPrecio: {[key: string]: ProductosPrecios};
@@ -27,6 +28,7 @@ const productoConverter = {
       version: data.version,
       id: snapshot.id,
       codigo: data.codigo,
+      todosLosCodigos: data.todosLosCodigos,
       nombre: data.nombre,
       rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,

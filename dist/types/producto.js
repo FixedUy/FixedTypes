@@ -11,6 +11,7 @@ const productoConverter = {
             version: data.version,
             id: snapshot.id,
             codigo: data.codigo,
+            todosLosCodigos: data.todosLosCodigos,
             nombre: data.nombre,
             rubroId: data.rubroId,
             listaPrecio: data.listaPrecio,
