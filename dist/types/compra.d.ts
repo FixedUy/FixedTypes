@@ -25,6 +25,7 @@ interface Compra {
     local: string;
     buscablePor: null | string[];
     productos: string[];
+    cotizacion: number;
 }
 declare const CompraConverter: {
     toFirestore(compra: Compra): Compra;

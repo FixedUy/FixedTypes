@@ -34,7 +34,8 @@ const CompraDevolucionConverter = {
             productos: data.productos,
             tipoDevolucion: data.tipoDevolucion,
             detalleDevolucion: data.detalleDevolucion,
-            detalleDevolucionImporte: data.detalleDevolucionImporte
+            detalleDevolucionImporte: data.detalleDevolucionImporte,
+            cotizacion: data.cotizacion
         };
     }
 };

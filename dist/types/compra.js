@@ -31,7 +31,8 @@ const CompraConverter = {
             usuario: data.usuario,
             local: data.local,
             buscablePor: data.buscablePor,
-            productos: data.productos
+            productos: data.productos,
+            cotizacion: data.cotizacion
         };
     }
 };

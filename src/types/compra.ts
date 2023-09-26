@@ -26,6 +26,7 @@ interface Compra {
   local: string;
   buscablePor: null | string[];
   productos: string[];
+  cotizacion: number;
 }
 
 const CompraConverter = {
@@ -58,7 +59,8 @@ const CompraConverter = {
       usuario: data.usuario,
       local: data.local,
       buscablePor: data.buscablePor,
-      productos: data.productos
+      productos: data.productos,
+      cotizacion: data.cotizacion
     };
   }
 };

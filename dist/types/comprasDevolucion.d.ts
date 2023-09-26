@@ -30,6 +30,7 @@ interface CompraDevolucion {
     tipoDevolucion: string;
     detalleDevolucion: ComprasFacturasDevueltaCantidad[];
     detalleDevolucionImporte: ComprasFacturasDevueltaImporte[];
+    cotizacion: number;
 }
 declare const CompraDevolucionConverter: {
     toFirestore(compraDevolucion: CompraDevolucion): CompraDevolucion;
