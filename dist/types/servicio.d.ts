@@ -5,6 +5,7 @@ interface Servicio {
     codigo: {
         [key: string]: string;
     };
+    todosLosCodigos: string[];
     nombre: string;
     rubroId: string;
     listaPrecio: {

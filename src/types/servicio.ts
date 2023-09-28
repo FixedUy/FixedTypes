@@ -4,6 +4,7 @@ interface Servicio {
   version: number;
   id: string;
   codigo: {[key: string]: string};
+  todosLosCodigos: string[];
   nombre: string;
   rubroId: string;
   listaPrecio: {[key: string]: ServiciosPrecios};
@@ -25,6 +26,7 @@ const servicioConverter = {
       version: data.version,
       id: snapshot.id,
       codigo: data.codigo,
+      todosLosCodigos: data.todosLosCodigos,
       nombre: data.nombre,
       rubroId: data.rubroId,
       listaPrecio: data.listaPrecio,
