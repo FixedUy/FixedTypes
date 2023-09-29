@@ -59,6 +59,7 @@ export * from "./types/comprasDevolucion";
 export * from "./types/stockLote";
 export * from "./types/stockFicha";
 export * from "./types/cae";
+export * from "./types/stockModificar";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";
