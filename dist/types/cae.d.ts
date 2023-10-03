@@ -5,13 +5,13 @@ interface CAE {
     ruce: number;
     tcfe: number;
     serie: string;
-    dNumero: number;
-    hNumero: number;
+    desdeNumero: number;
+    hastaNumero: number;
     numeroAutorizacion: number;
     fechaAutorizacion: string;
     fechaVencimiento: string;
-    activo: boolean;
-    buscablePor: null | string[];
+    usuarioCreador: string;
+    xml: string;
 }
 declare const CAEConverter: {
     toFirestore(cae: CAE): CAE;

@@ -14,13 +14,13 @@ const CAEConverter = {
             ruce: data.ruce,
             tcfe: data.tcfe,
             serie: data.serie,
-            dNumero: data.dNumero,
-            hNumero: data.hNumero,
+            desdeNumero: data.desdeNumero,
+            hastaNumero: data.hastaNumero,
             numeroAutorizacion: data.numeroAutorizacion,
             fechaAutorizacion: data.fechaAutorizacion,
             fechaVencimiento: data.fechaVencimiento,
-            activo: data.activo,
-            buscablePor: data.buscablePor
+            usuarioCreador: data.usuarioCreador,
+            xml: data.xml
         };
     }
 };
