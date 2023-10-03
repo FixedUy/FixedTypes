@@ -5,9 +5,9 @@ interface CAE {
     ruce: number;
     tcfe: number;
     serie: string;
-    desdeNumero: number;
-    hastaNumero: number;
-    numeroAutorizacion: number;
+    desdeNumero: string;
+    hastaNumero: string;
+    numeroAutorizacion: string;
     fechaAutorizacion: string;
     fechaVencimiento: string;
     caeEspecial: string;
