@@ -2,8 +2,8 @@ interface CAE {
   version: number;
   id: string;
   fechaCreacion: number;
-  ruce: number;
-  tcfe: number;
+  ruce: string;
+  tcfe: string;
   serie: string;
   desdeNumero: string;
   hastaNumero: string;
