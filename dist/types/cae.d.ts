@@ -10,6 +10,7 @@ interface CAE {
     numeroAutorizacion: number;
     fechaAutorizacion: string;
     fechaVencimiento: string;
+    caeEspecial: string;
     usuarioCreador: string;
     xml: string;
 }

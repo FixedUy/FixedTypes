@@ -19,6 +19,7 @@ const CAEConverter = {
             numeroAutorizacion: data.numeroAutorizacion,
             fechaAutorizacion: data.fechaAutorizacion,
             fechaVencimiento: data.fechaVencimiento,
+            caeEspecial: data.caeEspecial,
             usuarioCreador: data.usuarioCreador,
             xml: data.xml
         };
