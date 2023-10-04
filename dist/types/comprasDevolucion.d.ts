@@ -1,7 +1,7 @@
-import { Cliente } from "./cliente";
 import { CompraLinea } from "./compraLinea";
 import { ComprasFacturasDevueltaCantidad } from "./comprasFacturasDevueltaCantidad";
 import { ComprasFacturasDevueltaImporte } from "./comprasFacturasDevueltaImporte";
+import { Proveedor } from "./proveedor";
 interface CompraDevolucion {
     version: number;
     id: string;
@@ -12,7 +12,7 @@ interface CompraDevolucion {
     comprobante: string;
     serie: string;
     numero: number;
-    proveedor: Cliente;
+    proveedor: Proveedor;
     moneda: string;
     descuentoGeneral: number;
     compraLinea: CompraLinea[];
