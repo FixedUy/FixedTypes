@@ -21,7 +21,6 @@ interface Producto {
     };
     buscablePor: null | string[];
     cantidadDecimales: number;
-    conSeriales: boolean;
 }
 declare const productoConverter: {
     toFirestore(producto: Producto): Producto;

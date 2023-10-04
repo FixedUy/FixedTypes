@@ -18,7 +18,6 @@ export * from "./types/opcionesGeneralesProductos";
 export * from "./types/opcionesGeneralesServicios";
 export * from "./types/opcionesVentaRol";
 export * from "./types/producto";
-export * from "./types/productoSeriales";
 export * from "./types/productosListasPrecio";
 export * from "./types/productosRubros";
 export * from "./types/productosPrecios";

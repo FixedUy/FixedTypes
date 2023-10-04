@@ -6,6 +6,5 @@ interface ItemStock {
 export interface StockModificar {
   operacion: string;
   items: ItemStock[];
-  conSeriales: boolean;
   idLocal: string;
 }

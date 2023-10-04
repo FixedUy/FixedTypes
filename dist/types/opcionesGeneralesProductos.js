@@ -5,6 +5,5 @@ exports.defectoOpcionesGeneralesProductos = {
     nombreModuloProductos: "",
     nombreModuloProductosSingular: "",
     tasaIVADefectoProductos: "",
-    precioArbitrario: false,
-    seriales: false
+    precioArbitrario: false
 };
