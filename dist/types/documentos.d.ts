@@ -1,6 +1,7 @@
 import { InterfazDocCancela } from "./intefazDocCancela";
 import { InterfazPendienteCantidad } from "./interfazPendienteCantidad";
 import { InterfazPendienteImporte } from "./interfazPendienteImporte";
+import { InterfazTipoCancelacion } from "./interfazTipoCancelacion";
 interface Documento {
     version: number;
     id: string;
@@ -23,8 +24,8 @@ interface Documento {
     importeDisponible: number;
     canceladoPor: string[];
     cancela: string[];
-    tipoCancelacionRecibida: "cantidad" | "importe" | null;
-    tipoCancelacionRealizada: "cantidad" | "importe" | null;
+    tipoCancelacionRecibida: InterfazTipoCancelacion[];
+    tipoCancelacionRealizada: InterfazTipoCancelacion[];
     relacionCancelacionesRealizada: InterfazDocCancela[];
     relacionCancelacionesRecibida: InterfazDocCancela[];
 }
