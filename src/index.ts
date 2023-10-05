@@ -50,6 +50,7 @@ export * from "./types/intefazDocCancela";
 export * from "./types/documentos";
 export * from "./types/interfazPendienteCantidad";
 export * from "./types/interfazPendienteImporte";
+export * from "./types/interfazTipoCancelacion";
 export * from "./types/comprasDevolucionLineaCantidad";
 export * from "./types/comprasFacturasDevueltaCantidad";
 export * from "./types/comprasRelacionImporteTasas";
