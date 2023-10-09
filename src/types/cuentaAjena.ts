@@ -17,7 +17,7 @@ const cuentaAjenaConverter = {
     const data = snapshot.data()!;
     return {
       id: snapshot.id,
-      nombreFantasia: data.nombrenombreFantasia,
+      nombreFantasia: data.nombreFantasia,
       tipoDocumento: data.tipoDocumento,
       documento: data.documento,
       razonSocial: data.razonSocial,
