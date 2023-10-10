@@ -31,6 +31,10 @@ interface Venta {
   listasPreciosServicios: string;
   listasPreciosProductos: string;
   buscablePor: null | string[];
+  cotizacion: number;
+  productos: [];
+  tipo: string;
+  esDeReintegro: boolean;
 }
 
 const VentaConverter = {
@@ -68,7 +72,11 @@ const VentaConverter = {
       local: data.local,
       listasPreciosServicios: data.listasPreciosServicios,
       listasPreciosProductos: data.listasPreciosProductos,
-      buscablePor: data.buscablePor
+      buscablePor: data.buscablePor,
+      cotizacion: data.cotizacion,
+      productos: data.productos,
+      tipo: data.tipo,
+      esDeReintegro: data.esDeReintegro
     };
   }
 };

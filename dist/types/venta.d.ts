@@ -30,6 +30,10 @@ interface Venta {
     listasPreciosServicios: string;
     listasPreciosProductos: string;
     buscablePor: null | string[];
+    cotizacion: number;
+    productos: [];
+    tipo: string;
+    esDeReintegro: boolean;
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;
