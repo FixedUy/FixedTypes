@@ -40,8 +40,7 @@ const VentaConverter = {
             cotizacion: data.cotizacion,
             productos: data.productos,
             tipo: data.tipo,
-            esDeReintegro: data.esDeReintegro,
-            ultimoUsado: data.ultimoUsado
+            esDeReintegro: data.esDeReintegro
         };
     }
 };

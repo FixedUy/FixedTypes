@@ -13,6 +13,7 @@ interface CAE {
   caeEspecial: string;
   usuarioCreador: string;
   xml: string;
+  ultimoUsado: number;
 }
 
 const CAEConverter = {
@@ -35,7 +36,8 @@ const CAEConverter = {
       fechaVencimiento: data.fechaVencimiento,
       caeEspecial: data.caeEspecial,
       usuarioCreador: data.usuarioCreador,
-      xml: data.xml
+      xml: data.xml,
+      ultimoUsado: data.ultimoUsado
     };
   }
 };

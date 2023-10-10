@@ -13,6 +13,7 @@ interface CAE {
     caeEspecial: string;
     usuarioCreador: string;
     xml: string;
+    ultimoUsado: number;
 }
 declare const CAEConverter: {
     toFirestore(cae: CAE): CAE;
