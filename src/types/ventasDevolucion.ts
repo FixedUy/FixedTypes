@@ -1,7 +1,7 @@
+import {Cliente} from "./cliente";
 import {VentaLinea} from "./ventaLinea";
 import {VentasFacturasDevueltaCantidad} from "./ventasFacturasDevueltaCantidad";
 import {VentasFacturasDevueltaImporte} from "./ventasFacturasDevueltaImporte";
-import {Proveedor} from "./proveedor";
 
 interface VentaDevolucion {
   version: number;
@@ -13,7 +13,7 @@ interface VentaDevolucion {
   comprobante: string;
   serie: string;
   numero: number;
-  proveedor: Proveedor;
+  cliente: Cliente;
   moneda: string;
   descuentoGeneral: number;
   ventaLinea: VentaLinea[];
@@ -50,7 +50,7 @@ const VentaDevolucionConverter = {
       comprobante: data.comprobante,
       serie: data.serie,
       numero: data.numero,
-      proveedor: data.proveedor,
+      cliente: data.cliente,
       moneda: data.moneda,
       descuentoGeneral: data.descuentoGeneral,
       ventaLinea: data.ventaLinea,

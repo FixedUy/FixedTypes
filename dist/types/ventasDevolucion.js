@@ -17,7 +17,7 @@ const VentaDevolucionConverter = {
             comprobante: data.comprobante,
             serie: data.serie,
             numero: data.numero,
-            proveedor: data.proveedor,
+            cliente: data.cliente,
             moneda: data.moneda,
             descuentoGeneral: data.descuentoGeneral,
             ventaLinea: data.ventaLinea,

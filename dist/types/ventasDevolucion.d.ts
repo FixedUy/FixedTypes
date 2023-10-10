@@ -1,7 +1,7 @@
+import { Cliente } from "./cliente";
 import { VentaLinea } from "./ventaLinea";
 import { VentasFacturasDevueltaCantidad } from "./ventasFacturasDevueltaCantidad";
 import { VentasFacturasDevueltaImporte } from "./ventasFacturasDevueltaImporte";
-import { Proveedor } from "./proveedor";
 interface VentaDevolucion {
     version: number;
     id: string;
@@ -12,7 +12,7 @@ interface VentaDevolucion {
     comprobante: string;
     serie: string;
     numero: number;
-    proveedor: Proveedor;
+    cliente: Cliente;
     moneda: string;
     descuentoGeneral: number;
     ventaLinea: VentaLinea[];

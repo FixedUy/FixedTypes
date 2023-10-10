@@ -1,6 +1,6 @@
 {
   "name": "fixedtypespackage",
-  "version": "2.0.188",
+  "version": "2.0.189",
   "type": "commonjs",
   "description": "",
   "main": "dist/index.js",
