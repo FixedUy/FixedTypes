@@ -60,6 +60,11 @@ export * from "./types/stockLote";
 export * from "./types/stockFicha";
 export * from "./types/cae";
 export * from "./types/stockModificar";
+export * from "./types/ventasDevolucionLineaCantidad";
+export * from "./types/ventasFacturasDevueltaCantidad";
+export * from "./types/ventasRelacionImporteTasas";
+export * from "./types/ventasFacturasDevueltaImporte";
+export * from "./types/ventasDevolucion";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
