@@ -35,6 +35,7 @@ interface Venta {
   productos: [];
   tipo: string;
   esDeReintegro: boolean;
+  fechaAdenda: string;
 }
 
 const VentaConverter = {
@@ -76,7 +77,8 @@ const VentaConverter = {
       cotizacion: data.cotizacion,
       productos: data.productos,
       tipo: data.tipo,
-      esDeReintegro: data.esDeReintegro
+      esDeReintegro: data.esDeReintegro,
+      fechaAdenda: data.fechaAdenda
     };
   }
 };
