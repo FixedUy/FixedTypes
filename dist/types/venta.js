@@ -41,7 +41,7 @@ const VentaConverter = {
             productos: data.productos,
             tipo: data.tipo,
             esDeReintegro: data.esDeReintegro,
-            fechaAdenda: data.fechaAdenda
+            periodoDesdeHasta: data.periodoDesdeHasta
         };
     }
 };
