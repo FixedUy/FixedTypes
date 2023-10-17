@@ -36,6 +36,7 @@ interface Venta {
   tipo: string;
   esDeReintegro: boolean;
   periodoDesdeHasta: string;
+  ordenCompra: string;
 }
 
 const VentaConverter = {
@@ -78,7 +79,8 @@ const VentaConverter = {
       productos: data.productos,
       tipo: data.tipo,
       esDeReintegro: data.esDeReintegro,
-      periodoDesdeHasta: data.periodoDesdeHasta
+      periodoDesdeHasta: data.periodoDesdeHasta,
+      ordenCompra: data.ordenCompra
     };
   }
 };

@@ -91,7 +91,7 @@ var Permisos;
     Permisos["CrearListasPrecio"] = "kc";
     Permisos["Caja"] = "t";
     Permisos["ListarCFERecibidos"] = "u";
-})(Permisos || (exports.Permisos = Permisos = {}));
+})(Permisos = exports.Permisos || (exports.Permisos = {}));
 const usuarioRolConverter = {
     toFirestore(rol) {
         return rol;

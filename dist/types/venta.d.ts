@@ -35,6 +35,7 @@ interface Venta {
     tipo: string;
     esDeReintegro: boolean;
     periodoDesdeHasta: string;
+    ordenCompra: string;
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;
