@@ -5,7 +5,7 @@ import { InterfazTipoCancelacion } from "./interfazTipoCancelacion";
 interface Documento {
     version: number;
     id: string;
-    tipoDocumento: "venta" | "ventaNotaCredito" | "ventaNotaDebito" | "ajuste" | "compra" | "compraNotaCredito";
+    tipoDocumento: "venta" | "ventaNotaCredito" | "ventaNotaDebito" | "ajuste" | "compra" | "compraNotaCredito" | "reciboProveedor" | "reciboCliente";
     documentoId: string;
     fechaComprobante: number;
     fechaComprobanteString: string;

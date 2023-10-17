@@ -12,7 +12,9 @@ interface Documento {
     | "ventaNotaDebito"
     | "ajuste"
     | "compra"
-    | "compraNotaCredito";
+    | "compraNotaCredito"
+    | "reciboProveedor"
+    | "reciboCliente";
   documentoId: string;
   fechaComprobante: number;
   fechaComprobanteString: string;
