@@ -1,6 +1,6 @@
 interface InterfazTipoCancelacion {
   documentoId: string;
-  tipoCancelacion: "cantidad" | "importe";
+  tipoCancelacion: "cantidad" | "importe" | "recibo";
 }
 
 const InterfazTipoCancelacionConverter = {
