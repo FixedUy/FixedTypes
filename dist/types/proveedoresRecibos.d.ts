@@ -30,7 +30,7 @@ interface ProveedoresRecibos {
     local: string;
 }
 declare const ProveedoresRecibosConverter: {
-    toFirestore(compra: ProveedoresRecibos): ProveedoresRecibos;
+    toFirestore(recibo: ProveedoresRecibos): ProveedoresRecibos;
     fromFirestore(snapshot: any): ProveedoresRecibos;
 };
 export { type ProveedoresRecibos, ProveedoresRecibosConverter };

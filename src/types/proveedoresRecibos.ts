@@ -33,8 +33,8 @@ interface ProveedoresRecibos {
 }
 
 const ProveedoresRecibosConverter = {
-  toFirestore(compra: ProveedoresRecibos) {
-    return compra;
+  toFirestore(recibo: ProveedoresRecibos) {
+    return recibo;
   },
   fromFirestore(snapshot: any): ProveedoresRecibos {
     const data = snapshot.data()!;

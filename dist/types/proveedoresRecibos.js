@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProveedoresRecibosConverter = void 0;
 const ProveedoresRecibosConverter = {
-    toFirestore(compra) {
-        return compra;
+    toFirestore(recibo) {
+        return recibo;
     },
     fromFirestore(snapshot) {
         const data = snapshot.data();
