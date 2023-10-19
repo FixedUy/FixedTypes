@@ -42,7 +42,10 @@ const VentaConverter = {
             tipo: data.tipo,
             esDeReintegro: data.esDeReintegro,
             periodoDesdeHasta: data.periodoDesdeHasta,
-            ordenCompra: data.ordenCompra
+            ordenCompra: data.ordenCompra,
+            listaFormaDePago: data.listaFormaDePago,
+            fechaVencimiento: data.fechaVencimiento,
+            infoAdicional: data.infoAdicional
         };
     }
 };
