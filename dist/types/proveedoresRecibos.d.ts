@@ -1,3 +1,4 @@
+import { Proveedor } from "./proveedor";
 interface FacturasAfectadas {
     id: string;
     idDocumento: string;
@@ -16,8 +17,7 @@ interface ProveedoresRecibos {
     comprobante: string;
     serie: string;
     numero: number;
-    proveedorId: string;
-    proveedorNombre: string;
+    proveedor: Proveedor;
     moneda: string;
     facturasAfectadas: FacturasAfectadas[];
     tipo: string;
