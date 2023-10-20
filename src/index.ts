@@ -40,6 +40,7 @@ export * from "./types/remito";
 export * from "./types/remitoItem";
 export * from "./types/remitoItemFormulario";
 export * from "./types/caja";
+export * from "./types/cajaAfectar";
 export * from "./types/cajaMovimientos";
 export * from "./types/cajaMediosCobro";
 export * from "./types/cajaMediosPago";
