@@ -56,6 +56,7 @@ __exportStar(require("./types/remito"), exports);
 __exportStar(require("./types/remitoItem"), exports);
 __exportStar(require("./types/remitoItemFormulario"), exports);
 __exportStar(require("./types/caja"), exports);
+__exportStar(require("./types/cajaAfectar"), exports);
 __exportStar(require("./types/cajaMovimientos"), exports);
 __exportStar(require("./types/cajaMediosCobro"), exports);
 __exportStar(require("./types/cajaMediosPago"), exports);
