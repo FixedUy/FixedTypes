@@ -83,6 +83,7 @@ __exportStar(require("./types/ventasRelacionImporteTasas"), exports);
 __exportStar(require("./types/ventasFacturasDevueltaImporte"), exports);
 __exportStar(require("./types/ventasDevolucion"), exports);
 __exportStar(require("./types/proveedoresRecibos"), exports);
+__exportStar(require("./types/clientesRecibos"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);

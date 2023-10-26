@@ -67,6 +67,7 @@ export * from "./types/ventasRelacionImporteTasas";
 export * from "./types/ventasFacturasDevueltaImporte";
 export * from "./types/ventasDevolucion";
 export * from "./types/proveedoresRecibos";
+export * from "./types/clientesRecibos";
 
 // cloud functions
 export * from "./types/cloudFunctions/response";
