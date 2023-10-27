@@ -16,7 +16,7 @@ var CajaTipoMovimiento;
     CajaTipoMovimiento["DepositoRechazado"] = "depositorechazado";
     CajaTipoMovimiento["TransferenciaIngresa"] = "traningresa";
     CajaTipoMovimiento["TransferenciaSale"] = "transale";
-})(CajaTipoMovimiento || (exports.CajaTipoMovimiento = CajaTipoMovimiento = {}));
+})(CajaTipoMovimiento = exports.CajaTipoMovimiento || (exports.CajaTipoMovimiento = {}));
 exports.movimientoSumaCaja = {
     [CajaTipoMovimiento.Compra]: false,
     [CajaTipoMovimiento.CompraNotaCredito]: true,

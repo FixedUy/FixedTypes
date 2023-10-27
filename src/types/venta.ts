@@ -40,6 +40,8 @@ interface Venta {
   listaFormaDePago: string;
   fechaVencimiento: string;
   infoAdicional: string;
+  lineasVentaEditar: string;
+  combinadoImpresion: string;
 }
 
 const VentaConverter = {
@@ -86,7 +88,9 @@ const VentaConverter = {
       ordenCompra: data.ordenCompra,
       listaFormaDePago: data.listaFormaDePago,
       fechaVencimiento: data.fechaVencimiento,
-      infoAdicional: data.infoAdicional
+      infoAdicional: data.infoAdicional,
+      lineasVentaEditar: data.lineasVentaEditar,
+      combinadoImpresion: data.combinadoImpresion
     };
   }
 };
