@@ -39,8 +39,8 @@ interface Venta {
     listaFormaDePago: string;
     fechaVencimiento: string;
     infoAdicional: string;
-    lineasVentaEditar: string;
-    combinadoImpresion: string;
+    lineasVentaEditar: VentaLinea[];
+    combinadoImpresion: VentaLinea;
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;
