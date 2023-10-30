@@ -68,6 +68,7 @@ export * from "./types/ventasFacturasDevueltaImporte";
 export * from "./types/ventasDevolucion";
 export * from "./types/proveedoresRecibos";
 export * from "./types/clientesRecibos";
+export * from "./types/productosListasEditarMasiva";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";
