@@ -15,7 +15,9 @@ interface VentaLinea {
   importe: number; // = (precio * cantidad) - descuentoMonto
   stock: boolean;
   idProducto: string;
+  listaPrecio: [];
 }
+
 const VentaLineaConverter = {
   toFirestore(linea: VentaLinea) {
     return linea;
@@ -35,7 +37,8 @@ const VentaLineaConverter = {
       precio: data.precio,
       importe: data.importe,
       stock: data.stock,
-      idProducto: data.idProducto
+      idProducto: data.idProducto,
+      listaPrecio: data.listaPrecio
     };
   }
 };

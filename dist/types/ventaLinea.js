@@ -20,7 +20,8 @@ const VentaLineaConverter = {
             precio: data.precio,
             importe: data.importe,
             stock: data.stock,
-            idProducto: data.idProducto
+            idProducto: data.idProducto,
+            listaPrecio: data.listaPrecio
         };
     }
 };
