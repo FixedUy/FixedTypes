@@ -1,10 +1,10 @@
 import { ProductosListasPrecio } from "./productosListasPrecio";
 interface ListasDePreciosAEditar {
     listas: ProductosListasPrecio[];
-    rubros: never[];
+    rubros: string[];
     afectacion: string;
     conIva: boolean;
-    moneda: never[];
+    moneda: string[];
     redondeo: number;
     monto: number;
     tipo: string;
