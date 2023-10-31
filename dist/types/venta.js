@@ -46,7 +46,7 @@ const VentaConverter = {
             listaFormaDePago: data.listaFormaDePago,
             fechaVencimiento: data.fechaVencimiento,
             infoAdicional: data.infoAdicional,
-            lineasVentaEditar: data.lineasVentaEditar,
+            ventaLineaImpresion: data.ventaLineaImpresion,
             combinadoImpresion: data.combinadoImpresion
         };
     }
