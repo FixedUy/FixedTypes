@@ -12,7 +12,8 @@ interface VentaLinea {
     importe: number;
     stock: boolean;
     idProducto: string;
-    listaPrecio: [];
+    idServicio: string;
+    listaPrecio: string;
 }
 declare const VentaLineaConverter: {
     toFirestore(linea: VentaLinea): VentaLinea;

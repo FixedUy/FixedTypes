@@ -15,7 +15,8 @@ interface VentaLinea {
   importe: number; // = (precio * cantidad) - descuentoMonto
   stock: boolean;
   idProducto: string;
-  listaPrecio: [];
+  idServicio: string;
+  listaPrecio: string;
 }
 
 const VentaLineaConverter = {
@@ -38,6 +39,7 @@ const VentaLineaConverter = {
       importe: data.importe,
       stock: data.stock,
       idProducto: data.idProducto,
+      idServicio: data.idServicio,
       listaPrecio: data.listaPrecio
     };
   }

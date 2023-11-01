@@ -21,6 +21,7 @@ const VentaLineaConverter = {
             importe: data.importe,
             stock: data.stock,
             idProducto: data.idProducto,
+            idServicio: data.idServicio,
             listaPrecio: data.listaPrecio
         };
     }
