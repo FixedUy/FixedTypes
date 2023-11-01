@@ -31,7 +31,8 @@ interface Venta {
     listasPreciosProductos: string;
     buscablePor: null | string[];
     cotizacion: number;
-    productos: [];
+    productos: string[];
+    servicios: string[];
     tipo: string;
     esDeReintegro: boolean;
     periodoDesdeHasta: string;

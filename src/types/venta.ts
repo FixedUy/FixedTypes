@@ -32,7 +32,8 @@ interface Venta {
   listasPreciosProductos: string;
   buscablePor: null | string[];
   cotizacion: number;
-  productos: [];
+  productos: string[];
+  servicios: string[];
   tipo: string;
   esDeReintegro: boolean;
   periodoDesdeHasta: string;
@@ -82,6 +83,7 @@ const VentaConverter = {
       buscablePor: data.buscablePor,
       cotizacion: data.cotizacion,
       productos: data.productos,
+      servicios: data.servicios,
       tipo: data.tipo,
       esDeReintegro: data.esDeReintegro,
       periodoDesdeHasta: data.periodoDesdeHasta,

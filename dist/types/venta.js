@@ -39,6 +39,7 @@ const VentaConverter = {
             buscablePor: data.buscablePor,
             cotizacion: data.cotizacion,
             productos: data.productos,
+            servicios: data.servicios,
             tipo: data.tipo,
             esDeReintegro: data.esDeReintegro,
             periodoDesdeHasta: data.periodoDesdeHasta,
