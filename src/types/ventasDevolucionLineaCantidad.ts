@@ -10,6 +10,7 @@ interface VentasDevolucionLineaCantidad {
   importe: number;
   stock: boolean;
   idProducto: string;
+  idServicio: string;
   nroLinea: number;
 }
 
@@ -31,6 +32,7 @@ const VentasDevolucionLineaCantidadConverter = {
       importe: data.importe,
       stock: data.stock,
       idProducto: data.idProducto,
+      idServicio: data.idServicio,
       nroLinea: data.nroLinea
     };
   }

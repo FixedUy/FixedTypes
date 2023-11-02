@@ -19,6 +19,7 @@ const VentasDevolucionLineaCantidadConverter = {
             importe: data.importe,
             stock: data.stock,
             idProducto: data.idProducto,
+            idServicio: data.idServicio,
             nroLinea: data.nroLinea
         };
     }
