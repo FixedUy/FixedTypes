@@ -85,6 +85,7 @@ __exportStar(require("./types/ventasDevolucion"), exports);
 __exportStar(require("./types/proveedoresRecibos"), exports);
 __exportStar(require("./types/clientesRecibos"), exports);
 __exportStar(require("./types/productosListasEditarMasiva"), exports);
+__exportStar(require("./types/historicoPrecio"), exports);
 // cloud functions
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
