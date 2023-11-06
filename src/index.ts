@@ -69,6 +69,7 @@ export * from "./types/ventasDevolucion";
 export * from "./types/proveedoresRecibos";
 export * from "./types/clientesRecibos";
 export * from "./types/productosListasEditarMasiva";
+export * from "./types/historicoPrecio";
 // cloud functions
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
