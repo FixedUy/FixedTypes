@@ -8,7 +8,8 @@ const historicoPrecioConverter = {
     fromFirestore(snapshot) {
         const data = snapshot.data();
         return {
-            idProducto: data.idProducto,
+            idProducto: data.idProducto || "",
+            idServicio: data.idServicio || "",
             idLista: data.idLista,
             fechaNumero: data.fechaNumero,
             fechaString: data.fechaString,

@@ -1,5 +1,6 @@
 interface HistoricoPrecio {
-  idProducto: string;
+  idProducto?: string;
+  idServicio?: string;
   idLista: string;
   fechaNumero: number;
   fechaString: string;
@@ -20,7 +21,8 @@ const historicoPrecioConverter = {
   fromFirestore(snapshot: any): HistoricoPrecio {
     const data = snapshot.data()!;
     return {
-      idProducto: data.idProducto,
+      idProducto: data.idProducto || "",
+      idServicio: data.idServicio || "",
       idLista: data.idLista,
       fechaNumero: data.fechaNumero,
       fechaString: data.fechaString,

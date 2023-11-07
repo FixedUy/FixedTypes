@@ -1,5 +1,6 @@
 interface HistoricoPrecio {
-    idProducto: string;
+    idProducto?: string;
+    idServicio?: string;
     idLista: string;
     fechaNumero: number;
     fechaString: string;
