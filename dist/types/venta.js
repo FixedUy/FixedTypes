@@ -48,7 +48,8 @@ const VentaConverter = {
             fechaVencimiento: data.fechaVencimiento,
             infoAdicional: data.infoAdicional,
             ventaLineaImpresion: data.ventaLineaImpresion,
-            combinadoImpresion: data.combinadoImpresion
+            combinadoImpresion: data.combinadoImpresion,
+            tcfe: data.tcfe
         };
     }
 };

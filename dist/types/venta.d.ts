@@ -42,6 +42,7 @@ interface Venta {
     infoAdicional: string;
     ventaLineaImpresion: VentaLinea[];
     combinadoImpresion: VentaLinea | null;
+    tcfe: string;
 }
 declare const VentaConverter: {
     toFirestore(venta: Venta): Venta;
