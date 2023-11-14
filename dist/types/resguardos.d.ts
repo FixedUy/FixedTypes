@@ -12,6 +12,7 @@ interface Resguardos {
     referencias: (ResguardosReferenciaCFE | ResguardosReferenciaNormal)[];
     observaciones: string;
     valor: number;
+    cfe: string;
 }
 declare const resguardosConverter: {
     toFirestore(resguardos: Resguardos): Resguardos;

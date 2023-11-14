@@ -13,6 +13,7 @@ interface Resguardos {
   referencias: (ResguardosReferenciaCFE | ResguardosReferenciaNormal)[];
   observaciones: string;
   valor: number;
+  cfe: string;
 }
 
 const resguardosConverter = {
@@ -31,7 +32,8 @@ const resguardosConverter = {
       retenciones: data.retenciones,
       referencias: data.referencias,
       observaciones: data.observaciones,
-      valor: data.valor
+      valor: data.valor,
+      cfe: data.cfe
     };
   }
 };

@@ -14,7 +14,7 @@ var TipoMovimiento;
     TipoMovimiento["AjusteQuitarDeudaCliente"] = "ajustequitardeudacliente";
     TipoMovimiento["AjusteAgregarDeudaProveedor"] = "ajusteagregardeudaproveedor";
     TipoMovimiento["AjusteQuitarDeudaProveedor"] = "ajustequitardeudaproveedor";
-})(TipoMovimiento || (exports.TipoMovimiento = TipoMovimiento = {}));
+})(TipoMovimiento = exports.TipoMovimiento || (exports.TipoMovimiento = {}));
 exports.movimientoSuma = {
     [TipoMovimiento.Compra]: false,
     [TipoMovimiento.CompraNotaCredito]: true,
