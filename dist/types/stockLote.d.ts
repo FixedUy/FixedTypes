@@ -3,7 +3,8 @@ interface StockLote {
     id: string;
     cantidadActual: number;
     cantidadOriginal: number;
-    costo: number;
+    costoUnitarioSinIvaSinDescuento: number;
+    descuentoTotalSinIVA: number;
     cotizacion: number;
     documentoCreador: string;
     documentoCreadorId: string;

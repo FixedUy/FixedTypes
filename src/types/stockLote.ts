@@ -3,7 +3,8 @@ interface StockLote {
   id: string;
   cantidadActual: number;
   cantidadOriginal: number;
-  costo: number;
+  costoUnitarioSinIvaSinDescuento: number;
+  descuentoTotalSinIVA: number;
   cotizacion: number;
   documentoCreador: string;
   documentoCreadorId: string;
@@ -28,7 +29,8 @@ const stockLoteConverter = {
       id: snapshot.id,
       cantidadActual: data.cantidadActual,
       cantidadOriginal: data.cantidadOriginal,
-      costo: data.costo,
+      costoUnitarioSinIvaSinDescuento: data.costoUnitarioSinIvaSinDescuento,
+      descuentoTotalSinIVA: data.descuentoTotalSinIVA,
       cotizacion: data.cotización,
       documentoCreador: data.documentoCreador,
       documentoCreadorId: data.documentoCreadorId,
