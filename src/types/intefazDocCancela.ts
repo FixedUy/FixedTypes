@@ -1,4 +1,6 @@
 interface InterfazDocCancela {
+  idUsuario: string;
+  fecha: number;
   cancelante: string;
   cancelado: string;
   nroLineaCancelante: number;
@@ -14,6 +16,8 @@ const InterfazDocCancelaConverter = {
   fromFirestore(snapshot: any): InterfazDocCancela {
     const data = snapshot.data()!;
     return {
+      idUsuario: data.idUsuario,
+      fecha: data.fecha,
       cancelante: data.cancelante,
       cancelado: data.cancelado,
       nroLineaCancelante: data.nroLineaCancelante,
