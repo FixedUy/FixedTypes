@@ -3,7 +3,7 @@ interface TasaIVA {
   nombre: string;
   sigla: string;
   valor: number;
-  cfeDgi: "Basic" | "Exp" | "Min" | "Exe" | "Otro" | "";
+  cfeDgi: "Basic" | "Exp" | "Min" | "Exe" | "Otro" | "NoFac" | "";
   activoProductos: boolean;
   activoServicios: boolean;
   ultimaEdicion: number;
