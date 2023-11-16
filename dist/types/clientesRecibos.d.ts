@@ -20,6 +20,7 @@ interface ClientesRecibos {
     observaciones: string;
     usuario: string;
     local: string;
+    tcfe: string;
 }
 declare const ClientesRecibosConverter: {
     toFirestore(recibo: ClientesRecibos): ClientesRecibos;

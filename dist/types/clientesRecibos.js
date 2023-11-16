@@ -26,7 +26,8 @@ const ClientesRecibosConverter = {
             activo: data.activo,
             observaciones: data.observaciones,
             usuario: data.usuario,
-            local: data.local
+            local: data.local,
+            tcfe: data.tcfe
         };
     }
 };
