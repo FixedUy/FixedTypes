@@ -32,6 +32,7 @@ interface VentaDevolucion {
   detalleDevolucion: VentasFacturasDevueltaCantidad[];
   detalleDevolucionImporte: VentasFacturasDevueltaImporte[];
   cotizacion: number;
+  tcfe: string;
 }
 
 const VentaDevolucionConverter = {
@@ -68,7 +69,8 @@ const VentaDevolucionConverter = {
       tipoDevolucion: data.tipoDevolucion,
       detalleDevolucion: data.detalleDevolucion,
       detalleDevolucionImporte: data.detalleDevolucionImporte,
-      cotizacion: data.cotizacion
+      cotizacion: data.cotizacion,
+      tcfe: data.tcfe
     };
   }
 };

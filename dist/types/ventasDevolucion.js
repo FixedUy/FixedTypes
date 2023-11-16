@@ -35,7 +35,8 @@ const VentaDevolucionConverter = {
             tipoDevolucion: data.tipoDevolucion,
             detalleDevolucion: data.detalleDevolucion,
             detalleDevolucionImporte: data.detalleDevolucionImporte,
-            cotizacion: data.cotizacion
+            cotizacion: data.cotizacion,
+            tcfe: data.tcfe
         };
     }
 };

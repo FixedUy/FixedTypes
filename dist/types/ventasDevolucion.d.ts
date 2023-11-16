@@ -31,6 +31,7 @@ interface VentaDevolucion {
     detalleDevolucion: VentasFacturasDevueltaCantidad[];
     detalleDevolucionImporte: VentasFacturasDevueltaImporte[];
     cotizacion: number;
+    tcfe: string;
 }
 declare const VentaDevolucionConverter: {
     toFirestore(ventaDevolucion: VentaDevolucion): VentaDevolucion;
