@@ -9,6 +9,8 @@ const resguardosConverter = {
         const data = snapshot.data();
         return {
             id: snapshot.id,
+            emisorId: data.emisorId,
+            localId: data.localId,
             fecha: data.fecha,
             fechaString: data.fechaString,
             receptorId: data.receptorId,

@@ -3,6 +3,8 @@ import { ResguardosReferenciaNormal } from "./resguardosReferenciaNormal";
 import { ResguardosReferenciaCFE } from "./resguardosReferenciaCFE";
 interface Resguardos {
     id: string;
+    emisorId: string;
+    localId: string;
     fecha: number;
     fechaString: string;
     receptorId: string;

@@ -4,6 +4,8 @@ import {ResguardosReferenciaCFE} from "./resguardosReferenciaCFE";
 
 interface Resguardos {
   id: string;
+  emisorId: string;
+  localId: string;
   fecha: number;
   fechaString: string;
   receptorId: string;
@@ -24,6 +26,8 @@ const resguardosConverter = {
     const data = snapshot.data()!;
     return {
       id: snapshot.id,
+      emisorId: data.emisorId,
+      localId: data.localId,
       fecha: data.fecha,
       fechaString: data.fechaString,
       receptorId: data.receptorId,
