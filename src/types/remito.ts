@@ -2,7 +2,6 @@ import {RemitoItem} from "./remitoItem";
 
 interface Remito {
   version: number;
-  empresaId: string;
   id: string;
   fechaComprobante: number;
   fechaComprobanteString: string;
@@ -35,7 +34,6 @@ const RemitoConverter = {
     const data = snapshot.data()!;
     return {
       version: data.version,
-      empresaId: data.empresaId,
       id: snapshot.id,
       fechaComprobante: data.fechaComprobante,
       fechaComprobanteString: data.fechaComprobanteString,
