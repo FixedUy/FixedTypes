@@ -18,6 +18,7 @@ interface Remito {
   tipo: RemitoTipo;
   autor: string;
   activo: boolean;
+  cfe: string;
 }
 
 export enum RemitoTipo {
@@ -49,7 +50,8 @@ const RemitoConverter = {
       observaciones: data.observaciones,
       tipo: data.tipo,
       autor: data.autor,
-      activo: data.activo
+      activo: data.activo,
+      cfe: data.cfe
     };
   }
 };
