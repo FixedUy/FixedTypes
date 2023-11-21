@@ -1,6 +1,7 @@
 import { RemitoItem } from "./remitoItem";
 interface Remito {
     version: number;
+    empresaId: string;
     id: string;
     fechaComprobante: number;
     fechaComprobanteString: string;
