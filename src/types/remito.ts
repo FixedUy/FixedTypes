@@ -17,7 +17,7 @@ interface Remito {
   tipo: RemitoTipo;
   autor: string;
   activo: boolean;
-  cfe: string;
+  cfe?: string;
 }
 
 export enum RemitoTipo {

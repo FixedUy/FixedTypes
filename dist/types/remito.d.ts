@@ -16,7 +16,7 @@ interface Remito {
     tipo: RemitoTipo;
     autor: string;
     activo: boolean;
-    cfe: string;
+    cfe?: string;
 }
 export declare enum RemitoTipo {
     Ingreso = "ingreso",
