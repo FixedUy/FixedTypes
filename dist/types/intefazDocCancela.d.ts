@@ -1,6 +1,4 @@
 interface InterfazDocCancela {
-    idUsuario: string;
-    fecha: number;
     cancelante: string;
     cancelado: string;
     nroLineaCancelante: number;
