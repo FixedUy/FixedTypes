@@ -3,6 +3,7 @@ import {ResguardosReferenciaNormal} from "./resguardosReferenciaNormal";
 import {ResguardosReferenciaCFE} from "./resguardosReferenciaCFE";
 
 interface Resguardos {
+  activo: boolean,
   id: string;
   emisorId: string;
   localId: string;
@@ -26,6 +27,7 @@ const resguardosConverter = {
     const data = snapshot.data()!;
     return {
       id: snapshot.id,
+      activo: data.activo,
       emisorId: data.emisorId,
       localId: data.localId,
       fecha: data.fecha,

@@ -2,6 +2,7 @@ import { ResguardosRetencion } from "./resguardosRetencion";
 import { ResguardosReferenciaNormal } from "./resguardosReferenciaNormal";
 import { ResguardosReferenciaCFE } from "./resguardosReferenciaCFE";
 interface Resguardos {
+    activo: boolean;
     id: string;
     emisorId: string;
     localId: string;

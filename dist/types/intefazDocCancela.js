@@ -8,6 +8,8 @@ const InterfazDocCancelaConverter = {
     fromFirestore(snapshot) {
         const data = snapshot.data();
         return {
+            idUsuario: data.idUsuario,
+            fecha: data.fecha,
             cancelante: data.cancelante,
             cancelado: data.cancelado,
             nroLineaCancelante: data.nroLineaCancelante,
