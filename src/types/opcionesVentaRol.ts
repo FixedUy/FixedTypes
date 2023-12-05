@@ -10,7 +10,10 @@ export interface OpcionesVentaRol {
   campoOrdenCompra: boolean;
   descuentos: boolean;
   descripcionLarga: boolean;
-  modificarListaPrecio: boolean;
+  modificarListaPrecio:
+    | "no"
+    | "siMantenerNuevoPrecio"
+    | "siSinMantenerNuevoPrecio";
   redondear: string[];
   facturarRemitos: boolean;
   lineaManual: boolean;
@@ -57,7 +60,7 @@ export const opcionesVentaRolDefecto: OpcionesVentaRol = {
   campoOrdenCompra: false,
   descuentos: true,
   descripcionLarga: false,
-  modificarListaPrecio: false,
+  modificarListaPrecio: "no",
   redondear: [],
   facturarRemitos: false,
   lineaManual: true,

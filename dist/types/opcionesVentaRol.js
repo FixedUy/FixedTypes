@@ -13,7 +13,7 @@ exports.opcionesVentaRolDefecto = {
     campoOrdenCompra: false,
     descuentos: true,
     descripcionLarga: false,
-    modificarListaPrecio: false,
+    modificarListaPrecio: "no",
     redondear: [],
     facturarRemitos: false,
     lineaManual: true,
