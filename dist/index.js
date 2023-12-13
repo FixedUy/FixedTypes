@@ -108,5 +108,6 @@ __exportStar(require("./types/cloudFunctions/cajaDepositoCrear"), exports);
 __exportStar(require("./types/cloudFunctions/cajaDepositoDeshacer"), exports);
 __exportStar(require("./types/cloudFunctions/cajaDepositoAceptar"), exports);
 __exportStar(require("./types/cloudFunctions/cajaTransferencia"), exports);
+__exportStar(require("./types/cloudFunctions/generarCFE"), exports);
 // utils
 __exportStar(require("./utils/convertirFechaNumberoAfechaString"), exports);
