@@ -34,7 +34,7 @@ interface Venta {
   cotizacion: number;
   productos: string[];
   servicios: string[];
-  tipo: string;
+  tipo: "venta" | "devolucion" | "notadebito";
   esDeReintegro: boolean;
   periodoDesdeHasta: string;
   ordenCompra: string;
