@@ -11,7 +11,7 @@ interface Venta {
   comprobante: string;
   serie: string;
   numero: number;
-  cliente: Cliente;
+  cliente: Cliente | null;
   moneda: string;
   ventaLinea: VentaLinea[];
   descuentoGeneral: number;
