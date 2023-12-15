@@ -96,3 +96,4 @@ export * from "./types/cloudFunctions/generarCFE";
 
 // utils
 export * from "./utils/convertirFechaNumberoAfechaString";
+export * from "./utils/cfeDefinicion";

@@ -93,3 +93,4 @@ export * from "./types/cloudFunctions/cajaDepositoAceptar";
 export * from "./types/cloudFunctions/cajaTransferencia";
 export * from "./types/cloudFunctions/generarCFE";
 export * from "./utils/convertirFechaNumberoAfechaString";
+export * from "./utils/cfeDefinicion";
