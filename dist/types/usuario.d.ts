@@ -16,6 +16,7 @@ interface Usuario {
     activo: boolean;
     ultimaEdicion: number;
     rolId: string;
+    menuOpen: boolean;
 }
 declare const usuarioConverter: {
     toFirestore(usuario: Usuario): Usuario;
