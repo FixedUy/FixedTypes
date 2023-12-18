@@ -17,7 +17,8 @@ const usuarioConverter = {
             vendedor: data.vendedor,
             activo: data.activo,
             rolId: data.rolId,
-            ultimaEdicion: data.ultimaEdicion
+            ultimaEdicion: data.ultimaEdicion,
+            menuOpen: data.menuOpen
         };
     }
 };
