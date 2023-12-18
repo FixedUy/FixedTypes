@@ -8,6 +8,7 @@ const servicioConverter = {
     fromFirestore(snapshot) {
         const data = snapshot.data();
         return {
+            tipoItem: "servicio",
             version: data.version,
             id: snapshot.id,
             codigo: data.codigo,

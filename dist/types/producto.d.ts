@@ -1,5 +1,6 @@
 import { ProductosPrecios } from "./productosPrecios";
 interface Producto {
+    tipoItem: "producto";
     version: number;
     id: string;
     codigo: {
