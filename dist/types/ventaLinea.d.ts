@@ -14,9 +14,15 @@ interface VentaLinea {
     idProducto: string;
     idServicio: string;
     listaPrecio: string;
+    retenciones: VentaRetencion[];
 }
 declare const VentaLineaConverter: {
     toFirestore(linea: VentaLinea): VentaLinea;
     fromFirestore(snapshot: any): VentaLinea;
 };
-export { type VentaLinea, VentaLineaConverter };
+interface VentaRetencion {
+    codigo: number;
+    tasa: number;
+    valor: number;
+}
+export { type VentaRetencion, type VentaLinea, VentaLineaConverter };
