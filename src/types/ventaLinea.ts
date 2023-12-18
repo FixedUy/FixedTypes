@@ -17,6 +17,7 @@ interface VentaLinea {
   idProducto: string;
   idServicio: string;
   listaPrecio: string;
+  retenciones: VentaRetencion[];
 }
 
 const VentaLineaConverter = {
@@ -40,9 +41,16 @@ const VentaLineaConverter = {
       stock: data.stock,
       idProducto: data.idProducto,
       idServicio: data.idServicio,
-      listaPrecio: data.listaPrecio
+      listaPrecio: data.listaPrecio,
+      retenciones: data.retenciones
     };
   }
 };
 
-export {type VentaLinea, VentaLineaConverter};
+interface VentaRetencion {
+  codigo: number;
+  tasa: number;
+  valor: number;
+}
+
+export {type VentaRetencion, type VentaLinea, VentaLineaConverter};
