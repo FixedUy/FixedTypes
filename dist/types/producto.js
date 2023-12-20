@@ -8,7 +8,6 @@ const productoConverter = {
     fromFirestore(snapshot) {
         const data = snapshot.data();
         return {
-            tipoItem: "producto",
             version: data.version,
             id: snapshot.id,
             codigo: data.codigo,

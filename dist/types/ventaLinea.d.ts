@@ -5,8 +5,9 @@ interface VentaLinea {
     rubro: string;
     centroCosto: string;
     tasaIva: string;
-    montoBruto: number;
+    montoBruto: 0 | 1 | 2 | 3;
     descuentoMonto: number;
+    tipo: "manual" | "servicio" | "producto" | "remito";
     descuentoPorcentaje: number;
     precio: number;
     importe: number;

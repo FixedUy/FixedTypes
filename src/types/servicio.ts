@@ -1,7 +1,6 @@
 import {ServiciosPrecios} from "./serviciosPrecios";
 
 interface Servicio {
-  tipoItem: "servicio";
   version: number;
   id: string;
   codigo: {[key: string]: string};
@@ -24,7 +23,6 @@ const servicioConverter = {
     const data = snapshot.data()!;
 
     return {
-      tipoItem: "servicio",
       version: data.version,
       id: snapshot.id,
       codigo: data.codigo,

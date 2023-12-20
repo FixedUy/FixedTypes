@@ -5,11 +5,12 @@ interface VentaLinea {
   rubro: string;
   centroCosto: string;
   tasaIva: string;
-  montoBruto: number;
+  montoBruto: 0 | 1 | 2 | 3;
   // indica si precio y descuento son:
   // 0 = sin iva | 1 = iva incl
   // | 2 = iva imeba incl | 3 = literal e o monitributo
   descuentoMonto: number; // Descuento total, no unitario
+  tipo: "manual" | "servicio" | "producto" | "remito";
   descuentoPorcentaje: number;
   precio: number;
   importe: number; // = (precio * cantidad) - descuentoMonto
@@ -32,6 +33,7 @@ const VentaLineaConverter = {
       descripcionLarga: data.descripcionLarga,
       rubro: data.rubro,
       centroCosto: data.centroCosto,
+      tipo: data.tipo,
       tasaIva: data.tasaIva,
       montoBruto: data.montoBruto,
       descuentoMonto: data.descuentoMonto,

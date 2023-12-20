@@ -13,6 +13,7 @@ const VentaLineaConverter = {
             descripcionLarga: data.descripcionLarga,
             rubro: data.rubro,
             centroCosto: data.centroCosto,
+            tipo: data.tipo,
             tasaIva: data.tasaIva,
             montoBruto: data.montoBruto,
             descuentoMonto: data.descuentoMonto,
