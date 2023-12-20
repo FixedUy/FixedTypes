@@ -6,6 +6,7 @@ const VentaLineaConverter = {
         return linea;
     },
     fromFirestore(snapshot) {
+        var _a;
         const data = snapshot.data();
         return {
             cantidad: data.cantidad,
@@ -20,7 +21,7 @@ const VentaLineaConverter = {
             descuentoPorcentaje: data.descuentoPorcentaje,
             precio: data.precio,
             importe: data.importe,
-            stock: data.stock,
+            stockProducto: (_a = data.stockProducto) !== null && _a !== void 0 ? _a : null,
             idProducto: data.idProducto,
             idServicio: data.idServicio,
             listaPrecio: data.listaPrecio,

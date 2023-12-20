@@ -11,7 +11,9 @@ interface VentaLinea {
     descuentoPorcentaje: number;
     precio: number;
     importe: number;
-    stock: boolean;
+    stockProducto: {
+        [key: string]: number;
+    } | null;
     idProducto: string;
     idServicio: string;
     listaPrecio: string;

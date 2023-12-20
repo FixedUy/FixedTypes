@@ -14,7 +14,9 @@ interface VentaLinea {
   descuentoPorcentaje: number;
   precio: number;
   importe: number; // = (precio * cantidad) - descuentoMonto
-  stock: boolean;
+  stockProducto: {[key: string]: number} | null;
+  // solo para producto para validacion en formulario de venta
+  // cuando se guarda el detalle de la venta, este campo se elimina
   idProducto: string;
   idServicio: string;
   listaPrecio: string;
@@ -40,7 +42,7 @@ const VentaLineaConverter = {
       descuentoPorcentaje: data.descuentoPorcentaje,
       precio: data.precio,
       importe: data.importe,
-      stock: data.stock,
+      stockProducto: data.stockProducto ?? null,
       idProducto: data.idProducto,
       idServicio: data.idServicio,
       listaPrecio: data.listaPrecio,
