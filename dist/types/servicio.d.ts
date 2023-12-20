@@ -1,6 +1,7 @@
 import { ServiciosPrecios } from "./serviciosPrecios";
 interface Servicio {
     version: number;
+    tipo: "servicio";
     id: string;
     codigo: {
         [key: string]: string;

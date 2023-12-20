@@ -9,6 +9,7 @@ const productoConverter = {
         const data = snapshot.data();
         return {
             version: data.version,
+            tipo: "producto",
             id: snapshot.id,
             codigo: data.codigo,
             todosLosCodigos: data.todosLosCodigos,

@@ -9,6 +9,7 @@ const servicioConverter = {
         const data = snapshot.data();
         return {
             version: data.version,
+            tipo: "servicio",
             id: snapshot.id,
             codigo: data.codigo,
             todosLosCodigos: data.todosLosCodigos,
