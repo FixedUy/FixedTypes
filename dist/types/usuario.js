@@ -18,7 +18,7 @@ const usuarioConverter = {
             activo: data.activo,
             rolId: data.rolId,
             ultimaEdicion: data.ultimaEdicion,
-            menuOpen: data.menuOpen
+            menuCollapsed: data.menuCollapsed
         };
     }
 };

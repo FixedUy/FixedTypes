@@ -17,7 +17,7 @@ interface Usuario {
   activo: boolean;
   ultimaEdicion: number;
   rolId: string;
-  menuOpen: boolean;
+  menuCollapsed: boolean;
 }
 
 const usuarioConverter = {
@@ -38,7 +38,7 @@ const usuarioConverter = {
       activo: data.activo,
       rolId: data.rolId,
       ultimaEdicion: data.ultimaEdicion,
-      menuOpen: data.menuOpen
+      menuCollapsed: data.menuCollapsed
     };
   }
 };
