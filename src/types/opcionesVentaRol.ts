@@ -49,9 +49,9 @@ export interface OpcionesVentaRol {
 }
 
 export const opcionesVentaRolDefecto: OpcionesVentaRol = {
-  monedasHabilitadas: [],
+  monedasHabilitadas: ["pesos", "dolares"],
   clienteDefecto: "nuevo",
-  monedaDefecto: "",
+  monedaDefecto: "pesos",
   verRespuestaComercialCFE: false,
   comprobantesCuentaTerceros: false,
   controlarCaja: false,
@@ -61,7 +61,7 @@ export const opcionesVentaRolDefecto: OpcionesVentaRol = {
   descuentos: true,
   descripcionLarga: false,
   modificarListaPrecio: "no",
-  redondear: [],
+  redondear: ["pesos"],
   facturarRemitos: false,
   lineaManual: true,
   domicilioEntrega: false,

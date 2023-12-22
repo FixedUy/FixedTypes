@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.opcionesVentaRolDefecto = void 0;
 exports.opcionesVentaRolDefecto = {
-    monedasHabilitadas: [],
+    monedasHabilitadas: ["pesos", "dolares"],
     clienteDefecto: "nuevo",
-    monedaDefecto: "",
+    monedaDefecto: "pesos",
     verRespuestaComercialCFE: false,
     comprobantesCuentaTerceros: false,
     controlarCaja: false,
@@ -14,7 +14,7 @@ exports.opcionesVentaRolDefecto = {
     descuentos: true,
     descripcionLarga: false,
     modificarListaPrecio: "no",
-    redondear: [],
+    redondear: ["pesos"],
     facturarRemitos: false,
     lineaManual: true,
     domicilioEntrega: false,
