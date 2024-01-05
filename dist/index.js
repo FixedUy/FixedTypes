@@ -110,6 +110,7 @@ __exportStar(require("./types/cloudFunctions/cajaDepositoDeshacer"), exports);
 __exportStar(require("./types/cloudFunctions/cajaDepositoAceptar"), exports);
 __exportStar(require("./types/cloudFunctions/cajaTransferencia"), exports);
 __exportStar(require("./types/cloudFunctions/generarCFE"), exports);
+__exportStar(require("./types/cloudFunctions/oAuthGoogleModificarPermisoEmpresa"), exports);
 // utils
 __exportStar(require("./utils/convertirFechaNumberoAfechaString"), exports);
 __exportStar(require("./utils/cfeDefinicion"), exports);

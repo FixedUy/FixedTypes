@@ -94,6 +94,7 @@ export * from "./types/cloudFunctions/cajaDepositoDeshacer";
 export * from "./types/cloudFunctions/cajaDepositoAceptar";
 export * from "./types/cloudFunctions/cajaTransferencia";
 export * from "./types/cloudFunctions/generarCFE";
+export * from "./types/cloudFunctions/oAuthGoogleModificarPermisoEmpresa";
 
 // utils
 export * from "./utils/convertirFechaNumberoAfechaString";
