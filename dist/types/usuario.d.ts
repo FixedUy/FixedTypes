@@ -17,6 +17,8 @@ interface Usuario {
     ultimaEdicion: number;
     rolId: string;
     menuCollapsed: boolean;
+    googleApi: boolean;
+    googleApiEmpresasHabilitadas: UsuarioEmpresas[];
 }
 declare const usuarioConverter: {
     toFirestore(usuario: Usuario): Usuario;

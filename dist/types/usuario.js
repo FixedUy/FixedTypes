@@ -18,6 +18,8 @@ const usuarioConverter = {
             activo: data.activo,
             rolId: data.rolId,
             ultimaEdicion: data.ultimaEdicion,
+            googleApi: data.googleApi,
+            googleApiEmpresasHabilitadas: data.googleApiEmpresasHabilitadas,
             menuCollapsed: data.menuCollapsed
         };
     }
