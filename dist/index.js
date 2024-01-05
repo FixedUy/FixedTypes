@@ -22,6 +22,7 @@ __exportStar(require("./types/comprasRubros"), exports);
 __exportStar(require("./types/ventasRubros"), exports);
 __exportStar(require("./types/cuentaAjena"), exports);
 __exportStar(require("./types/empresa"), exports);
+__exportStar(require("./types/mecanismosEnvioMails"), exports);
 __exportStar(require("./types/entidad"), exports);
 __exportStar(require("./types/formaDePagoPlazos"), exports);
 __exportStar(require("./types/compraLinea"), exports);

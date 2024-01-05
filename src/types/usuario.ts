@@ -1,9 +1,12 @@
+import {MecanismosEnvioMails} from "./mecanismosEnvioMails";
+
 interface UsuarioEmpresas {
   id: string;
   nombreComercial: string;
   rut: string;
   razonSocial: string;
   logoURL: string;
+  mecanismosEnvioMails: MecanismosEnvioMails[];
 }
 
 interface Usuario {
@@ -19,7 +22,7 @@ interface Usuario {
   rolId: string;
   menuCollapsed: boolean;
   googleApi: boolean;
-  googleApiEmpresasHabilitadas: UsuarioEmpresas[];
+  googleApiEmpresasHabilitadas: string[];
 }
 
 const usuarioConverter = {

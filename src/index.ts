@@ -6,6 +6,7 @@ export * from "./types/comprasRubros";
 export * from "./types/ventasRubros";
 export * from "./types/cuentaAjena";
 export * from "./types/empresa";
+export * from "./types/mecanismosEnvioMails";
 export * from "./types/entidad";
 export * from "./types/formaDePagoPlazos";
 export * from "./types/compraLinea";

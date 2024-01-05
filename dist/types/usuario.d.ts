@@ -1,9 +1,11 @@
+import { MecanismosEnvioMails } from "./mecanismosEnvioMails";
 interface UsuarioEmpresas {
     id: string;
     nombreComercial: string;
     rut: string;
     razonSocial: string;
     logoURL: string;
+    mecanismosEnvioMails: MecanismosEnvioMails[];
 }
 interface Usuario {
     id: string;
@@ -18,7 +20,7 @@ interface Usuario {
     rolId: string;
     menuCollapsed: boolean;
     googleApi: boolean;
-    googleApiEmpresasHabilitadas: UsuarioEmpresas[];
+    googleApiEmpresasHabilitadas: string[];
 }
 declare const usuarioConverter: {
     toFirestore(usuario: Usuario): Usuario;

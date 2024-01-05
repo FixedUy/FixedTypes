@@ -1,3 +1,4 @@
+import {MecanismosEnvioMails} from "./mecanismosEnvioMails";
 import {OpcionesCompras} from "./opcionesCompras";
 import {OpcionesGenerales} from "./opcionesGenerales";
 import {OpcionesGeneralesProductos} from "./opcionesGeneralesProductos";
@@ -11,6 +12,7 @@ interface Empresa {
   rut: string;
   razonSocial: string;
   logoURL: string;
+  mecanismosEnvioMails: MecanismosEnvioMails[];
   opcionesGenerales: OpcionesGenerales;
   opcionesCompras: OpcionesCompras;
   opcionesGeneralesServicios: OpcionesGeneralesServicios;
@@ -46,6 +48,7 @@ const empresaConverter = {
       rut: data.rut,
       razonSocial: data.razonSocial,
       logoURL: data.logoURL,
+      mecanismosEnvioMails: data.mecanismosEnvioMails,
       opcionesGenerales: data.opcionesGenerales,
       opcionesCompras: data.opcionesCompras,
       opcionesGeneralesProductos: data.opcionesGeneralesProductos,

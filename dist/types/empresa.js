@@ -14,6 +14,7 @@ const empresaConverter = {
             rut: data.rut,
             razonSocial: data.razonSocial,
             logoURL: data.logoURL,
+            mecanismosEnvioMails: data.mecanismosEnvioMails,
             opcionesGenerales: data.opcionesGenerales,
             opcionesCompras: data.opcionesCompras,
             opcionesGeneralesProductos: data.opcionesGeneralesProductos,
