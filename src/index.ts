@@ -72,6 +72,7 @@ export * from "./types/clientesRecibos";
 export * from "./types/productosListasEditarMasiva";
 export * from "./types/historicoPrecio";
 export * from "./types/usuarioApiGoogleSecret";
+export * from "./types/accesoSMTP";
 // cloud functions
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
