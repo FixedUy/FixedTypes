@@ -90,6 +90,7 @@ __exportStar(require("./types/historicoPrecio"), exports);
 __exportStar(require("./types/usuarioApiGoogleSecret"), exports);
 __exportStar(require("./types/accesoSMTP"), exports);
 // cloud functions
+__exportStar(require("./types/cloudFunctions/accesoSMTPguardar"), exports);
 __exportStar(require("./types/cloudFunctions/response"), exports);
 __exportStar(require("./types/cloudFunctions/asignarCustomClaim"), exports);
 __exportStar(require("./types/cloudFunctions/actualizarDatosEmpresa"), exports);

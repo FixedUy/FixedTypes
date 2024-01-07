@@ -73,6 +73,7 @@ export * from "./types/productosListasEditarMasiva";
 export * from "./types/historicoPrecio";
 export * from "./types/usuarioApiGoogleSecret";
 export * from "./types/accesoSMTP";
+export * from "./types/cloudFunctions/accesoSMTPguardar";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";

@@ -74,6 +74,7 @@ export * from "./types/historicoPrecio";
 export * from "./types/usuarioApiGoogleSecret";
 export * from "./types/accesoSMTP";
 // cloud functions
+export * from "./types/cloudFunctions/accesoSMTPguardar";
 export * from "./types/cloudFunctions/response";
 export * from "./types/cloudFunctions/asignarCustomClaim";
 export * from "./types/cloudFunctions/actualizarDatosEmpresa";
